@@ -1,0 +1,215 @@
+/* ==========================================================
+   COMIC CHRONICLES — RESPONSIVE LAYOUT (OPTIMIZED)
+   ========================================================== */
+
+/* --- TABLET & LAYAR KECIL (< 992px) --- */
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+
+    /* Navbar Mobile */
+    .navbar-collapse {
+        background-color: var(--surface-color);
+        border: 3px solid var(--border-color);
+        padding: 20px;
+        margin-top: 15px;
+        box-shadow: 6px 6px 0 var(--border-color);
+    }
+
+    .comic-navbar .container {
+        flex-wrap: wrap;
+    }
+
+    .navbar-nav {
+        gap: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px 0;
+    }
+
+    /* Hilangkan tinggi fix pada kartu agar menyesuaikan isi */
+    .comic-project-card,
+    .comic-cert-card,
+    .comic-skill-card,
+    .comic-card {
+        height: auto !important;
+    }
+}
+
+/* --- SMARTPHONE (< 768px) --- */
+@media (max-width: 767.98px) {
+    
+    /* 1. Perbaikan Tipografi */
+    .display-3 { /* Judul Hero */
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        line-height: 1.2;
+        overflow-wrap: break-word;
+    }
+
+    .display-5 { /* Judul Section */
+        font-size: clamp(1.6rem, 6vw, 2rem);
+    }
+    
+    .hero-section h1, 
+    .hero-section h2 {
+        line-height: 1.15;
+    }
+
+    .hero-section p {
+        font-size: 0.95rem;
+    }
+
+    /* 2. Teks NEMO di Hero */
+    .nemo-inline {
+        display: flex !important; /* Ubah ke flex agar turun ke baris baru dengan rapi */
+        margin-top: 10px !important;
+        margin-left: 0 !important;
+        font-size: 1.1rem !important;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        white-space: normal; /* Izinkan teks turun jika layar sangat kecil */
+    }
+
+    .nemo-badge {
+        font-size: 1.1rem !important;
+        padding: 2px 10px !important;
+    }
+
+    /* 3. Gambar Profil Hero */
+    /* Karena di HTML tingginya di-hardcode 420px, kita override di sini */
+    .comic-frame-box img[alt="Foto Profil Rizki Apriana"] {
+        height: 300px !important; 
+    }
+
+    /* 4. Tombol & Elemen Lainnya */
+    .btn-comic-primary,
+    .btn-comic-outline {
+        max-width: 100%;
+        white-space: normal;
+        padding: 12px 20px;
+    }
+
+    /* Sembunyikan indikator edisi di kanan bawah */
+    .chapter-indicator {
+        display: none !important;
+    }
+
+    #backToTop {
+        right: 15px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Shadow lebih tipis di HP */
+    .comic-frame-box,
+    .shadow-comic,
+    .comic-card, 
+    .comic-project-card, 
+    .comic-cert-card, 
+    .comic-skill-card {
+        box-shadow: 4px 4px 0 var(--border-color) !important;
+    }
+
+    /* 5. Section Title & Timeline */
+    .section-title-wrap h2 {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+
+    /* 6. Form & Modal */
+    .form-control, .comic-input {
+        width: 100%;
+        min-width: 0;
+        font-size: 16px; /* Mencegah auto-zoom di iOS */
+    }
+    
+    .modal-body {
+        padding: 1rem !important;
+    }
+    
+    /* 7. Footer */
+    .footer-bersambung {
+        font-size: 2rem !important;
+    }
+}
+
+/* --- SMARTPHONE KECIL (< 400px) --- */
+@media (max-width: 400px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .comic-brand {
+        font-size: 0.78rem;
+    }
+
+    .monogram-badge {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+
+    .btn-comic-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Judul lebih kecil lagi */
+    .display-3 {
+        font-size: 1.6rem;
+    }
+
+    .comic-frame-box img[alt="Foto Profil Rizki Apriana"] {
+        height: 250px !important; 
+    }
+
+    .comic-card, 
+    .comic-project-card, 
+    .comic-cert-card, 
+    .comic-skill-card {
+        box-shadow: 3px 3px 0 var(--border-color) !important;
+    }
+}
+
+/* --- SMARTPHONE LANDSCAPE --- */
+@media (max-width: 767.98px) and (orientation: landscape) {
+    .hero-section {
+        padding-top: 4rem;
+    }
+    
+    /* Di landscape, gambar profil jangan terlalu tinggi */
+    .comic-frame-box img[alt="Foto Profil Rizki Apriana"] {
+        height: 200px !important; 
+    }
+}
+
+/* ==========================================
+   FIX FINAL: RESPONSIVE NEMO & OVERFLOW
+   ========================================== */
+
+/* Cegah layar geser ke kanan secara global */
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+}
+
+@media (max-width: 767.98px) {
+    /* 1. Paksa teks NEMO turun jadi satu baris penuh */
+    .nemo-inline {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        white-space: normal !important;
+        justify-content: flex-start;
+        font-size: 1.1rem !important;
+    }
+
+    /* 2. Sesuaikan ukuran kotak NEMO di HP */
+    .nemo-badge {
+        font-size: 1.1rem !important;
+        padding: 2px 8px !important;
+    }
+}

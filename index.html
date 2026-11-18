@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Anti-flash tema: WAJIB paling atas, sebelum CSS -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme') || 'light';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) { /* localStorage diblokir, abaikan */ }
+        })();
+    </script>
+
+    <!-- SEO Dasar -->
+    <title>Portofolio — Rizki Apriana | Junior Web Developer</title>
+    <meta name="description" content="Portofolio profesional Rizki Apriana, Junior Web Developer lulusan Rekayasa Perangkat Lunak. Berpengalaman membangun aplikasi web dengan Laravel, PHP, dan MySQL.">
+    <meta name="author" content="Rizki Apriana">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Rizki Apriana, Web Developer, Laravel Developer, Portofolio, RPL, SMKN 1 Talaga">
+    <link rel="canonical" href="https://rizkiapriana.dev/">
+
+    <!-- Preconnect & DNS-Prefetch untuk Mempercepat Koneksi CDN Eksternal -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
+    <!-- Warna tema browser -->
+    <meta name="theme-color" content="#FFF8E7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+
+    <!-- Favicon & ikon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Comic Chronicles — Rizki Apriana">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:title" content="Comic Chronicles — Portofolio Rizki Apriana">
+    <meta property="og:description" content="Jelajahi perjalanan digital dan proyek pengembangan web saya.">
+    <meta property="og:url" content="https://rizkiapriana.dev/">
+    <meta property="og:image" content="https://rizkiapriana.dev/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Portofolio Rizki Apriana — Junior Web Developer">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Comic Chronicles — Portofolio Rizki Apriana">
+    <meta name="twitter:description" content="Jelajahi perjalanan digital dan proyek pengembangan web saya.">
+    <meta name="twitter:image" content="https://rizkiapriana.dev/assets/images/og-image.png">
+
+    <!-- Google Fonts (Gunakan display=swap untuk performa teks) -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rizki Apriana",
+      "jobTitle": "Junior Web Developer",
+      "url": "https://rizkiapriana.dev/",
+      "image": "https://rizkiapriana.dev/assets/images/profil.jpg",
+      "email": "mailto:aprianarizqi@gmail.com",
+      "address": { "@type": "PostalAddress", "addressRegion": "Jawa Barat", "addressCountry": "ID" },
+      "alumniOf": { "@type": "EducationalOrganization", "name": "SMKN 1 Talaga" },
+      "knowsAbout": ["Laravel", "PHP", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap"],
+      "sameAs": [
+        "https://github.com/rizki12-cyber",
+        "https://www.instagram.com/ap.rzqy",
+        "https://www.linkedin.com/in/rizkiapriana"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Splash Screen Interaktif dengan GIF Animasi Spider-Man -->
+    <div id="comicSplash" class="splash-screen position-relative d-flex align-items-center justify-content-center">
+
+        <div class="splash-box p-4 p-md-5 border border-4 border-dark bg-body shadow-comic text-center mt-5 pt-4">
+            <span class="badge bg-comic-yellow text-dark border border-2 border-dark font-bangers fs-5 px-3 py-1 mb-2">
+                VOL. 01 — WEB PORTFOLIO
+            </span>
+            
+            <h1 class="font-archivo fs-3 fw-bold text-dark mb-2">
+                RIZKI APRIANA
+            </h1>
+
+            <p class="font-dm text-muted small mb-4">
+                Tekan tombol di bawah untuk masuk ke ruang kerja dan eksplorasi proyek.
+            </p>
+
+            <!-- Tombol Interaktif untuk Memulai & Mengizinkan Audio -->
+            <button id="startSplashBtn" class="btn btn-comic-red font-bangers fs-5 px-4 py-2 border border-3 border-dark w-100 shadow-sm">
+                ▶ MASUK KE HALAMAN UTAMA
+            </button>
+
+            <!-- Area Angka Hitung Mundur -->
+            <div id="countdownArea" class="d-none mt-3">
+                <h1 id="countdownNumber" class="font-archivo display-1 fw-bold text-comic-red mb-1 comic-countdown-text">3</h1>
+                <p id="splashStatusText" class="font-bangers fs-6 text-dark mb-0 tracking-widest">MEMUAT SISTEM...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skip link untuk aksesibilitas keyboard -->
+    <a href="#home" class="visually-hidden-focusable position-absolute top-0 start-0 m-2 px-3 py-2 bg-dark text-white">Lompat ke konten</a>
+
+    <!-- Reading Progress Bar -->
+    <div id="reading-progress"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top comic-navbar-minimal">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a class="navbar-brand comic-brand d-flex align-items-center gap-2 m-0" href="#home">
+                <span class="monogram-badge">RA</span>
+                <span class="brand-text d-none d-sm-inline">APRIANA<span class="text-comic-red">.DEV</span></span>
+            </a>
+            
+            <div class="d-flex align-items-center gap-2 d-lg-none">
+                <button class="navbar-toggler comic-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigasi">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-end flex-grow-0" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center gap-1 gap-lg-2 my-2 my-lg-0 p-3 p-lg-1 bg-surface border border-3 border-dark shadow-comic">
+                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#origin">Pendidikan</a></li>
+                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#experience">Pengalaman</a></li>
+                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#skills">Keahlian</a></li>
+                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#projects">Proyek</a></li>
+                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#certificates">Sertifikat</a></li>
+                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#reviews">Ulasan</a></li>
+                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#contact">Kontak</a></li>
+                    <li class="nav-item ms-lg-1 mt-2 mt-lg-0">
+                        <a href="cv.html" class="btn btn-comic-primary btn-sm px-3 py-1 font-archivo text-uppercase w-100">CV</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chapter Indicator Floating -->
+    <div class="chapter-indicator d-none d-xl-flex">
+        <span class="chapter-tag" id="currentChapter">EDISI #001 — BERANDA</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section comic-panel-grid">
+        <div class="container">
+            <div class="row align-items-center min-vh-100 py-5">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="comic-badge-top mb-3">
+                        <span class="badge bg-comic-yellow text-dark border border-dark fw-bold px-3 py-2 font-bangers text-wrap text-start">THE DEVELOPER CHRONICLES — EDISI #001</span>
+                    </div>
+                    <h1 class="display-3 fw-black font-archivo text-uppercase mb-3">
+                        HALO, SAYA <span class="text-comic-red highlight-pop">RIZKI APRIANA</span>
+                        <span class="d-block d-md-inline-block mt-3 mt-md-0 ms-md-3">
+                            <span class="nemo-inline font-bangers">
+                                BIASA DI PANGGIL <span class="nemo-badge font-archivo">NEMO</span>
+                            </span>
+                        </span>
+                    </h1>
+
+                    <h2 class="h4 font-bangers tracking-wide text-secondary mb-4">
+                        JUNIOR WEB DEVELOPER
+                    </h2>
+
+                    <p class="hero-desc font-dm text-muted mb-5">
+                        Saya merupakan lulusan Rekayasa Perangkat Lunak yang memiliki ketertarikan pada pengembangan website dan aplikasi berbasis web. Saya senang mempelajari teknologi baru serta mengembangkan solusi digital yang fungsional dan menarik.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#projects" class="btn btn-comic-primary px-4 py-3 font-archivo text-uppercase">LIHAT PROYEK SAYA</a>
+                        <a href="cv.html" class="btn btn-comic-outline px-4 py-3 font-archivo text-uppercase">UNDUH CV</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
+                    <div class="comic-frame-box p-3 bg-surface border border-3 border-dark shadow-comic">
+                        <div class="position-relative overflow-hidden border border-2 border-dark">
+                            <!-- Optimasi LCP: fetchpriority high & decoding async -->
+                            <img src="assets/images/profil.jpg" alt="Foto Profil Rizki Apriana" class="img-fluid w-100 object-fit-cover" style="height: 420px;" fetchpriority="high" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop'">
+                            <div class="speech-bubble-hero position-absolute bottom-0 start-0 m-3 p-2 bg-comic-yellow border border-dark text-dark fw-bold font-bangers">
+                                Mari Bangun Sesuatu yang Hebat!
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top border-dark">
+                            <span class="font-bangers fs-5">EDISI VOL. 1</span>
+                            <span class="font-dm small text-muted">EST. 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator text-center pb-4">
+            <a href="#about" class="text-dark text-decoration-none font-bangers fs-5">
+                GULIR UNTUK MEMBACA <br> <i class="bi bi-chevron-down animate-bounce"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 border-top border-3 border-dark bg-surface">
+        <div class="container py-5">
+            <div class="section-title-wrap mb-5" data-aos="fade-up">
+                <span class="font-bangers text-comic-red fs-4">BAB 01</span>
+                <h2 class="display-5 font-archivo fw-bold text-uppercase">KENALI DEVELOPER</h2>
+                <div class="comic-divider"></div>
+            </div>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="comic-card p-4 bg-body border border-3 border-dark position-relative">
+                        <div class="position-absolute top-0 start-0 translate-middle badge bg-comic-red text-white border border-dark font-bangers fs-6 px-3 py-1">PROFIL</div>
+                        <div class="text-center mb-4">
+                            <img src="assets/images/profil.jpg" alt="Rizki Apriana" class="rounded-circle border border-3 border-dark mb-3" style="width: 150px; height: 150px; object-fit: cover;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop'">
+                            <h3 class="font-archivo fs-4 mb-1">Rizki Apriana</h3>
+                            <p class="font-bangers text-secondary">Junior Web Developer</p>
+                        </div>
+                        <ul class="list-unstyled font-dm mb-0 border-top border-dark pt-3">
+                            <li class="py-2 d-flex justify-content-between border-bottom border-secondary border-opacity-25">
+                                <span class="fw-bold">Lokasi:</span> <span>Jawa Barat, Indonesia</span>
+                            </li>
+                            <li class="py-2 d-flex justify-content-between border-bottom border-secondary border-opacity-25">
+                                <span class="fw-bold">Pendidikan:</span> <span>SMKN 1 Talaga (RPL)</span>
+                            </li>
+                            <li class="py-2 d-flex justify-content-between border-bottom border-secondary border-opacity-25">
+                                <span class="fw-bold">Status:</span> <span class="text-success fw-bold">Lulusan Baru</span>
+                            </li>
+                            <li class="py-2 d-flex justify-content-between">
+                                <span class="fw-bold">Fokus:</span> <span>Pengembangan Web &amp; Laravel</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="position-relative p-4 border border-3 border-dark bg-body mb-4">
+                        <div class="speech-bubble-about position-absolute top-0 end-0 translate-middle-y me-4 px-3 py-1 bg-comic-yellow border border-dark font-bangers">
+                            BERSEMANGAT &amp; BERDEDIKASI!
+                        </div>
+                        <p class="font-dm fs-5 lh-lg mb-4">
+                            "Saya merupakan lulusan SMK jurusan Rekayasa Perangkat Lunak yang memiliki ketertarikan pada pengembangan website dan aplikasi berbasis web. Saya memiliki pengalaman praktik kerja lapangan sebagai Web Developer, dengan keterlibatan dalam pengembangan aplikasi menggunakan Laravel, PHP, HTML, CSS, dan MySQL."
+                        </p>
+                        <p class="font-dm text-muted mb-0">
+                            Saya terbiasa bekerja secara teliti, disiplin, bertanggung jawab, serta mampu berkolaborasi dalam tim maupun menyelesaikan pekerjaan secara mandiri.
+                        </p>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="p-3 border border-2 border-dark bg-comic-yellow text-dark font-archivo text-center fw-bold">
+                                <i class="bi bi-lightbulb-fill d-block fs-3 mb-1"></i> Pemecahan Masalah
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="p-3 border border-2 border-dark bg-comic-red text-white font-archivo text-center fw-bold">
+                                <i class="bi bi-code-slash d-block fs-3 mb-1"></i> Pengembangan Web
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="p-3 border border-2 border-dark bg-body text-dark font-archivo text-center fw-bold">
+                                <i class="bi bi-people-fill d-block fs-3 mb-1 text-comic-red"></i> Kolaborasi Tim
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="p-3 border border-2 border-dark bg-body text-dark font-archivo text-center fw-bold">
+                                <i class="bi bi-rocket-takeoff-fill d-block fs-3 mb-1 text-comic-yellow"></i> Pembelajaran Berkelanjutan
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Origin Story Section (Education) -->
+    <section id="origin" class="py-5 border-top border-3 border-dark">
+        <div class="container py-5">
+            <div class="section-title-wrap mb-5" data-aos="fade-up">
+                <span class="font-bangers text-comic-red fs-4">BAB 02</span>
+                <h2 class="display-5 font-archivo fw-bold text-uppercase">KISAH AWAL (PENDIDIKAN)</h2>
+                <div class="comic-divider"></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="timeline-editorial">
+                        <div class="timeline-item border-start border-4 border-dark ps-4 pb-5 position-relative" data-aos="fade-up">
+                            <div class="timeline-dot bg-comic-red border border-2 border-dark position-absolute top-0 start-0 translate-middle"></div>
+                            <span class="badge bg-dark text-white font-bangers mb-2">2023 – 2026</span>
+                            <h3 class="font-archivo fs-4">SMKN 1 Talaga</h3>
+                            <h4 class="font-bangers text-secondary fs-5">Jurusan Rekayasa Perangkat Lunak (RPL)</h4>
+                            <p class="font-dm text-muted mt-2">Mempelajari dasar-dasar pemrograman, struktur data, pengembangan web front-end dan back-end, serta basis data relasional.</p>
+                        </div>
+
+                        <div class="timeline-item border-start border-4 border-dark ps-4 pb-5 position-relative" data-aos="fade-up">
+                            <div class="timeline-dot bg-comic-yellow border border-2 border-dark position-absolute top-0 start-0 translate-middle"></div>
+                            <span class="badge bg-dark text-white font-bangers mb-2">2020 – 2023</span>
+                            <h3 class="font-archivo fs-4">SMPN 1 Cingambul</h3>
+                            <h4 class="font-bangers text-secondary fs-5">Pendidikan Menengah Pertama</h4>
+                            <p class="font-dm text-muted mt-2">Menyelesaikan pendidikan menengah pertama serta mulai mengembangkan ketertarikan pada bidang teknologi informasi.</p>
+                        </div>
+
+                        <div class="timeline-item border-start border-4 border-dark ps-4 position-relative" data-aos="fade-up">
+                            <div class="timeline-dot bg-comic-red border border-2 border-dark position-absolute top-0 start-0 translate-middle"></div>
+                            <span class="badge bg-dark text-white font-bangers mb-2">2015 – 2020</span>
+                            <h3 class="font-archivo fs-4">SDN 01 Ciranjeng</h3>
+                            <h4 class="font-bangers text-secondary fs-5">Pendidikan Sekolah Dasar</h4>
+                            <p class="font-dm text-muted mt-2">Menempuh pendidikan dasar sebagai fondasi dalam membangun pengetahuan, kedisiplinan, dan tanggung jawab.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Journey Section (Experience) -->
+    <section id="experience" class="py-5 border-top border-3 border-dark bg-surface">
+        <div class="container py-5">
+            <div class="section-title-wrap mb-5" data-aos="fade-up">
+                <span class="font-bangers text-comic-red fs-4">BAB 03</span>
+                <h2 class="display-5 font-archivo fw-bold text-uppercase">PERJALANAN PROFESIONAL</h2>
+                <div class="comic-divider"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body shadow-comic" data-aos="fade-up">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom border-dark">
+                            <div>
+                                <span class="badge bg-comic-red text-white font-bangers px-3 py-1 mb-2">PRAKTIK KERJA LAPANGAN</span>
+                                <h3 class="font-archivo fs-3 mb-0">PT Grage Media Technology</h3>
+                            </div>
+                            <div class="text-lg-end mt-2 mt-lg-0">
+                                <span class="font-bangers fs-5 text-secondary">Juli 2025 – Oktober 2025</span>
+                                <div class="font-archivo fw-bold text-dark">Web Developer Intern</div>
+                            </div>
+                        </div>
+                        <h4 class="font-archivo fs-5 mb-3 text-uppercase text-comic-red">Tanggung Jawab Utama:</h4>
+                        <ul class="list-unstyled font-dm space-y-3">
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1"></i>
+                                <span>Mengembangkan aplikasi web menggunakan framework Laravel berdasarkan kebutuhan klien.</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1"></i>
+                                <span>Melakukan penyesuaian fitur dan antarmuka berdasarkan feedback langsung dari klien secara profesional.</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1"></i>
+                                <span>Membuat modul panduan penggunaan aplikasi untuk membantu klien memahami sistem dengan mudah.</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1"></i>
+                                <span>Melakukan pengujian mandiri (testing) untuk memastikan fitur berjalan dengan baik tanpa kendala teknis.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+                    <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body shadow-comic mt-5" data-aos="fade-up">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom border-dark">
+                            <div>
+                                <span class="badge bg-comic-yellow text-dark font-bangers px-3 py-1 mb-2">ORGANISASI</span>
+                                <h3 class="font-archivo fs-3 mb-0">LABANTIK</h3>
+                            </div>
+                            <div class="text-lg-end mt-2 mt-lg-0">
+                                <span class="font-bangers fs-5 text-secondary">2023 – 2026</span>
+                                <div class="font-archivo fw-bold text-dark">Laboratorium Anak Teknik Ilmu Komputer — Anggota</div>
+                            </div>
+                        </div>
+
+                        <p class="font-dm text-muted mb-3">
+                            Laboratorium Anak Teknik Ilmu Komputer (LABANTIK) merupakan wadah pengembangan minat dan bakat siswa di bidang teknologi informasi, khususnya pemrograman dan kreativitas digital.
+                        </p>
+
+                        <ul class="list-unstyled font-dm space-y-3">
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1"></i>
+                                <span>Mendokumentasikan berbagai kegiatan organisasi melalui fotografi dan media visual.</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1"></i>
+                                <span>Berpartisipasi dalam kegiatan pengembangan keterampilan di bidang pemrograman dan teknologi informasi.</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1"></i>
+                                <span>Mengembangkan kemampuan teknis melalui diskusi, berbagi pengetahuan, dan pembelajaran bersama anggota.</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1"></i>
+                                <span>Membantu mendokumentasikan dan mengabadikan momen penting dalam kegiatan organisasi.</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1"></i>
+                                <span>Melatih kemampuan komunikasi dan kerja sama tim dalam menjalankan kegiatan organisasi.</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1"></i>
+                                <span>Meningkatkan kedisiplinan, tanggung jawab, kreativitas, serta kemampuan beradaptasi dalam lingkungan organisasi.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Abilities Section (Skills) -->
+    <section id="skills" class="py-5 border-top border-3 border-dark">
+        <div class="container py-5">
+            <div class="section-title-wrap mb-5" data-aos="fade-up">
+                <span class="font-bangers text-comic-red fs-4">BAB 04</span>
+                <h2 class="display-5 font-archivo fw-bold text-uppercase">KEAHLIAN TEKNIS</h2>
+                <div class="comic-divider"></div>
+            </div>
+            
+            <div class="row g-4" id="skillsContainer">
+                <!-- 1. FRONTEND -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-comic-red">FRONTEND</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-html text-danger me-1"></i> HTML5</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-css text-primary me-1"></i> CSS3</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-js text-warning me-1"></i> JavaScript</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-bootstrap-fill text-purple me-1"></i> Bootstrap</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-lightning-charge-fill me-1" style="color: #646CFF;"></i> Vite.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. BACKEND & DB -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-comic-yellow">BACKEND &amp; DB</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-php text-secondary me-1"></i> PHP</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-shield-fill-check text-danger me-1"></i> Laravel</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-database-fill text-info me-1"></i> MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. UI/UX & DESAIN -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-info">UI/UX &amp; DESAIN</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-palette text-primary me-1"></i> Canva</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-phone text-success me-1"></i> Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. TOOLS & VERSION -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-success">TOOLS &amp; VERSION</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-code text-info me-1"></i> VS Code</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-git text-danger me-1"></i> Git &amp; GitHub</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-file-earmark-word text-primary me-1"></i> MS Word</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-file-earmark-excel text-success me-1"></i> MS Excel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. DEPLOYMENT -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-warning">DEPLOYMENT</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-triangle-fill text-dark me-1"></i> Vercel</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-cloud-arrow-up text-info me-1"></i> Netlify</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-hdd-rack text-secondary me-1"></i> cPanel</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 6. AI & PROMPTING -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark" style="color: #8b5cf6;">AI &amp; PROMPTING</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-braces text-primary me-1"></i> DeepSeek</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-robot me-1" style="color: #8b5cf6;"></i> ChatGPT</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-stars text-warning me-1"></i> Claude</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-github text-dark me-1"></i> Copilot</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-google me-1" style="color: #4285F4;"></i> Gemini AI</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-cpu me-1" style="color: #6366f1;"></i> Qwen AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. API & INTEGRATION -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-danger">API &amp; INTEGRATION</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-fire text-warning me-1"></i> Firebase Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Projects Section -->
+    <section id="projects" class="py-5 border-top border-3 border-dark bg-surface">
+        <div class="container py-5">
+            <div class="section-title-wrap mb-5" data-aos="fade-up">
+                <span class="font-bangers text-comic-red fs-4">BAB 05</span>
+                
+                <!-- GIF Animasi Proyek Ditingkatkan Performanya -->
+                <div class="d-flex align-items-center gap-3">
+                    <h2 class="display-5 font-archivo fw-bold text-uppercase mb-0">PROYEK PILIHAN</h2>
+                </div>
+
+                <p class="font-dm text-muted mt-2">Karya pilihan yang dikembangkan menggunakan teknologi web modern.</p>
+                <div class="comic-divider"></div>
+            </div>
+
+            <div class="row g-4" id="projectsGrid">
+                <!-- Project 01 -->
+                <div class="col-12" data-aos="fade-up">
+                    <div class="comic-project-card featured border border-3 border-dark bg-body p-4 p-lg-5">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-7">
+                                <span class="badge bg-comic-red text-white font-bangers px-3 py-1 mb-2">PROYEK 01 — UNGGULAN</span>
+                                <h3 class="font-archivo display-6 mb-2">CASA RASA</h3>
+                                <h4 class="font-bangers text-secondary fs-4 mb-3">Website E-Commerce Makanan Premium</h4>
+                                <p class="font-dm mb-4">Website e-commerce makanan dengan tampilan modern dan sistem pengelolaan produk lengkap yang dirancang untuk memudahkan transaksi jual beli kuliner secara online.</p>
+                                <div class="mb-4">
+                                    <strong class="font-archivo d-block mb-2">Teknologi yang Digunakan:</strong>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge border border-dark bg-surface text-dark">Laravel</span>
+                                        <span class="badge border border-dark bg-surface text-dark">PHP</span>
+                                        <span class="badge border border-dark bg-surface text-dark">MySQL</span>
+                                        <span class="badge border border-dark bg-surface text-dark">Bootstrap</span>
+                                        <span class="badge border border-dark bg-surface text-dark">JavaScript</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column flex-sm-row gap-2">
+                                    <button class="btn btn-comic-primary px-4 py-2 font-archivo view-project-btn" data-project-id="1">LIHAT DETAIL</button>
+                                    <a href="https://github.com/rizki12-cyber/E-Commerce-Restoran" target="_blank" rel="noopener noreferrer" class="btn btn-comic-outline px-4 py-2 font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="border border-2 border-dark overflow-hidden position-relative">
+                                    <img src="assets/images/projects/casarasa1.png" alt="Casa Rasa E-Commerce" class="img-fluid w-100 object-fit-cover" style="height: 300px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop'">
+                                    <div class="position-absolute top-0 end-0 m-2 badge bg-comic-yellow text-dark border border-dark font-bangers">E-COMMERCE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="comic-project-card border border-3 border-dark bg-body p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="border border-2 border-dark overflow-hidden mb-3 position-relative">
+                                <img src="assets/images/projects/klinik1.png" alt="PoliklinikApp" class="img-fluid w-100 object-fit-cover" style="height: 220px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=800&auto=format&fit=crop'">
+                                <span class="position-absolute top-0 end-0 m-2 badge bg-comic-red text-white border border-dark font-bangers">PoliklinikApp</span>
+                            </div>
+                            <h3 class="font-archivo fs-3 mb-1">PoliklinikApp</h3>
+                            <h4 class="font-bangers text-secondary fs-6 mb-2">Sistem Manajemen Klinik</h4>
+                            <p class="font-dm text-muted small mb-3">Aplikasi manajemen poliklinik untuk mengelola data pasien, dokter, pendaftaran, pemeriksaan, dan pembayaran.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="badge border border-dark bg-surface text-dark small">Laravel</span>
+                                <span class="badge border border-dark bg-surface text-dark small">MySQL</span>
+                                <span class="badge border border-dark bg-surface text-dark small">Bootstrap</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
+                            <button class="btn btn-comic-outline flex-fill font-archivo view-project-btn" data-project-id="2"><i class="bi bi-eye-fill me-1"></i> LIHAT DETAIL</button>
+                            <a href="https://github.com/rizki12-cyber/PoliklinikApp" target="_blank" rel="noopener noreferrer" class="btn btn-comic-primary flex-fill font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="comic-project-card border border-3 border-dark bg-body p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="border border-2 border-dark overflow-hidden mb-3 position-relative">
+                                <img src="assets/images/projects/crj4.png" alt="Sistem Informasi Desa Ciranjeng" class="img-fluid w-100 object-fit-cover" style="height: 220px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop'">
+                                <span class="position-absolute top-0 end-0 m-2 badge bg-comic-yellow text-dark border border-dark font-bangers">SISTEM INFORMASI DESA</span>
+                            </div>
+                            <h3 class="font-archivo fs-3 mb-1">Desa Ciranjeng</h3>
+                            <h4 class="font-bangers text-secondary fs-6 mb-2">Sistem Informasi Desa</h4>
+                            <p class="font-dm text-muted small mb-3">Website informasi desa untuk menampilkan profil, berita, agenda, potensi, dan statistik kependudukan masyarakat desa.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="badge border border-dark bg-surface text-dark small">Laravel</span>
+                                <span class="badge border border-dark bg-surface text-dark small">JavaScript</span>
+                                <span class="badge border border-dark bg-surface text-dark small">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
+                            <button class="btn btn-comic-outline flex-fill font-archivo view-project-btn" data-project-id="3"><i class="bi bi-eye-fill me-1"></i> LIHAT DETAIL</button>
+                            <a href="https://github.com/rizki12-cyber/sistem-informasi-desa" target="_blank" rel="noopener noreferrer" class="btn btn-comic-primary flex-fill font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-5 border-top border-3 border-dark">
+        <div class="container py-5">
+            <div class="section-title-wrap mb-5" data-aos="fade-up">
+                <span class="font-bangers text-comic-red fs-4">BAB 06</span>
+                <h2 class="display-5 font-archivo fw-bold text-uppercase">PENCAPAIAN TERBUKA</h2>
+                <p class="font-dm text-muted">Koleksi sertifikat penghargaan dan kompetensi profesional.</p>
+                <div class="comic-divider"></div>
+            </div>
+
+            <div class="row g-4" id="certificatesGrid">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="comic-cert-card border border-3 border-dark bg-body p-3 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="border border-2 border-dark overflow-hidden mb-3 position-relative cert-thumb" style="cursor: pointer;" data-img="assets/images/certificates/pkl.jpg" data-title="Sertifikat Praktik Kerja Lapangan">
+                                <img src="assets/images/certificates/pkl.jpg" alt="Sertifikat PKL" class="img-fluid w-100 object-fit-cover" style="height: 200px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=600&auto=format&fit=crop'">
+                                <span class="position-absolute bottom-0 start-0 m-2 badge bg-dark text-white font-bangers">PT Grage Media Technology</span>
+                            </div>
+                            <h3 class="font-archivo fs-5 mb-1">Sertifikat Praktik Kerja Lapangan</h3>
+                            <p class="font-dm text-muted small mb-0">Pengalaman kerja nyata sebagai Web Developer.</p>
+                        </div>
+                        <button class="btn btn-comic-outline btn-sm mt-3 font-archivo view-cert-btn" data-img="assets/images/certificates/pkl.jpg" data-title="Sertifikat Praktik Kerja Lapangan"><i class="bi bi-eye-fill me-1"></i> LIHAT SERTIFIKAT</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="comic-cert-card border border-3 border-dark bg-body p-3 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="border border-2 border-dark overflow-hidden mb-3 position-relative cert-thumb" style="cursor: pointer;" data-img="assets/images/certificates/bnsp.jpg" data-title="Sertifikat Uji Kompetensi Keahlian">
+                                <img src="assets/images/certificates/bnsp.jpg" alt="Sertifikat Ukom" class="img-fluid w-100 object-fit-cover" style="height: 200px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600&auto=format&fit=crop'">
+                                <span class="position-absolute bottom-0 start-0 m-2 badge bg-dark text-white font-bangers">SMKN 1 Talaga</span>
+                            </div>
+                            <h3 class="font-archivo fs-5 mb-1">Sertifikat Uji Kompetensi</h3>
+                            <p class="font-dm text-muted small mb-0">Kompetensi Keahlian Rekayasa Perangkat Lunak.</p>
+                        </div>
+                        <button class="btn btn-comic-outline btn-sm mt-3 font-archivo view-cert-btn" data-img="assets/images/certificates/bnsp.jpg" data-title="Sertifikat Uji Kompetensi Keahlian"><i class="bi bi-eye-fill me-1"></i> LIHAT SERTIFIKAT</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="comic-cert-card border border-3 border-dark bg-body p-3 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="border border-2 border-dark overflow-hidden mb-3 position-relative cert-thumb" style="cursor: pointer;" data-img="assets/images/certificates/ujikom.jpg" data-title="Sertifikat Uji Kompetensi PT Gebra">
+                                <img src="assets/images/certificates/ujikom.jpg" alt="Sertifikat Webinar" class="img-fluid w-100 object-fit-cover" style="height: 200px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&auto=format&fit=crop'">
+                                <span class="position-absolute bottom-0 start-0 m-2 badge bg-dark text-white font-bangers">PT. Gebra</span>
+                            </div>
+                            <h3 class="font-archivo fs-5 mb-1">Sertifikat Uji Kompetensi PT Gebra</h3>
+                            <p class="font-dm text-muted small mb-0">Partisipasi aktif dalam pengembangan tren web modern.</p>
+                        </div>
+                        <button class="btn btn-comic-outline btn-sm mt-3 font-archivo view-cert-btn" data-img="assets/images/certificates/ujikom.jpg" data-title="Sertifikat Uji Kompetensi PT Gebra"><i class="bi bi-eye-fill me-1"></i> LIHAT SERTIFIKAT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-5 border-top border-3 border-dark bg-surface">
+        <div class="container py-5">
+            <div class="section-title-wrap mb-5 text-center" data-aos="fade-up">
+                <span class="font-bangers text-comic-red fs-4">BAB INTERAKTIF</span>
+                <h2 class="display-5 font-archivo fw-bold text-uppercase">SUARA PEMBACA</h2>
+                <p class="font-dm text-muted">Setiap masukan adalah amunisi untuk terus berkembang.</p>
+                <div class="comic-divider mx-auto"></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="comic-card border border-3 border-dark bg-body p-4 p-md-5 shadow-comic">
+                        <div class="mb-5">
+                            <h3 class="font-archivo fs-5 text-uppercase mb-3 d-flex align-items-center gap-2">
+                                <i class="bi bi-pencil-square text-comic-red"></i> Tinggalkan Jejak
+                            </h3>
+                            <form id="reviewForm">
+                                <div class="row g-3 mb-3">
+                                    <div class="col-12">
+                                        <input type="text" class="form-control border border-2 border-dark rounded-0 p-2 font-dm" id="visitorName" placeholder="Nama / Panggilan kamu..." maxlength="50" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control border border-2 border-dark rounded-0 p-2 font-dm" id="visitorMessage" rows="2" placeholder="Tuliskan pendapat singkatmu di sini..." maxlength="500" required></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-comic-primary w-100 py-2 font-archivo text-uppercase">Kirim <i class="bi bi-send-fill ms-1"></i></button>
+                                <div id="reviewFeedback" class="mt-2 font-dm small text-success text-center d-none"></div>
+                            </form>
+                        </div>
+
+                        <hr class="border-dark border-2 opacity-100 my-4">
+
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h3 class="font-archivo fs-5 text-uppercase mb-0 d-flex align-items-center gap-2">
+                                    <i class="bi bi-chat-square-text-fill text-comic-red"></i> Daftar Ulasan
+                                </h3>
+                                <span class="badge bg-comic-yellow text-dark border border-dark font-bangers fs-6 px-3 py-1">
+                                    <span id="reviewCount">0</span>
+                                </span>
+                            </div>
+
+                            <div id="testimonialsList" class="review-list mb-4">
+                                <p class="font-dm text-muted text-center small my-4">Belum ada ulasan. Jadilah yang pertama!</p>
+                            </div>
+
+                            <div id="reviewPagination" class="d-flex justify-content-between align-items-center w-100 mt-2 flex-nowrap">
+                                <button id="btnPrevReview" class="btn btn-sm btn-outline-dark border-2 font-archivo text-uppercase" disabled><i class="bi bi-arrow-left"></i></button>
+                                <span id="pageIndicator" class="font-bangers text-muted fs-6 mx-2 text-center text-nowrap">Hal 1</span>
+                                <button id="btnNextReview" class="btn btn-sm btn-outline-dark border-2 font-archivo text-uppercase" disabled><i class="bi bi-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 border-top border-3 border-dark bg-surface">
+        <div class="container py-5">
+            <div class="section-title-wrap mb-5 text-center" data-aos="fade-up">
+                <span class="font-bangers text-comic-red fs-4">BAB AKHIR</span>
+                <h2 class="display-5 font-archivo fw-bold text-uppercase">BAB BERIKUTNYA</h2>
+                <p class="font-bangers fs-4 text-secondary">"SETIAP KISAH HEBAT BERAWAL DARI SEBUAH KONEKSI."</p>
+                <div class="comic-divider mx-auto"></div>
+            </div>
+
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="comic-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-4 text-uppercase">HUBUNGI SAYA</h3>
+                        <p class="font-dm text-muted mb-4">Terbuka untuk kesempatan kerja, kolaborasi, dan pengalaman baru di bidang pengembangan web.</p>
+
+                        <ul class="list-unstyled font-dm space-y-3 mb-4">
+                            <li class="mb-3 d-flex align-items-center gap-3">
+                                <div class="p-2 border border-2 border-dark bg-comic-yellow text-dark"><i class="bi bi-envelope-fill fs-5"></i></div>
+                                <div>
+                                    <span class="d-block small text-muted font-bangers">EMAIL</span>
+                                    <a href="mailto:aprianarizqi@gmail.com" class="text-dark text-decoration-none fw-bold">aprianarizqi@gmail.com</a>
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center gap-3">
+                                <div class="p-2 border border-2 border-dark bg-success text-white"><i class="bi bi-whatsapp fs-5"></i></div>
+                                <div>
+                                    <span class="d-block small text-muted font-bangers">WHATSAPP</span>
+                                    <a href="https://wa.me/6282116949020" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none fw-bold">+62 821-1694-9020</a>
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center gap-3">
+                                <div class="p-2 border border-2 border-dark bg-danger text-white"><i class="bi bi-instagram fs-5"></i></div>
+                                <div>
+                                    <span class="d-block small text-muted font-bangers">INSTAGRAM</span>
+                                    <a href="https://www.instagram.com/ap.rzqy" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none fw-bold">@ap.rzqy</a>
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center gap-3">
+                                <div class="p-2 border border-2 border-dark bg-primary text-white"><i class="bi bi-linkedin fs-5"></i></div>
+                                <div>
+                                    <span class="d-block small text-muted font-bangers">LINKEDIN</span>
+                                    <a href="https://www.linkedin.com/in/rizkiapriana" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none fw-bold">linkedin.com/in/rizkiapriana</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <div class="p-2 border border-2 border-dark bg-dark text-white"><i class="bi bi-github fs-5"></i></div>
+                                <div>
+                                    <span class="d-block small text-muted font-bangers">GITHUB</span>
+                                    <a href="https://github.com/rizki12-cyber" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none fw-bold">github.com/rizki12-cyber</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body">
+                        <h3 class="font-archivo fs-4 mb-4 text-uppercase">KIRIM PESAN</h3>
+                        <form id="contactForm" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label font-archivo fw-bold">NAMA ANDA</label>
+                                <input type="text" class="form-control comic-input border border-2 border-dark rounded-0" id="name" name="name" autocomplete="name" required>
+                                <div class="invalid-feedback">Silakan masukkan nama Anda.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label font-archivo fw-bold">ALAMAT EMAIL</label>
+                                <input type="email" class="form-control comic-input border border-2 border-dark rounded-0" id="email" name="email" autocomplete="email" required>
+                                <div class="invalid-feedback">Silakan masukkan email yang valid.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label font-archivo fw-bold">SUBJEK</label>
+                                <input type="text" class="form-control comic-input border border-2 border-dark rounded-0" id="subject" name="subject" autocomplete="off" required>
+                                <div class="invalid-feedback">Silakan masukkan subjek pesan.</div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label font-archivo fw-bold">PESAN</label>
+                                <textarea class="form-control comic-input border border-2 border-dark rounded-0" id="message" name="message" rows="4" autocomplete="off" required></textarea>
+                                <div class="invalid-feedback">Silakan tuliskan pesan Anda.</div>
+                            </div>
+                            <button type="submit" class="btn btn-comic-primary w-100 py-3 font-archivo text-uppercase">KIRIM PESAN <i class="bi bi-send-fill ms-2"></i></button>
+                            <div id="formSuccessAlert" class="alert alert-success mt-3 d-none font-dm border border-2 border-dark rounded-0">
+                                Pesan berhasil divalidasi! Silakan hubungi langsung melalui WhatsApp atau Email tertera.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top border-3 border-dark bg-body text-center">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center gap-3">
+                <div class="monogram-badge-lg">RA</div>
+                <h4 class="font-bangers display-6 text-comic-red mb-0 footer-bersambung">BERSAMBUNG...</h4>
+                <p class="font-dm text-muted small mb-0">&copy; <span id="currentYear"></span> Rizki Apriana. Hak Cipta Dilindungi. Dirancang dengan Sistem Desain Comic Chronicles.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-comic-primary rounded-circle border border-2 border-dark shadow" aria-label="Kembali ke Atas">
+        <i class="bi bi-arrow-up-short fs-4"></i>
+    </button>
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border border-3 border-dark rounded-0 bg-surface">
+                <div class="modal-header border-bottom border-dark bg-body">
+                    <h3 class="modal-title font-archivo fs-4" id="projectModalLabel">Detail Proyek</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body font-dm p-4" id="projectModalBody"></div>
+                <div class="modal-footer border-top border-dark bg-body">
+                    <button type="button" class="btn btn-comic-outline font-archivo" data-bs-dismiss="modal">TUTUP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate Modal -->
+    <div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border border-3 border-dark rounded-0 bg-surface">
+                <div class="modal-header border-bottom border-dark bg-body">
+                    <h3 class="modal-title font-archivo fs-4" id="certModalLabel">Pratinjau Sertifikat</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body text-center p-4">
+                    <img id="certModalImage" src="" alt="Sertifikat" class="img-fluid border border-2 border-dark w-100">
+                </div>
+                <div class="modal-footer border-top border-dark bg-body">
+                    <button type="button" class="btn btn-comic-outline font-archivo" data-bs-dismiss="modal">TUTUP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JS (Ditambahkan defer agar tidak memblokir render HTML) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+    <!-- Custom JS Scripts -->
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/navigation.js" defer></script>
+    <script src="assets/js/projects.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script type="module" src="assets/js/firebase-reviews.js"></script>
+</body>
+</html>
