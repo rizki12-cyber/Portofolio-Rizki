@@ -186,16 +186,23 @@
                         </span>
                     </h1>
 
-                    <h2 class="h4 font-bangers tracking-wide text-secondary mb-4">
-                        JUNIOR WEB DEVELOPER
-                    </h2>
-
                     <p class="hero-desc font-dm text-muted mb-5">
                         Saya merupakan lulusan Rekayasa Perangkat Lunak yang memiliki ketertarikan pada pengembangan website dan aplikasi berbasis web. Saya senang mempelajari teknologi baru serta mengembangkan solusi digital yang fungsional dan menarik.
                     </p>
                     <div class="d-flex flex-wrap gap-3">
                         <a href="#projects" class="btn btn-comic-primary px-4 py-3 font-archivo text-uppercase">LIHAT PROYEK SAYA</a>
                         <a href="cv.html" class="btn btn-comic-outline px-4 py-3 font-archivo text-uppercase">UNDUH CV</a>
+                    </div>
+
+                    <!-- Moto Harian Dinamis ala Komik -->
+                    <div class="daily-motto-box mt-4 p-3 border border-2 border-dark bg-comic-yellow shadow-comic" data-aos="fade-up">
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="badge bg-comic-red text-white font-bangers px-2 py-0 fs-6 border border-dark">MOTO HARIAN</span>
+                            <small class="font-bangers text-dark tracking-widest" id="mottoDayLabel">EDISI HARI INI</small>
+                        </div>
+                        <p class="font-dm fw-bold text-dark mb-0 fs-6" id="dailyMottoText">
+                            "Memuat kutipan hari ini..."
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
@@ -260,6 +267,8 @@
                         <div class="speech-bubble-about position-absolute top-0 end-0 translate-middle-y me-4 px-3 py-1 bg-comic-yellow border border-dark font-bangers">
                             BERSEMANGAT &amp; BERDEDIKASI!
                         </div>
+
+                        
                         <p class="font-dm fs-5 lh-lg mb-4">
                             "Saya merupakan lulusan SMK jurusan Rekayasa Perangkat Lunak yang memiliki ketertarikan pada pengembangan website dan aplikasi berbasis web. Saya memiliki pengalaman praktik kerja lapangan sebagai Web Developer, dengan keterlibatan dalam pengembangan aplikasi menggunakan Laravel, PHP, HTML, CSS, dan MySQL."
                         </p>
@@ -435,94 +444,84 @@
                 <div class="comic-divider"></div>
             </div>
             
-            <div class="row g-4" id="skillsContainer">
-                <!-- 1. FRONTEND -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
-                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-comic-red">FRONTEND</h3>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-html text-danger me-1"></i> HTML5</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-css text-primary me-1"></i> CSS3</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-js text-warning me-1"></i> JavaScript</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-bootstrap-fill text-purple me-1"></i> Bootstrap</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-lightning-charge-fill me-1" style="color: #646CFF;"></i> Vite.js</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. BACKEND & DB -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
-                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-comic-yellow">BACKEND &amp; DB</h3>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-php text-secondary me-1"></i> PHP</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-shield-fill-check text-danger me-1"></i> Laravel</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-database-fill text-info me-1"></i> MySQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. UI/UX & DESAIN -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
-                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
-                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-info">UI/UX &amp; DESAIN</h3>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-palette text-primary me-1"></i> Canva</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-phone text-success me-1"></i> Responsive Design</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. TOOLS & VERSION -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
-                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-success">TOOLS &amp; VERSION</h3>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-code text-info me-1"></i> VS Code</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-git text-danger me-1"></i> Git &amp; GitHub</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-file-earmark-word text-primary me-1"></i> MS Word</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-file-earmark-excel text-success me-1"></i> MS Excel</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5. DEPLOYMENT -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
-                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
-                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-warning">DEPLOYMENT</h3>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-triangle-fill text-dark me-1"></i> Vercel</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-cloud-arrow-up text-info me-1"></i> Netlify</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-hdd-rack text-secondary me-1"></i> cPanel</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 6. AI & PROMPTING -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
-                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark" style="color: #8b5cf6;">AI &amp; PROMPTING</h3>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-braces text-primary me-1"></i> DeepSeek</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-robot me-1" style="color: #8b5cf6;"></i> ChatGPT</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-stars text-warning me-1"></i> Claude</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-github text-dark me-1"></i> Copilot</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-google me-1" style="color: #4285F4;"></i> Gemini AI</span>
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-cpu me-1" style="color: #6366f1;"></i> Qwen AI</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 7. API & INTEGRATION -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
-                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
-                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-danger">API &amp; INTEGRATION</h3>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-fire text-warning me-1"></i> Firebase Integration</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="row g-4 justify-content-center" id="skillsContainer">
+    <!-- 1. FRONTEND -->
+    <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+            <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-comic-red">FRONTEND</h3>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-html text-danger me-1"></i> HTML5</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-css text-primary me-1"></i> CSS3</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-js text-warning me-1"></i> JavaScript</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-bootstrap-fill me-1" style="color: #7952B3;"></i> Bootstrap</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-lightning-charge-fill me-1" style="color: #646CFF;"></i> Vite.js</span>
             </div>
+        </div>
+    </div>
+
+    <!-- 2. BACKEND & DB (Core Stack Diberi Penanda Khusus) -->
+    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100 position-relative">
+            <span class="position-absolute top-0 end-0 translate-middle-y badge bg-comic-red text-white border border-dark font-bangers me-3 mt-3">CORE STACK</span>
+            <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-dark">BACKEND &amp; DB</h3>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-php text-secondary me-1"></i> PHP</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-shield-fill-check text-danger me-1"></i> Laravel</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-database-fill text-info me-1"></i> MySQL</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. API & INTEGRATION (Digabung agar grid pas & relevan) -->
+    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+            <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-danger">API &amp; INTEGRATION</h3>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-fire text-warning me-1"></i> Firebase</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-code-slash text-success me-1"></i> RESTful API</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-json text-primary me-1"></i> JSON / AJAX</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. TOOLS & VERSION CONTROL -->
+    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+            <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-success">TOOLS &amp; VERSION</h3>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-code text-info me-1"></i> VS Code</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-git text-danger me-1"></i> Git &amp; GitHub</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-server text-warning me-1"></i> Postman</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-hdd-stack text-secondary me-1"></i> XAMPP</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. DEPLOYMENT & UI/UX -->
+    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+        <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+            <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-warning">DEPLOYMENT &amp; DESIGN</h3>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-cloud-arrow-up text-info me-1"></i> Vercel / Netlify</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-hdd-rack text-secondary me-1"></i> cPanel</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-palette text-primary me-1"></i> Canva</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-phone text-success me-1"></i> Responsive Design</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 6. AI & PROMPTING -->
+    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+            <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark" style="color: #8b5cf6;">AI &amp; PROMPTING</h3>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-github text-dark me-1"></i> GitHub Copilot</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-robot me-1" style="color: #8b5cf6;"></i> ChatGPT &amp; Claude</span>
+                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-google me-1" style="color: #4285F4;"></i> Gemini &amp; DeepSeek</span>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
     </section>
 
@@ -541,89 +540,104 @@
                 <div class="comic-divider"></div>
             </div>
 
-            <div class="row g-4" id="projectsGrid">
-                <!-- Project 01 -->
-                <div class="col-12" data-aos="fade-up">
-                    <div class="comic-project-card featured border border-3 border-dark bg-body p-4 p-lg-5">
-                        <div class="row align-items-center g-4">
-                            <div class="col-lg-7">
-                                <span class="badge bg-comic-red text-white font-bangers px-3 py-1 mb-2">PROYEK 01 — UNGGULAN</span>
-                                <h3 class="font-archivo display-6 mb-2">CASA RASA</h3>
-                                <h4 class="font-bangers text-secondary fs-4 mb-3">Website E-Commerce Makanan Premium</h4>
-                                <p class="font-dm mb-4">Website e-commerce makanan dengan tampilan modern dan sistem pengelolaan produk lengkap yang dirancang untuk memudahkan transaksi jual beli kuliner secara online.</p>
-                                <div class="mb-4">
-                                    <strong class="font-archivo d-block mb-2">Teknologi yang Digunakan:</strong>
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <span class="badge border border-dark bg-surface text-dark">Laravel</span>
-                                        <span class="badge border border-dark bg-surface text-dark">PHP</span>
-                                        <span class="badge border border-dark bg-surface text-dark">MySQL</span>
-                                        <span class="badge border border-dark bg-surface text-dark">Bootstrap</span>
-                                        <span class="badge border border-dark bg-surface text-dark">JavaScript</span>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-column flex-sm-row gap-2">
-                                    <button class="btn btn-comic-primary px-4 py-2 font-archivo view-project-btn" data-project-id="1">LIHAT DETAIL</button>
-                                    <a href="https://github.com/rizki12-cyber/E-Commerce-Restoran" target="_blank" rel="noopener noreferrer" class="btn btn-comic-outline px-4 py-2 font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="border border-2 border-dark overflow-hidden position-relative">
-                                    <img src="assets/images/projects/casarasa1.png" alt="Casa Rasa E-Commerce" class="img-fluid w-100 object-fit-cover" style="height: 300px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop'">
-                                    <div class="position-absolute top-0 end-0 m-2 badge bg-comic-yellow text-dark border border-dark font-bangers">E-COMMERCE</div>
-                                </div>
-                            </div>
+           <div class="row g-4" id="projectsGrid">
+    <!-- Project 01: Casa Rasa -->
+    <div class="col-12" data-aos="fade-up">
+        <div class="comic-project-card featured border border-3 border-dark bg-body p-4 p-lg-5">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <span class="badge bg-comic-red text-white font-bangers px-3 py-1 mb-2">PROYEK 01 — UNGGULAN</span>
+                    <h3 class="font-archivo display-6 mb-2">CASA RASA</h3>
+                    <h4 class="font-bangers text-secondary fs-4 mb-3">Website E-Commerce Makanan</h4>
+                    
+                    <div class="font-dm mb-4 space-y-2">
+                        <p class="mb-2"><strong class="font-archivo">Proses:</strong> Merancang alur pemesanan dari katalog menu, keranjang belanja, hingga dashboard admin untuk mengelola stok dan status pesanan.</p>
+                        <p class="mb-0"><strong class="font-archivo">Tantangan:</strong> Menjaga sinkronisasi hitung total harga dan pemotongan stok produk di MySQL saat pengguna mengubah jumlah item di keranjang secara bersamaan.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <strong class="font-archivo d-block mb-2">Teknologi:</strong>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark">Laravel</span>
+                            <span class="badge border border-dark bg-surface text-dark">PHP</span>
+                            <span class="badge border border-dark bg-surface text-dark">MySQL</span>
+                            <span class="badge border border-dark bg-surface text-dark">Bootstrap</span>
+                            <span class="badge border border-dark bg-surface text-dark">JavaScript</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- Project 02 -->
-                <div class="col-md-6" data-aos="fade-up">
-                    <div class="comic-project-card border border-3 border-dark bg-body p-4 h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <div class="border border-2 border-dark overflow-hidden mb-3 position-relative">
-                                <img src="assets/images/projects/klinik1.png" alt="PoliklinikApp" class="img-fluid w-100 object-fit-cover" style="height: 220px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=800&auto=format&fit=crop'">
-                                <span class="position-absolute top-0 end-0 m-2 badge bg-comic-red text-white border border-dark font-bangers">PoliklinikApp</span>
-                            </div>
-                            <h3 class="font-archivo fs-3 mb-1">PoliklinikApp</h3>
-                            <h4 class="font-bangers text-secondary fs-6 mb-2">Sistem Manajemen Klinik</h4>
-                            <p class="font-dm text-muted small mb-3">Aplikasi manajemen poliklinik untuk mengelola data pasien, dokter, pendaftaran, pemeriksaan, dan pembayaran.</p>
-                            <div class="d-flex flex-wrap gap-1 mb-3">
-                                <span class="badge border border-dark bg-surface text-dark small">Laravel</span>
-                                <span class="badge border border-dark bg-surface text-dark small">MySQL</span>
-                                <span class="badge border border-dark bg-surface text-dark small">Bootstrap</span>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
-                            <button class="btn btn-comic-outline flex-fill font-archivo view-project-btn" data-project-id="2"><i class="bi bi-eye-fill me-1"></i> LIHAT DETAIL</button>
-                            <a href="https://github.com/rizki12-cyber/PoliklinikApp" target="_blank" rel="noopener noreferrer" class="btn btn-comic-primary flex-fill font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
-                        </div>
+                    <div class="d-flex flex-column flex-sm-row gap-2">
+                        <button class="btn btn-comic-primary px-4 py-2 font-archivo view-project-btn" data-project-id="1">BACA CASE STUDY</button>
+                        <a href="https://github.com/rizki12-cyber/E-Commerce-Restoran" target="_blank" rel="noopener noreferrer" class="btn btn-comic-outline px-4 py-2 font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
                     </div>
                 </div>
-
-                <!-- Project 03 -->
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="comic-project-card border border-3 border-dark bg-body p-4 h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <div class="border border-2 border-dark overflow-hidden mb-3 position-relative">
-                                <img src="assets/images/projects/crj4.png" alt="Sistem Informasi Desa Ciranjeng" class="img-fluid w-100 object-fit-cover" style="height: 220px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop'">
-                                <span class="position-absolute top-0 end-0 m-2 badge bg-comic-yellow text-dark border border-dark font-bangers">SISTEM INFORMASI DESA</span>
-                            </div>
-                            <h3 class="font-archivo fs-3 mb-1">Desa Ciranjeng</h3>
-                            <h4 class="font-bangers text-secondary fs-6 mb-2">Sistem Informasi Desa</h4>
-                            <p class="font-dm text-muted small mb-3">Website informasi desa untuk menampilkan profil, berita, agenda, potensi, dan statistik kependudukan masyarakat desa.</p>
-                            <div class="d-flex flex-wrap gap-1 mb-3">
-                                <span class="badge border border-dark bg-surface text-dark small">Laravel</span>
-                                <span class="badge border border-dark bg-surface text-dark small">JavaScript</span>
-                                <span class="badge border border-dark bg-surface text-dark small">MySQL</span>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
-                            <button class="btn btn-comic-outline flex-fill font-archivo view-project-btn" data-project-id="3"><i class="bi bi-eye-fill me-1"></i> LIHAT DETAIL</button>
-                            <a href="https://github.com/rizki12-cyber/sistem-informasi-desa" target="_blank" rel="noopener noreferrer" class="btn btn-comic-primary flex-fill font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
-                        </div>
+                <div class="col-lg-5">
+                    <div class="border border-2 border-dark overflow-hidden position-relative">
+                        <img src="assets/images/projects/casarasa1.png" alt="Casa Rasa E-Commerce" class="img-fluid w-100 object-fit-cover" style="height: 300px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop'">
+                        <div class="position-absolute top-0 end-0 m-2 badge bg-comic-yellow text-dark border border-dark font-bangers">E-COMMERCE</div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Project 02: PoliklinikApp -->
+    <div class="col-md-6" data-aos="fade-up">
+        <div class="comic-project-card border border-3 border-dark bg-body p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+                <div class="border border-2 border-dark overflow-hidden mb-3 position-relative">
+                    <img src="assets/images/projects/klinik1.png" alt="PoliklinikApp" class="img-fluid w-100 object-fit-cover" style="height: 220px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=800&auto=format&fit=crop'">
+                    <span class="position-absolute top-0 end-0 m-2 badge bg-comic-red text-white border border-dark font-bangers">PoliklinikApp</span>
+                </div>
+                <h3 class="font-archivo fs-3 mb-1">PoliklinikApp</h3>
+                <h4 class="font-bangers text-secondary fs-6 mb-3">Sistem Manajemen Klinik</h4>
+                
+                <div class="font-dm small mb-3">
+                    <p class="mb-2"><strong class="font-archivo text-dark">Proses:</strong> Membangun sistem multi-role (Admin, Dokter, Pasien) untuk alur pendaftaran antrean, input rekam medis/obat, hingga kalkulasi biaya periksa.</p>
+                    <p class="mb-0"><strong class="font-archivo text-dark">Tantangan:</strong> Mengelola relasi tabel *many-to-many* antara riwayat pemeriksaan dan daftar obat yang diresepkan dokter serta pembatasan hak akses *middleware*.</p>
+                </div>
+
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                    <span class="badge border border-dark bg-surface text-dark small">Laravel</span>
+                    <span class="badge border border-dark bg-surface text-dark small">MySQL</span>
+                    <span class="badge border border-dark bg-surface text-dark small">Bootstrap</span>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
+                <button class="btn btn-comic-outline flex-fill font-archivo view-project-btn" data-project-id="2"><i class="bi bi-journal-text me-1"></i> CASE STUDY</button>
+                <a href="https://github.com/rizki12-cyber/PoliklinikApp" target="_blank" rel="noopener noreferrer" class="btn btn-comic-primary flex-fill font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 03: Desa Ciranjeng -->
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="comic-project-card border border-3 border-dark bg-body p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+                <div class="border border-2 border-dark overflow-hidden mb-3 position-relative">
+                    <img src="assets/images/projects/crj4.png" alt="Sistem Informasi Desa Ciranjeng" class="img-fluid w-100 object-fit-cover" style="height: 220px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop'">
+                    <span class="position-absolute top-0 end-0 m-2 badge bg-comic-yellow text-dark border border-dark font-bangers">SISTEM INFORMASI DESA</span>
+                </div>
+                <h3 class="font-archivo fs-3 mb-1">Desa Ciranjeng</h3>
+                <h4 class="font-bangers text-secondary fs-6 mb-3">Sistem Informasi Desa</h4>
+                
+                <div class="font-dm small mb-3">
+                    <p class="mb-2"><strong class="font-archivo text-dark">Proses:</strong> Membuat portal informasi publik desa beserta panel operator untuk publikasi berita, agenda kegiatan, potensi wilayah, dan grafik data kependudukan.</p>
+                    <p class="mb-0"><strong class="font-archivo text-dark">Tantangan:</strong> Merancang struktur database kependudukan agar mudah dikelompokkan berdasarkan usia/pekerjaan serta memastikan tampilan tetap ringan dibuka lewat jaringan seluler warga.</p>
+                </div>
+
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                    <span class="badge border border-dark bg-surface text-dark small">Laravel</span>
+                    <span class="badge border border-dark bg-surface text-dark small">JavaScript</span>
+                    <span class="badge border border-dark bg-surface text-dark small">MySQL</span>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
+                <button class="btn btn-comic-outline flex-fill font-archivo view-project-btn" data-project-id="3"><i class="bi bi-journal-text me-1"></i> CASE STUDY</button>
+                <a href="https://github.com/rizki12-cyber/sistem-informasi-desa" target="_blank" rel="noopener noreferrer" class="btn btn-comic-primary flex-fill font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
     </section>
 
@@ -670,7 +684,7 @@
                     <div class="comic-cert-card border border-3 border-dark bg-body p-3 h-100 d-flex flex-column justify-content-between">
                         <div>
                             <div class="border border-2 border-dark overflow-hidden mb-3 position-relative cert-thumb" style="cursor: pointer;" data-img="assets/images/certificates/ujikom.jpg" data-title="Sertifikat Uji Kompetensi PT Gebra">
-                                <img src="assets/images/certificates/ujikom.jpg" alt="Sertifikat Webinar" class="img-fluid w-100 object-fit-cover" style="height: 200px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&auto=format&fit=crop'">
+                                <img src="assets/images/certificates/ujikom.jpg" alt="Sertifikat Uji Kompetensi" class="img-fluid w-100 object-fit-cover" style="height: 200px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&auto=format&fit=crop'">
                                 <span class="position-absolute bottom-0 start-0 m-2 badge bg-dark text-white font-bangers">PT. Gebra</span>
                             </div>
                             <h3 class="font-archivo fs-5 mb-1">Sertifikat Uji Kompetensi PT Gebra</h3>

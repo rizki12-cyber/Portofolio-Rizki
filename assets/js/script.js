@@ -281,5 +281,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// ==========================================
+    // MOTO HARIAN OTOMATIS BERDASARKAN HARI
+    // ==========================================
+    const dailyMottoText = document.getElementById('dailyMottoText');
+    const mottoDayLabel = document.getElementById('mottoDayLabel');
+
+    if (dailyMottoText) {
+        // Daftar moto yang bisa disesuaikan otomatis per hari (0 = Minggu, 1 = Senin, dst.)
+        const mottos = [
+            { day: "MINGGU", quote: "Seperti senja yang selalu indah, ada kalanya kita perlu berhenti sejenak untuk menikmati kehadiran seseorang yang berarti." },
+            { day: "SENIN", quote: "Seminggu boleh dimulai dengan banyak rencana, tetapi satu hal yang selalu kuharapkan adalah tetap ada kamu di dalamnya." },
+            { day: "SELASA", quote: "Seperti kode yang terus kususun hingga sempurna, perasaanku padamu tak pernah lelah menemukan alasan untuk bertahan." },
+            { day: "RABU", quote: "Jika hidup adalah perjalanan penuh error, semoga kamu selalu menjadi bagian yang tidak ingin kuhapus dari ceritaku." },
+            { day: "KAMIS", quote: "Aku tidak membutuhkan hari yang sempurna, cukup seseorang yang membuat hari biasa terasa istimewa." },
+            { day: "JUMAT", quote: "Di antara ribuan hal yang ingin kuselesaikan, ada satu doa yang tak pernah lupa kupanjatkan: semoga kita tetap bersama." },
+            { day: "SABTU", quote: "Kalau waktu bisa kuatur seperti algoritma, aku ingin setiap akhir pekan selalu punya cerita bersamamu." }
+        ];
+
+        const todayIndex = new Date().getDay(); // Mendapatkan angka 0-6 hari ini
+        const todayMotto = mottos[todayIndex];
+
+        // Tampilkan ke elemen HTML
+        dailyMottoText.textContent = `"${todayMotto.quote}"`;
+        if (mottoDayLabel) {
+            mottoDayLabel.textContent = `EDISI HARI ${todayMotto.day}`;
+        }
+    }
+
 console.log("%c⚡ COMIC CHRONICLES SYSTEM ACTIVE ⚡", "background: #111; color: #ffe600; padding: 6px 12px; font-weight: bold; font-family: monospace; border: 2px solid #111;");
 console.log("Halo, Rekruter/Developer! Tertarik dengan kodenya? Mari terhubung: rizki@email.com");
