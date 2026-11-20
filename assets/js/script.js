@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const STORAGE_KEY = 'comic_testimonials';
 
-    // Ambil data ulasan dari LocalStorage
     function getReviews() {
         try {
             const savedReviews = JSON.parse(
@@ -70,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let reviews = getReviews();
 
-    // Render seluruh ulasan
     function renderReviews() {
         if (!testimonialsList) return;
 
@@ -80,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
             reviewCount.textContent = reviews.length;
         }
 
-        // Tampilan ketika belum ada ulasan
         if (reviews.length === 0) {
             const emptyMessage = document.createElement('p');
             emptyMessage.className = 'font-dm text-muted text-center py-3 small';
@@ -93,17 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const reviewCard = document.createElement('div');
             reviewCard.className = 'p-3 mb-3 border border-2 border-dark bg-surface position-relative';
 
-            // Nama pengunjung
             const name = document.createElement('h5');
             name.className = 'font-archivo fs-6 mb-1 text-comic-red';
             name.textContent = item.name;
 
-            // Isi ulasan
             const message = document.createElement('p');
             message.className = 'font-dm small mb-2 text-body';
             message.textContent = `"${item.message}"`;
 
-            // Tanggal ulasan
             const date = document.createElement('small');
             date.className = 'font-dm text-muted d-block';
             date.style.fontSize = '0.75rem';
@@ -122,7 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Tampilkan notifikasi form
     function showFeedback(message, type) {
         if (!reviewFeedback) return;
 
@@ -131,13 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
             type === 'success' ? 'text-success' : 'text-danger'
         }`;
 
-        // Hilang otomatis setelah 4 detik
         setTimeout(() => {
             reviewFeedback.textContent = '';
         }, 4000);
     }
 
-    // Proses pengiriman ulasan
     if (reviewForm) {
         reviewForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -148,19 +139,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = nameInput.value.trim();
             const message = messageInput.value.trim();
 
-            // Validasi input kosong
             if (!name || !message) {
                 showFeedback('Nama dan ulasan wajib diisi.', 'error');
                 return;
             }
 
-            // Validasi batas karakter
             if (name.length > 50 || message.length > 500) {
                 showFeedback('Nama atau ulasan melebihi batas karakter.', 'error');
                 return;
             }
 
-            // Buat data ulasan baru
             const newReview = {
                 id: Date.now(),
                 name: name,
@@ -168,36 +156,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 date: new Date().toISOString()
             };
 
-            // Tambahkan ke urutan paling atas
             reviews.unshift(newReview);
 
             try {
-                // Simpan ke LocalStorage
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(reviews));
-
-                // Perbarui tampilan secara langsung
                 renderReviews();
-
-                // Kosongkan form
                 reviewForm.reset();
-
-                // Notifikasi berhasil
                 showFeedback('Terima kasih! Ulasan berhasil dikirim.', 'success');
-
             } catch (error) {
-                reviews.shift(); // Batalkan jika gagal
+                reviews.shift();
                 console.error('Gagal menyimpan ulasan:', error);
                 showFeedback('Ulasan gagal disimpan. Silakan coba lagi.', 'error');
             }
         });
     }
 
-    // Jalankan render ulasan pertama kali saat halaman dimuat
     renderReviews();
 });
 
 /* ==========================================================
-   INTERACTIVE COMIC SPLASH SCREEN (WITH AUDIO TRIGGER)
+   INTERACTIVE COMIC SPLASH SCREEN (AUDIO EFX ONLY)
    ========================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -212,12 +190,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Kunci scroll halaman utama di awal
     document.body.style.overflow = 'hidden';
 
-    // Fungsi Web Audio API untuk efek suara komik retro
+    let cachedAudioCtx = null;
+    function getAudioCtx() {
+        if (cachedAudioCtx) return cachedAudioCtx;
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return null;
+        cachedAudioCtx = new AudioContext();
+        return cachedAudioCtx;
+    }
+
     function playComicSound(type) {
         try {
-            const AudioContext = window.AudioContext || window.webkitAudioContext;
-            if (!AudioContext) return;
-            const ctx = new AudioContext();
+            const ctx = getAudioCtx();
+            if (!ctx) return;
+
+            if (ctx.state === 'suspended') ctx.resume();
 
             const osc = ctx.createOscillator();
             const gain = ctx.createGain();
@@ -243,19 +230,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 osc.stop(ctx.currentTime + 0.45);
             }
         } catch (e) {
-            console.log("Audio error:", e);
+            console.warn("Audio error:", e);
         }
     }
 
-    // Saat tombol "BUKA KOMIK" diklik oleh pengunjung:
     startBtn.addEventListener('click', () => {
-        // Sembunyikan tombol, tampilkan angka hitung mundur
         startBtn.classList.add('d-none');
         countdownArea.classList.remove('d-none');
 
         let count = 3;
         countdownNumber.textContent = count;
-        playComicSound('tick'); // Suara aktif karena dipicu oleh klik pengguna!
+        playComicSound('tick');
 
         const countdownInterval = setInterval(() => {
             count--;
@@ -267,28 +252,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(countdownInterval);
                 countdownNumber.textContent = "READY!";
                 countdownNumber.classList.add('comic-boom');
-                playComicSound('ready'); // Suara chime spesial
-                
+                playComicSound('ready');
+
                 if (splashStatusText) splashStatusText.textContent = "SELAMAT MEMBACA!";
 
-                // Angkat layar splash ke atas setelah 500ms
+                // (Perbaikan: Pemanggilan playDailyMusic otomatis dihapus agar lagu tidak menyala sendiri)
+
                 setTimeout(() => {
                     splashScreen.classList.add('splash-hidden');
-                    document.body.style.overflow = ''; // Kembalikan fungsi scroll
+                    document.body.style.overflow = '';
                 }, 500);
             }
         }, 700);
     });
 });
 
-// ==========================================
+/* ==========================================================
+   MOTO HARIAN & SOUNDTRACK HARIAN (HTML5 AUDIO)
+   ========================================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ==========================================
     // MOTO HARIAN OTOMATIS BERDASARKAN HARI
     // ==========================================
     const dailyMottoText = document.getElementById('dailyMottoText');
     const mottoDayLabel = document.getElementById('mottoDayLabel');
 
     if (dailyMottoText) {
-        // Daftar moto yang bisa disesuaikan otomatis per hari (0 = Minggu, 1 = Senin, dst.)
         const mottos = [
             { day: "MINGGU", quote: "Seperti senja yang selalu indah, ada kalanya kita perlu berhenti sejenak untuk menikmati kehadiran seseorang yang berarti." },
             { day: "SENIN", quote: "Seminggu boleh dimulai dengan banyak rencana, tetapi satu hal yang selalu kuharapkan adalah tetap ada kamu di dalamnya." },
@@ -299,15 +289,89 @@ document.addEventListener('DOMContentLoaded', () => {
             { day: "SABTU", quote: "Kalau waktu bisa kuatur seperti algoritma, aku ingin setiap akhir pekan selalu punya cerita bersamamu." }
         ];
 
-        const todayIndex = new Date().getDay(); // Mendapatkan angka 0-6 hari ini
+        const todayIndex = new Date().getDay();
         const todayMotto = mottos[todayIndex];
 
-        // Tampilkan ke elemen HTML
         dailyMottoText.textContent = `"${todayMotto.quote}"`;
         if (mottoDayLabel) {
             mottoDayLabel.textContent = `EDISI HARI ${todayMotto.day}`;
         }
     }
+
+    // ==========================================
+    // SOUNDTRACK HARIAN - HTML5 AUDIO PLAYER
+    // ==========================================
+    const musicToggleBtn = document.getElementById('musicToggleBtn');
+    const dailySongTitle = document.getElementById('dailySongTitle');
+    const musicDayLabel = document.getElementById('musicDayLabel');
+    const dailyYoutubePlayer = document.getElementById('dailyYoutubePlayer'); // Wadah status audio
+
+    if (musicToggleBtn && dailySongTitle && dailyYoutubePlayer) {
+
+        const songs = [
+            { day: "MINGGU", title: "Satu-Satu", artist: "Idgitaf", audioUrl: "assets/audio/minggu.mp3" },
+            { day: "SENIN", title: "Komang", artist: "Raim Laode", audioUrl: "assets/audio/senin.mp3" },
+            { day: "SELASA", title: "Akad", artist: "Payung Teduh", audioUrl: "assets/audio/selasa.mp3" },
+            { day: "RABU", title: "Mesin Waktu", artist: "Budi Doremi", audioUrl: "assets/audio/rabu.mp3" },
+            { day: "KAMIS", title: "Teman Hidup", artist: "Tulus", audioUrl: "assets/audio/kamis.mp3" },
+            { day: "JUMAT", title: "Bertaut", artist: "Nadin Amizah", audioUrl: "assets/audio/jumat.mp3" },
+            { day: "SABTU", title: "Monokrom", artist: "Tulus", audioUrl: "assets/audio/sabtu.mp3" }
+        ];
+
+        const todayIndex = new Date().getDay();
+        const todaySong = songs[todayIndex];
+
+        dailySongTitle.textContent = `${todaySong.title} — ${todaySong.artist}`;
+        if (musicDayLabel) {
+            musicDayLabel.textContent = `EDISI HARI ${todaySong.day}`;
+        }
+
+        // Inisialisasi objek Audio HTML5
+        const audioElement = new Audio(todaySong.audioUrl);
+        audioElement.volume = 0.4;
+        audioElement.loop = true;
+
+        let isPlaying = false;
+
+        function updateButtonUI() {
+            if (isPlaying) {
+                musicToggleBtn.textContent = '⏸ JEDA';
+                dailyYoutubePlayer.innerHTML = `<span class="font-dm small text-success fw-bold">🎵 Sedang memutar soundtrack harian...</span>`;
+            } else {
+                musicToggleBtn.textContent = '▶ PUTAR';
+                dailyYoutubePlayer.innerHTML = `<span class="font-dm small text-muted">Audio dijeda. Tekan putar untuk mendengarkan.</span>`;
+            }
+        }
+
+        // Tombol hanya merespons jika diklik manual oleh pengguna
+        musicToggleBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audioElement.pause();
+                isPlaying = false;
+                updateButtonUI();
+            } else {
+                audioElement.play().then(() => {
+                    isPlaying = true;
+                    updateButtonUI();
+                }).catch(error => {
+                    console.warn("Gagal memutar audio:", error);
+                    dailyYoutubePlayer.innerHTML = `<span class="font-dm small text-danger">⚠️ Pastikan file MP3 sudah ada di folder assets/audio/</span>`;
+                });
+            }
+        });
+
+        audioElement.addEventListener('ended', () => {
+            isPlaying = false;
+            updateButtonUI();
+        });
+
+        updateButtonUI();
+    }
+});
+
+/* ==========================================================
+   CONSOLE EASTER EGG
+   ========================================================== */
 
 console.log("%c⚡ COMIC CHRONICLES SYSTEM ACTIVE ⚡", "background: #111; color: #ffe600; padding: 6px 12px; font-weight: bold; font-family: monospace; border: 2px solid #111;");
 console.log("Halo, Rekruter/Developer! Tertarik dengan kodenya? Mari terhubung: rizki@email.com");

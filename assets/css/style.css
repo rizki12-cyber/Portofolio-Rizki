@@ -985,3 +985,62 @@ code {
     visibility: hidden;
     pointer-events: none;
 }
+
+/* ==== Logo pada Card Experience ==== */
+.comic-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    background: #fff;
+    border: 2px solid #1a1a1a;
+    border-radius: 8px;
+    padding: 4px;
+    box-shadow: 3px 3px 0 #1a1a1a;
+    flex-shrink: 0;
+}
+
+@media (max-width: 575.98px) {
+    .comic-logo {
+        width: 44px;
+        height: 44px;
+        box-shadow: 2px 2px 0 #1a1a1a;
+    }
+}
+
+/* ==========================================================
+   SPLASH SCREEN EXTERNAL GIF
+   ========================================================== */
+.splash-gif {
+    width: 180px; /* Ukuran di layar desktop */
+    height: auto;
+    z-index: 1; /* Berada di belakang kotak utama agar tidak menutupi tombol */
+    pointer-events: none; /* Agar tidak mengganggu klik mouse */
+}
+
+/* Penyesuaian ukuran saat dibuka lewat HP */
+@media (max-width: 576px) {
+    .splash-gif {
+        width: 110px;
+    }
+}
+
+/* ==========================================
+   DAILY SOUNDTRACK CARD ENHANCEMENTS
+   ========================================== */
+.daily-music-box {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.daily-music-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 8px 8px 0 var(--border-color) !important;
+}
+
+@keyframes pulseAnimation {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.95); }
+}
+
+.animate-pulse {
+    animation: pulseAnimation 1.5s infinite ease-in-out;
+}

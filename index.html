@@ -97,34 +97,37 @@
 </head>
 <body>
 
-    <!-- Splash Screen Interaktif dengan GIF Animasi Spider-Man -->
-    <div id="comicSplash" class="splash-screen position-relative d-flex align-items-center justify-content-center">
+    <!-- Splash Screen Interaktif dengan GIF Animasi di Tengah Atas -->
+<div id="comicSplash" class="splash-screen position-relative d-flex align-items-center justify-content-center">
 
-        <div class="splash-box p-4 p-md-5 border border-4 border-dark bg-body shadow-comic text-center mt-5 pt-4">
-            <span class="badge bg-comic-yellow text-dark border border-2 border-dark font-bangers fs-5 px-3 py-1 mb-2">
-                VOL. 01 — WEB PORTFOLIO
-            </span>
-            
-            <h1 class="font-archivo fs-3 fw-bold text-dark mb-2">
-                RIZKI APRIANA
-            </h1>
+    <!-- Posisi di tengah atas menggunakan top-0 start-50 translate-middle-x -->
+    <img src="assets/images/spider3.gif" alt="Animasi Komik" class="splash-gif position-fixed top-0 start-50 translate-middle-x mt-3">
 
-            <p class="font-dm text-muted small mb-4">
-                Tekan tombol di bawah untuk masuk ke ruang kerja dan eksplorasi proyek.
-            </p>
+    <div class="splash-box p-4 p-md-5 border border-4 border-dark bg-body shadow-comic text-center mt-5 pt-4 position-relative" style="z-index: 2;">
+        <span class="badge bg-comic-yellow text-dark border border-2 border-dark font-bangers fs-5 px-3 py-1 mb-2">
+            VOL. 01 — WEB PORTFOLIO
+        </span>
+        
+        <h1 class="font-archivo fs-3 fw-bold text-dark mb-2">
+            RIZKI APRIANA
+        </h1>
 
-            <!-- Tombol Interaktif untuk Memulai & Mengizinkan Audio -->
-            <button id="startSplashBtn" class="btn btn-comic-red font-bangers fs-5 px-4 py-2 border border-3 border-dark w-100 shadow-sm">
-                ▶ MASUK KE HALAMAN UTAMA
-            </button>
+        <p class="font-dm text-muted small mb-4">
+            Tekan tombol di bawah untuk masuk ke ruang kerja dan eksplorasi proyek.
+        </p>
 
-            <!-- Area Angka Hitung Mundur -->
-            <div id="countdownArea" class="d-none mt-3">
-                <h1 id="countdownNumber" class="font-archivo display-1 fw-bold text-comic-red mb-1 comic-countdown-text">3</h1>
-                <p id="splashStatusText" class="font-bangers fs-6 text-dark mb-0 tracking-widest">MEMUAT SISTEM...</p>
-            </div>
+        <!-- Tombol Interaktif untuk Memulai -->
+        <button id="startSplashBtn" class="btn btn-comic-red font-bangers fs-5 px-4 py-2 border border-3 border-dark w-100 shadow-sm">
+            ▶ MASUK KE HALAMAN UTAMA
+        </button>
+
+        <!-- Area Angka Hitung Mundur -->
+        <div id="countdownArea" class="d-none mt-3">
+            <h1 id="countdownNumber" class="font-archivo display-1 fw-bold text-comic-red mb-1 comic-countdown-text">3</h1>
+            <p id="splashStatusText" class="font-bangers fs-6 text-dark mb-0 tracking-widest">MEMUAT SISTEM...</p>
         </div>
     </div>
+</div>
 
     <!-- Skip link untuk aksesibilitas keyboard -->
     <a href="#home" class="visually-hidden-focusable position-absolute top-0 start-0 m-2 px-3 py-2 bg-dark text-white">Lompat ke konten</a>
@@ -194,15 +197,52 @@
                         <a href="cv.html" class="btn btn-comic-outline px-4 py-3 font-archivo text-uppercase">UNDUH CV</a>
                     </div>
 
-                    <!-- Moto Harian Dinamis ala Komik -->
-                    <div class="daily-motto-box mt-4 p-3 border border-2 border-dark bg-comic-yellow shadow-comic" data-aos="fade-up">
-                        <div class="d-flex align-items-center gap-2 mb-1">
-                            <span class="badge bg-comic-red text-white font-bangers px-2 py-0 fs-6 border border-dark">MOTO HARIAN</span>
-                            <small class="font-bangers text-dark tracking-widest" id="mottoDayLabel">EDISI HARI INI</small>
+                    <!-- Moto & Soundtrack Harian Dinamis -->
+                    <div class="row g-3 mt-4" data-aos="fade-up">
+                    <!-- ===== MOTO HARIAN ===== -->
+                    <div class="col-lg-6">
+                        <div class="daily-motto-box h-100 p-3 p-md-4 border border-2 border-dark bg-comic-yellow shadow-comic d-flex flex-column">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="badge bg-comic-red text-white font-bangers px-2 py-0 fs-6 border border-dark">MOTO HARIAN</span>
+                                <small class="font-bangers text-dark tracking-widest" id="mottoDayLabel">EDISI HARI INI</small>
+                            </div>
+                            <p class="font-dm fw-bold text-dark mb-0 fs-6" id="dailyMottoText">
+                                "Memuat kutipan hari ini..."
+                            </p>
                         </div>
-                        <p class="font-dm fw-bold text-dark mb-0 fs-6" id="dailyMottoText">
-                            "Memuat kutipan hari ini..."
-                        </p>
+                    </div>
+
+                    <!-- ===== SOUNDTRACK HARIAN ===== -->
+                    <div class="col-lg-6">
+                        <div class="daily-music-box h-100 p-3 p-md-4 border border-2 border-dark bg-body shadow-comic d-flex flex-column position-relative overflow-hidden">
+                        
+
+                            <div class="d-flex align-items-center justify-content-between gap-2 mb-2 z-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="badge bg-comic-red text-white font-bangers px-2 py-0 fs-6 border border-dark">SOUNDTRACK</span>
+                                    <small class="font-bangers text-dark tracking-widest" id="musicDayLabel">EDISI HARI INI</small>
+                                </div>
+                                <button id="musicToggleBtn"
+                                        class="btn btn-sm btn-comic-red font-bangers border border-2 border-dark px-3 py-1 shadow-sm"
+                                        type="button">
+                                    ▶ PUTAR
+                                </button>
+                            </div>
+                                <p class="font-dm fw-bold text-dark mb-2 fs-6 z-1" id="dailySongTitle">
+                                    "Memuat lagu hari ini..."
+                                </p>
+
+                                <!-- Wadah status audio & visualizer mini -->
+                                <div id="dailyYoutubePlayer" class="mt-auto pt-2 border-top border-dark border-opacity-25 z-1 d-flex align-items-center justify-content-between">
+                                    <span class="font-dm small text-muted fst-italic">Tekan tombol putar untuk mendengarkan.</span>
+                                    <div class="audio-waves d-none align-items-center gap-1">
+                                        <span class="wave-bar bg-comic-red"></span>
+                                        <span class="wave-bar bg-comic-red"></span>
+                                        <span class="wave-bar bg-comic-red"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
@@ -334,7 +374,7 @@
                         <div class="timeline-item border-start border-4 border-dark ps-4 position-relative" data-aos="fade-up">
                             <div class="timeline-dot bg-comic-red border border-2 border-dark position-absolute top-0 start-0 translate-middle"></div>
                             <span class="badge bg-dark text-white font-bangers mb-2">2015 – 2020</span>
-                            <h3 class="font-archivo fs-4">SDN 01 Ciranjeng</h3>
+                            <h3 class="font-archivo fs-4">SDN Ciranjeng</h3>
                             <h4 class="font-bangers text-secondary fs-5">Pendidikan Sekolah Dasar</h4>
                             <p class="font-dm text-muted mt-2">Menempuh pendidikan dasar sebagai fondasi dalam membangun pengetahuan, kedisiplinan, dan tanggung jawab.</p>
                         </div>
@@ -345,95 +385,112 @@
     </section>
 
     <!-- Professional Journey Section (Experience) -->
-    <section id="experience" class="py-5 border-top border-3 border-dark bg-surface">
-        <div class="container py-5">
-            <div class="section-title-wrap mb-5" data-aos="fade-up">
-                <span class="font-bangers text-comic-red fs-4">BAB 03</span>
-                <h2 class="display-5 font-archivo fw-bold text-uppercase">PERJALANAN PROFESIONAL</h2>
-                <div class="comic-divider"></div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body shadow-comic" data-aos="fade-up">
-                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom border-dark">
-                            <div>
-                                <span class="badge bg-comic-red text-white font-bangers px-3 py-1 mb-2">PRAKTIK KERJA LAPANGAN</span>
+<section id="experience" class="py-5 border-top border-3 border-dark bg-surface">
+    <div class="container py-5">
+        <div class="section-title-wrap mb-5" data-aos="fade-up">
+            <span class="font-bangers text-comic-red fs-4">BAB 03</span>
+            <h2 class="display-5 font-archivo fw-bold text-uppercase">PERJALANAN PROFESIONAL</h2>
+            <div class="comic-divider"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+
+                <!-- ===== CARD 1: PT Grage Media Technology ===== -->
+                <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body shadow-comic" data-aos="fade-up">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom border-dark">
+                        <div>
+                            <span class="badge bg-comic-red text-white font-bangers px-3 py-1 mb-2">PRAKTIK KERJA LAPANGAN</span>
+
+                            <!-- ===== LOGO + NAMA PT GRAGE ===== -->
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="assets/images/gmt.png"
+                                     alt="Logo PT Grage Media Technology"
+                                     class="comic-logo">
                                 <h3 class="font-archivo fs-3 mb-0">PT Grage Media Technology</h3>
                             </div>
-                            <div class="text-lg-end mt-2 mt-lg-0">
-                                <span class="font-bangers fs-5 text-secondary">Juli 2025 – Oktober 2025</span>
-                                <div class="font-archivo fw-bold text-dark">Web Developer Intern</div>
-                            </div>
                         </div>
-                        <h4 class="font-archivo fs-5 mb-3 text-uppercase text-comic-red">Tanggung Jawab Utama:</h4>
-                        <ul class="list-unstyled font-dm space-y-3">
-                            <li class="d-flex align-items-start mb-2">
-                                <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1"></i>
-                                <span>Mengembangkan aplikasi web menggunakan framework Laravel berdasarkan kebutuhan klien.</span>
-                            </li>
-                            <li class="d-flex align-items-start mb-2">
-                                <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1"></i>
-                                <span>Melakukan penyesuaian fitur dan antarmuka berdasarkan feedback langsung dari klien secara profesional.</span>
-                            </li>
-                            <li class="d-flex align-items-start mb-2">
-                                <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1"></i>
-                                <span>Membuat modul panduan penggunaan aplikasi untuk membantu klien memahami sistem dengan mudah.</span>
-                            </li>
-                            <li class="d-flex align-items-start mb-2">
-                                <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1"></i>
-                                <span>Melakukan pengujian mandiri (testing) untuk memastikan fitur berjalan dengan baik tanpa kendala teknis.</span>
-                            </li>
-                        </ul>
+                        <div class="text-lg-end mt-2 mt-lg-0">
+                            <span class="font-bangers fs-5 text-secondary">Juli 2025 – Oktober 2025</span>
+                            <div class="font-archivo fw-bold text-dark">Web Developer Intern</div>
+                        </div>
                     </div>
+                    <h4 class="font-archivo fs-5 mb-3 text-uppercase text-comic-red">Tanggung Jawab Utama:</h4>
+                    <ul class="list-unstyled font-dm">
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1 flex-shrink-0"></i>
+                            <span>Mengembangkan aplikasi web menggunakan framework Laravel berdasarkan kebutuhan klien.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1 flex-shrink-0"></i>
+                            <span>Melakukan penyesuaian fitur dan antarmuka berdasarkan feedback langsung dari klien secara profesional.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1 flex-shrink-0"></i>
+                            <span>Membuat modul panduan penggunaan aplikasi untuk membantu klien memahami sistem dengan mudah.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1 flex-shrink-0"></i>
+                            <span>Melakukan pengujian mandiri (testing) untuk memastikan fitur berjalan dengan baik tanpa kendala teknis.</span>
+                        </li>
+                    </ul>
+                </div>
 
-                    
-                    <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body shadow-comic mt-5" data-aos="fade-up">
-                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom border-dark">
-                            <div>
-                                <span class="badge bg-comic-yellow text-dark font-bangers px-3 py-1 mb-2">ORGANISASI</span>
+                <!-- ===== CARD 2: LABANTIK ===== -->
+                <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body shadow-comic mt-5" data-aos="fade-up">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom border-dark">
+                        <div>
+                            <span class="badge bg-comic-yellow text-dark font-bangers px-3 py-1 mb-2">ORGANISASI</span>
+
+                            <!-- ===== LOGO + NAMA LABANTIK ===== -->
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="assets/images/labantik1.png"
+                                     alt="Logo LABANTIK"
+                                     class="comic-logo">
                                 <h3 class="font-archivo fs-3 mb-0">LABANTIK</h3>
                             </div>
-                            <div class="text-lg-end mt-2 mt-lg-0">
-                                <span class="font-bangers fs-5 text-secondary">2023 – 2026</span>
-                                <div class="font-archivo fw-bold text-dark">Laboratorium Anak Teknik Ilmu Komputer — Anggota</div>
-                            </div>
                         </div>
-
-                        <p class="font-dm text-muted mb-3">
-                            Laboratorium Anak Teknik Ilmu Komputer (LABANTIK) merupakan wadah pengembangan minat dan bakat siswa di bidang teknologi informasi, khususnya pemrograman dan kreativitas digital.
-                        </p>
-
-                        <ul class="list-unstyled font-dm space-y-3">
-                            <li class="d-flex align-items-start mb-2">
-                                <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1"></i>
-                                <span>Mendokumentasikan berbagai kegiatan organisasi melalui fotografi dan media visual.</span>
-                            </li>
-                            <li class="d-flex align-items-start mb-2">
-                                <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1"></i>
-                                <span>Berpartisipasi dalam kegiatan pengembangan keterampilan di bidang pemrograman dan teknologi informasi.</span>
-                            </li>
-                            <li class="d-flex align-items-start mb-2">
-                                <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1"></i>
-                                <span>Mengembangkan kemampuan teknis melalui diskusi, berbagi pengetahuan, dan pembelajaran bersama anggota.</span>
-                            </li>
-                            <li class="d-flex align-items-start mb-2">
-                                <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1"></i>
-                                <span>Membantu mendokumentasikan dan mengabadikan momen penting dalam kegiatan organisasi.</span>
-                            </li>
-                            <li class="d-flex align-items-start mb-2">
-                                <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1"></i>
-                                <span>Melatih kemampuan komunikasi dan kerja sama tim dalam menjalankan kegiatan organisasi.</span>
-                            </li>
-                            <li class="d-flex align-items-start mb-2">
-                                <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1"></i>
-                                <span>Meningkatkan kedisiplinan, tanggung jawab, kreativitas, serta kemampuan beradaptasi dalam lingkungan organisasi.</span>
-                            </li>
-                        </ul>
+                        <div class="text-lg-end mt-2 mt-lg-0">
+                            <span class="font-bangers fs-5 text-secondary">2023 – 2026</span>
+                            <div class="font-archivo fw-bold text-dark">Laboratorium Anak Teknik Ilmu Komputer — Anggota</div>
+                        </div>
                     </div>
+
+                    <p class="font-dm text-muted mb-3">
+                        Laboratorium Anak Teknik Ilmu Komputer (LABANTIK) merupakan wadah pengembangan minat dan bakat siswa di bidang teknologi informasi, khususnya pemrograman dan kreativitas digital.
+                    </p>
+
+                    <ul class="list-unstyled font-dm">
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
+                            <span>Mendokumentasikan berbagai kegiatan organisasi melalui fotografi dan media visual.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
+                            <span>Berpartisipasi dalam kegiatan pengembangan keterampilan di bidang pemrograman dan teknologi informasi.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
+                            <span>Mengembangkan kemampuan teknis melalui diskusi, berbagi pengetahuan, dan pembelajaran bersama anggota.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
+                            <span>Membantu mendokumentasikan dan mengabadikan momen penting dalam kegiatan organisasi.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
+                            <span>Melatih kemampuan komunikasi dan kerja sama tim dalam menjalankan kegiatan organisasi.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
+                            <span>Meningkatkan kedisiplinan, tanggung jawab, kreativitas, serta kemampuan beradaptasi dalam lingkungan organisasi.</span>
+                        </li>
+                    </ul>
                 </div>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Technical Abilities Section (Skills) -->
     <section id="skills" class="py-5 border-top border-3 border-dark">
