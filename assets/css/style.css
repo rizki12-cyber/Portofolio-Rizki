@@ -1044,3 +1044,32 @@ code {
 .animate-pulse {
     animation: pulseAnimation 1.5s infinite ease-in-out;
 }
+
+/* Comic Intro Overlay Minimalist */
+.comic-intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(17, 17, 17, 0.82);
+    backdrop-filter: blur(4px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.comic-intro-overlay.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.comic-intro-content {
+    max-width: 420px; /* Ukuran diperkecil agar pas dan minimalis */
+    width: 88%;
+    background-color: var(--bs-body-bg, #fff);
+    box-shadow: 6px 6px 0px #111111 !important;
+}

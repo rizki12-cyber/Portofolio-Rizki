@@ -370,6 +370,59 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================
+   SMOOTH COMIC INTRO OVERLAY (MINIMALIST & ONCE PER SESSION)
+   ========================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    const introOverlay = document.getElementById('comicIntroOverlay');
+    const closeIntroBtn = document.getElementById('closeIntroBtn');
+    const introTypingTitle = document.getElementById('introTypingTitle');
+
+    if (!introOverlay || !closeIntroBtn) return;
+
+    // Cek apakah intro sudah dilihat pada sesi ini
+    const hasSeenIntro = sessionStorage.getItem('comic_intro_seen');
+
+    if (hasSeenIntro) {
+        introOverlay.remove();
+        document.body.style.overflow = '';
+    } else {
+        document.body.style.overflow = 'hidden';
+
+        // Efek Mengetik Teks Judul (Versi Ringkas)
+        const titleText = "COMIC CHRONICLES";
+        let charIndex = 0;
+        function typeWriter() {
+            if (introTypingTitle && charIndex < titleText.length) {
+                introTypingTitle.textContent += titleText.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeWriter, 60);
+            }
+        }
+        typeWriter();
+
+        function dismissIntro() {
+            introOverlay.classList.add('fade-out');
+            document.body.style.overflow = '';
+            
+            // Simpan ke sessionStorage agar tidak muncul lagi saat navigasi ke CV & kembali
+            sessionStorage.setItem('comic_intro_seen', 'true');
+
+            setTimeout(() => {
+                introOverlay.remove();
+            }, 350);
+        }
+
+        // Event listener klik tombol masuk & tombol ESC
+        closeIntroBtn.addEventListener('click', dismissIntro);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && document.body.style.overflow === 'hidden') {
+                dismissIntro();
+            }
+        });
+    }
+});
+
+/* ==========================================================
    CONSOLE EASTER EGG
    ========================================================== */
 

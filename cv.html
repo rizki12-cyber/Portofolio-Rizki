@@ -14,9 +14,9 @@
         })();
     </script>
 
-    <title>CV Belum Tersedia — Rizki Apriana</title>
-    <meta name="description" content="Halaman CV Rizki Apriana sedang dalam proses pembaruan.">
-    <meta name="robots" content="noindex, nofollow"> <!-- Mencegah Google mengindeks halaman kosong ini -->
+    <title>Curriculum Vitae (CV) — Rizki Apriana</title>
+    <meta name="description" content="Curriculum Vitae profesional Rizki Apriana — Junior Web Developer lulusan Rekayasa Perangkat Lunak.">
+    <meta name="robots" content="index, follow">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,33 +30,94 @@
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Custom CSS (Sama persis dengan index) -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+        .cv-container {
+            background-color: var(--bs-body-bg, #ffffff);
+            color: var(--bs-body-color, #212529);
+            border: 3px solid #000;
+            box-shadow: 6px 6px 0px #000;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .cv-section-title {
+            border-bottom: 2px solid #000;
+            padding-bottom: 2px;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.88rem;
+        }
+        .cv-item-title {
+            font-weight: 700;
+            font-size: 0.92rem;
+        }
+        /* Styling khusus agar pas 1 halaman saat diprint/PDF */
+        @media print {
+            @page {
+                size: A4;
+                margin: 8mm;
+            }
+            .navbar, footer, .no-print {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+                font-size: 9.5pt;
+                line-height: 1.35;
+            }
+            main {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+            }
+            .cv-container {
+                border: none !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+                padding: 4px !important;
+            }
+            .cv-section-title {
+                margin-bottom: 0.35rem !important;
+                font-size: 0.85rem !important;
+            }
+            .mb-3 {
+                margin-bottom: 0.5rem !important;
+            }
+            .pb-3 {
+                padding-bottom: 0.45rem !important;
+            }
+            ul li {
+                margin-bottom: 1px !important;
+            }
+        }
+    </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg fixed-top comic-navbar">
+    <nav class="navbar navbar-expand-lg fixed-top comic-navbar no-print">
         <div class="container">
-            <!-- Kembalikan link ke index.html dengan Monogram RA -->
             <a class="navbar-brand comic-brand d-flex align-items-center gap-2" href="index.html">
                 <span class="monogram-badge">RA</span>
                 <span class="brand-text">APRIANA<span class="text-comic-red">.DEV</span></span>
             </a>
 
-            <!-- Mobile Action Controls & Toggler -->
             <div class="d-flex align-items-center gap-2 d-lg-none">
                 <button class="navbar-toggler comic-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigasi Toggle">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
 
-            <!-- Navbar Links -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-lg-center gap-lg-2 my-3 my-lg-0 p-3 p-lg-0 bg-surface bg-lg-transparent border border-3 border-dark border-lg-0 shadow-comic shadow-lg-none">
-                    <!-- Ubah href ke index.html#section -->
                     <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#about">Tentang</a></li>
                     <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#origin">Pendidikan</a></li>
                     <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#experience">Pengalaman</a></li>
@@ -65,69 +126,142 @@
                     <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#certificates">Sertifikat</a></li>
                     <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#reviews">Ulasan</a></li>
                     <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#contact">Kontak</a></li>
-        
+                    <li class="nav-item"><a class="nav-link comic-nav-link active fw-bold" href="cv.html">CV</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content (Halaman Kosong / Coming Soon) -->
-    <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5" style="margin-top: 80px;">
+    <!-- Main Content: CV Viewer -->
+    <main class="flex-grow-1 py-5" style="margin-top: 70px;">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center" data-aos="zoom-in">
-                    
-                    <div class="comic-card p-5 bg-surface border border-3 border-dark shadow-comic position-relative">
-                        <!-- Badge Nyeleneh -->
-                        <div class="position-absolute top-0 start-50 translate-middle badge bg-comic-yellow text-dark border border-dark font-bangers fs-5 px-4 py-2">
-                            EDISI SPESIAL
-                        </div>
-
-                        <i class="bi bi-tools display-1 text-comic-red mb-4 d-block"></i>
-                        
-                        <h1 class="display-4 font-archivo fw-bold text-uppercase mb-3">
-                            HALAMAN BELUM <br> <span class="text-comic-red">TERSEDIA</span>
-                        </h1>
-                        
-                        <p class="font-dm fs-5 text-muted mb-5">
-                            "Dia sedang menyiapkan sesuatu yang istimewa. Bukan untuk sekadar dibaca, tetapi semoga cukup berkesan untuk membuatmu ingin mengenalnya lebih jauh."
-                        </p>
-
-                        <!-- Tombol Kembali -->
-                        <a href="index.html" class="btn btn-comic-primary px-5 py-3 font-archivo text-uppercase">
-                        Kembali ke Beranda
-                        </a>
-                    </div>
-
+            
+            <div class="row justify-content-center mb-3 no-print">
+                <div class="col-lg-8 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                    <a href="index.html" class="btn btn-outline-dark fw-bold font-archivo btn-sm">
+                    Kembali ke Beranda
+                    </a>
+                    <button onclick="window.print()" class="btn btn-comic-primary fw-bold font-archivo btn-sm">
+                        <i class="bi bi-printer me-1"></i> Cetak / Simpan PDF (1 Halaman)
+                    </button>
                 </div>
             </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="cv-container p-4 p-md-4 bg-surface" data-aos="fade-up">
+                        
+                        <!-- Header CV -->
+                        <div class="text-center border-bottom border-2 border-dark pb-3 mb-3">
+                            <h1 class="font-archivo fw-bold text-uppercase fs-3 mb-1">Rizki Apriana</h1>
+                            <p class="font-archivo text-secondary fs-6 text-uppercase mb-2">Junior Web Developer</p>
+                            <div class="d-flex justify-content-center flex-wrap gap-3 font-dm small text-dark">
+                                <span><i class="bi bi-geo-alt-fill text-comic-red me-1"></i> Jawa Barat, Indonesia</span>
+                                <span><i class="bi bi-envelope-fill text-comic-red me-1"></i> aprianarizqi@gmail.com</span>
+                                <span><i class="bi bi-whatsapp text-success me-1"></i> +62 821-1694-9020</span>
+                            </div>
+                        </div>
+
+                        <!-- Ringkasan Profesional -->
+                        <section class="mb-3">
+                            <h2 class="cv-section-title font-archivo">Ringkasan Profesional</h2>
+                            <p class="font-dm small mb-0 text-secondary" style="text-align: justify; line-height: 1.45;">
+                                Lulusan SMK Rekayasa Perangkat Lunak (RPL) dengan pengalaman magang profesional sebagai Web Developer. Terbiasa membangun aplikasi web fungsional menggunakan PHP, Laravel, HTML, CSS, dan MySQL. Memiliki kedisiplinan tinggi, teliti, serta mampu beradaptasi cepat dalam pengembangan proyek secara mandiri maupun tim.
+                            </p>
+                        </section>
+
+                        <!-- Pengalaman Kerja & Magang -->
+                        <section class="mb-3">
+                            <h2 class="cv-section-title font-archivo">Pengalaman Kerja &amp; Magang</h2>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start flex-wrap">
+                                    <div>
+                                        <h3 class="cv-item-title mb-0">Web Developer Intern</h3>
+                                        <p class="text-muted small mb-1">PT Grage Media Technology</p>
+                                    </div>
+                                    <span class="badge bg-dark font-dm" style="font-size: 0.7rem;">Juli 2025 – Oktober 2025</span>
+                                </div>
+                                <ul class="font-dm small mt-1 mb-0 ps-3 text-secondary">
+                                    <li>Mengembangkan aplikasi web berbasis framework Laravel sesuai spesifikasi kebutuhan klien secara profesional.</li>
+                                    <li>Melakukan penyesuaian fitur dan perbaikan antarmuka berdasarkan umpan balik langsung dari klien.</li>
+                                    <li>Menyusun dokumentasi dan modul panduan penggunaan sistem untuk memudahkan operasional klien.</li>
+                                    <li>Melakukan pengujian fungsional aplikasi guna meminimalisir kendala teknis sebelum rilis ke produksi.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Pendidikan -->
+                        <section class="mb-3">
+                            <h2 class="cv-section-title font-archivo">Pendidikan</h2>
+                            <div class="d-flex justify-content-between align-items-start flex-wrap">
+                                <div>
+                                    <h3 class="cv-item-title mb-0">SMKN 1 Talaga</h3>
+                                    <p class="text-muted small mb-0">Jurusan Rekayasa Perangkat Lunak (RPL) — <span class="fw-bold text-dark">Nilai Akhir: 83.79</span></p>
+                                </div>
+                                <span class="badge bg-dark font-dm" style="font-size: 0.7rem;">2023 – 2026</span>
+                            </div>
+                        </section>
+
+                        <!-- Keahlian & Keterampilan -->
+                        <section class="mb-3">
+                            <h2 class="cv-section-title font-archivo">Keahlian &amp; Keterampilan</h2>
+                            <div class="row font-dm small g-2 text-secondary">
+                                <div class="col-md-6">
+                                    <strong>Bahasa &amp; Framework:</strong> 
+                                    <span class="d-block">PHP, HTML5, CSS3, Laravel, Bootstrap</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Basis Data &amp; Tools:</strong>
+                                    <span class="d-block">MySQL, phpMyAdmin, Git, GitHub, VS Code</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Organisasi -->
+                        <section class="mb-0">
+                            <h2 class="cv-section-title font-archivo">Organisasi</h2>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start flex-wrap">
+                                    <div>
+                                        <h3 class="cv-item-title mb-0">Anggota — LABANTIK</h3>
+                                        <p class="text-muted small mb-1">Laboratorium Anak Teknik Ilmu Komputer</p>
+                                    </div>
+                                    <span class="badge bg-dark font-dm" style="font-size: 0.7rem;">2023 – 2026</span>
+                                </div>
+                                <ul class="font-dm small mt-1 mb-0 ps-3 text-secondary">
+                                    <li>Mendokumentasikan berbagai kegiatan organisasi melalui fotografi dan media visual.</li>
+                                    <li>Berpartisipasi dalam kegiatan pengembangan keterampilan di bidang pemrograman dan teknologi informasi.</li>
+                                    <li>Mengembangkan kemampuan teknis melalui diskusi, berbagi pengetahuan, dan pembelajaran bersama anggota.</li>
+                                    <li>Membantu mendokumentasikan dan mengabadikan momen penting dalam kegiatan organisasi.</li>
+                                    <li>Melatih kemampuan komunikasi dan kerja sama tim dalam menjalankan kegiatan organisasi.</li>
+                                    <li>Meningkatkan kedisiplinan, tanggung jawab, kreativitas, serta kemampuan beradaptasi dalam lingkungan organisasi.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
-    <!-- Footer (Sama persis) -->
-    <footer class="py-4 border-top border-3 border-dark bg-body text-center mt-auto">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center gap-3">
-                <div class="monogram-badge-lg">RA</div>
-                <h4 class="font-bangers display-6 text-comic-red mb-0 footer-bersambung">BERSAMBUNG...</h4>
-                <p class="font-dm text-muted small mb-0">&copy; <span id="currentYear">2026</span> Rizki Apriana. Hak Cipta Dilindungi. Dirancang dengan Sistem Desain Comic Chronicles.</p>
-            </div>
+    <footer class="py-4 border-top border-3 border-dark bg-body text-center">
+    <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-center gap-2">
+            <div class="monogram-badge-lg">RA</div>
+            <span class="badge bg-comic-yellow text-dark border border-2 border-dark font-bangers px-3 py-1">STILL HIGH 20</span>
+            <h4 class="font-bangers display-6 text-comic-red mb-0 footer-bersambung">BERSAMBUNG...</h4>
+            <p class="font-dm text-muted small mb-0">&copy; <span id="currentYear"></span> Rizki Apriana. Hak Cipta Dilindungi.</p>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- Bootstrap 5.3 JS -->
+    <!-- Bootstrap 5.3 JS & AOS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Custom JS -->
-    <script src="assets/js/theme.js"></script>
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/script.js"></script>
     <script>
-        // Inisialisasi AOS untuk halaman ini
         AOS.init({ once: true });
-        // Set tahun otomatis di footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>

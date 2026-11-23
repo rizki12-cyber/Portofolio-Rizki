@@ -213,3 +213,27 @@ html, body {
         padding: 2px 8px !important;
     }
 }
+
+/* ==========================================================
+   FIX: Navbar fixed menutupi konten hero
+   ========================================================== */
+:root {
+    /* fallback sebelum JS jalan */
+    --comic-navbar-height: 90px;
+}
+
+/* Beri ruang atas hero sebesar tinggi navbar */
+#home.hero-section {
+    padding-top: var(--comic-navbar-height);
+    box-sizing: border-box;
+}
+
+/* Row hero tidak lagi 100vh penuh, tapi 100vh dikurangi navbar */
+#home.hero-section .row.min-vh-100 {
+    min-height: calc(100vh - var(--comic-navbar-height)) !important;
+}
+
+/* Anchor link tidak tertutup navbar */
+html {
+    scroll-padding-top: var(--comic-navbar-height);
+}
