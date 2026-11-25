@@ -122,37 +122,46 @@
     <!-- Reading Progress Bar -->
     <div id="reading-progress"></div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg fixed-top comic-navbar-minimal">
-        <div class="container d-flex align-items-center justify-content-between">
-            <a class="navbar-brand comic-brand d-flex align-items-center gap-2 m-0" href="#home">
-                <span class="monogram-badge">RA</span>
-                <span class="brand-text d-none d-sm-inline">APRIANA<span class="text-comic-red">.DEV</span></span>
-            </a>
-            
-            <div class="d-flex align-items-center gap-2 d-lg-none">
-                <button class="navbar-toggler comic-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigasi">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+    <nav class="navbar navbar-expand-lg fixed-top comic-navbar-minimal" id="mainNav">
+  <div class="container">
 
-            <div class="collapse navbar-collapse justify-content-end flex-grow-0" id="navbarNav">
-                <ul class="navbar-nav align-items-lg-center gap-1 gap-lg-2 my-2 my-lg-0 p-3 p-lg-1 bg-surface border border-3 border-dark shadow-comic">
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#about">Tentang</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#origin">Pendidikan</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#experience">Pengalaman</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#skills">Keahlian</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#projects">Proyek</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#certificates">Sertifikat</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#reviews">Ulasan</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="#contact">Kontak</a></li>
-                    <li class="nav-item ms-lg-1 mt-2 mt-lg-0">
-                        <a href="cv.html" class="btn btn-comic-primary btn-sm px-3 py-1 font-archivo text-uppercase w-100">CV</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Brand -->
+    <a class="navbar-brand comic-brand d-flex align-items-center gap-2 m-0" href="#home">
+      <span class="monogram-badge">RA</span>
+      <span class="brand-text d-none d-sm-inline">APRIANA<span class="text-comic-red">.DEV</span></span>
+    </a>
+
+    <!-- Toggler mobile -->
+    <button class="navbar-toggler comic-toggler border-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse justify-content-end flex-grow-0" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center gap-1 my-2 my-lg-0 p-2 p-lg-0">
+        <li class="nav-item"><a class="nav-link comic-nav-link" href="#about"><span class="nav-index">01</span>Tentang</a></li>
+        <li class="nav-item"><a class="nav-link comic-nav-link" href="#experience"><span class="nav-index">02</span>Pengalaman</a></li>
+        <li class="nav-item"><a class="nav-link comic-nav-link" href="#projects"><span class="nav-index">03</span>Proyek</a></li>
+        <li class="nav-item"><a class="nav-link comic-nav-link" href="#skills"><span class="nav-index">04</span>Keahlian</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link comic-nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Lainnya</a>
+          <ul class="dropdown-menu shadow-comic-soft">
+            <li><a class="dropdown-item" href="#origin">Pendidikan</a></li>
+            <li><a class="dropdown-item" href="#certificates">Sertifikat</a></li>
+            <li><a class="dropdown-item" href="#reviews">Ulasan</a></li>
+            <li><a class="dropdown-item" href="#roadmap">Roadmap</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <a href="cv.html" class="btn btn-comic-primary btn-sm text-uppercase">CV </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     <!-- Chapter Indicator Floating -->
     <div class="chapter-indicator d-none d-xl-flex">
@@ -344,7 +353,7 @@
                     <div class="timeline-editorial">
                         <div class="timeline-item border-start border-4 border-dark ps-4 pb-5 position-relative" data-aos="fade-up">
                             <div class="timeline-dot bg-comic-red border border-2 border-dark position-absolute top-0 start-0 translate-middle"></div>
-                            <span class="badge bg-dark text-white font-bangers mb-2">2023 – 2026</span>
+                            <span class="badge bg-danger text-white font-bangers mb-2">2023 – 2026</span>
                             <h3 class="font-archivo fs-4">SMKN 1 Talaga</h3>
                             <h4 class="font-bangers text-secondary fs-5">Jurusan Rekayasa Perangkat Lunak (RPL)</h4>
                             <p class="font-dm text-muted mt-2">Mempelajari dasar-dasar pemrograman, struktur data, pengembangan web front-end dan back-end, serta basis data relasional.</p>
@@ -352,14 +361,14 @@
 
                         <div class="timeline-item border-start border-4 border-dark ps-4 pb-5 position-relative" data-aos="fade-up">
                             <div class="timeline-dot bg-comic-yellow border border-2 border-dark position-absolute top-0 start-0 translate-middle"></div>
-                            <span class="badge bg-dark text-white font-bangers mb-2">2020 – 2023</span>
+                            <span class="badge bg-comic-yellow text-dark font-bangers mb-2">2020 – 2023</span>
                             <h3 class="font-archivo fs-4">SMPN 1 Cingambul</h3>
                             <h4 class="font-bangers text-secondary fs-5">Pendidikan Menengah Pertama</h4>
                             <p class="font-dm text-muted mt-2">Menyelesaikan pendidikan menengah pertama serta mulai mengembangkan ketertarikan pada bidang teknologi informasi.</p>
                         </div>
 
                         <div class="timeline-item border-start border-4 border-dark ps-4 position-relative" data-aos="fade-up">
-                            <div class="timeline-dot bg-comic-red border border-2 border-dark position-absolute top-0 start-0 translate-middle"></div>
+                            <div class="timeline-dot bg-dark border border-2 border-dark position-absolute top-0 start-0 translate-middle"></div>
                             <span class="badge bg-dark text-white font-bangers mb-2">2015 – 2020</span>
                             <h3 class="font-archivo fs-4">SDN Ciranjeng</h3>
                             <h4 class="font-bangers text-secondary fs-5">Pendidikan Sekolah Dasar</h4>
@@ -371,746 +380,1189 @@
         </div>
     </section>
 
-    <!-- Professional Journey Section (Experience) -->
-<section id="experience" class="py-5 border-top border-3 border-dark bg-surface">
-    <div class="container py-5">
-        <div class="section-title-wrap mb-5" data-aos="fade-up">
-            <span class="font-bangers text-comic-red fs-4">BAB 03</span>
-            <h2 class="display-5 font-archivo fw-bold text-uppercase">PERJALANAN PROFESIONAL</h2>
-            <div class="comic-divider"></div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-9">
-
-                <!-- ===== CARD 1: PT Grage Media Technology ===== -->
-                <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body shadow-comic" data-aos="fade-up">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom border-dark">
-                        <div>
-                            <span class="badge bg-comic-red text-white font-bangers px-3 py-1 mb-2">PRAKTIK KERJA LAPANGAN</span>
-
-                            <!-- ===== LOGO + NAMA PT GRAGE ===== -->
-                            <div class="d-flex align-items-center gap-3">
-                                <img src="assets/images/gmt.png"
-                                     alt="Logo PT Grage Media Technology"
-                                     class="comic-logo">
-                                <h3 class="font-archivo fs-3 mb-0">PT Grage Media Technology</h3>
-                            </div>
-                        </div>
-                        <div class="text-lg-end mt-2 mt-lg-0">
-                            <span class="font-bangers fs-5 text-secondary">Juli 2025 – Oktober 2025</span>
-                            <div class="font-archivo fw-bold text-dark">Web Developer Intern</div>
-                        </div>
-                    </div>
-                    <h4 class="font-archivo fs-5 mb-3 text-uppercase text-comic-red">Tanggung Jawab Utama:</h4>
-                    <ul class="list-unstyled font-dm">
-                        <li class="d-flex align-items-start mb-2">
-                            <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1 flex-shrink-0"></i>
-                            <span>Mengembangkan aplikasi web menggunakan framework Laravel berdasarkan kebutuhan klien.</span>
-                        </li>
-                        <li class="d-flex align-items-start mb-2">
-                            <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1 flex-shrink-0"></i>
-                            <span>Melakukan penyesuaian fitur dan antarmuka berdasarkan feedback langsung dari klien secara profesional.</span>
-                        </li>
-                        <li class="d-flex align-items-start mb-2">
-                            <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1 flex-shrink-0"></i>
-                            <span>Membuat modul panduan penggunaan aplikasi untuk membantu klien memahami sistem dengan mudah.</span>
-                        </li>
-                        <li class="d-flex align-items-start mb-2">
-                            <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1 flex-shrink-0"></i>
-                            <span>Melakukan pengujian mandiri (testing) untuk memastikan fitur berjalan dengan baik tanpa kendala teknis.</span>
-                        </li>
-                    </ul>
+        <!-- Professional Journey Section (Experience) -->
+        <section id="experience" class="py-5 border-top border-3 border-dark bg-surface">
+            <div class="container py-5">
+                <div class="section-title-wrap mb-5" data-aos="fade-up">
+                    <span class="font-bangers text-comic-red fs-4">BAB 03</span>
+                    <h2 class="display-5 font-archivo fw-bold text-uppercase">PERJALANAN PROFESIONAL</h2>
+                    <div class="comic-divider"></div>
                 </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
 
-                <!-- ===== CARD 2: LABANTIK ===== -->
-                <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body shadow-comic mt-5" data-aos="fade-up">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom border-dark">
-                        <div>
-                            <span class="badge bg-comic-yellow text-dark font-bangers px-3 py-1 mb-2">ORGANISASI</span>
+                        <!-- ===== CARD 1: PT Grage Media Technology ===== -->
+                        <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body shadow-comic" data-aos="fade-up">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom border-dark">
+                                <div>
+                                    <span class="badge bg-comic-red text-white font-bangers px-3 py-1 mb-2">PRAKTIK KERJA LAPANGAN</span>
 
-                            <!-- ===== LOGO + NAMA LABANTIK ===== -->
-                            <div class="d-flex align-items-center gap-3">
-                                <img src="assets/images/labantik1.png"
-                                     alt="Logo LABANTIK"
-                                     class="comic-logo">
-                                <h3 class="font-archivo fs-3 mb-0">LABANTIK</h3>
+                                    <!-- ===== LOGO + NAMA PT GRAGE ===== -->
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="assets/images/gmt.png"
+                                            alt="Logo PT Grage Media Technology"
+                                            class="comic-logo">
+                                        <h3 class="font-archivo fs-3 mb-0">PT Grage Media Technology</h3>
+                                    </div>
+                                </div>
+                                <div class="text-lg-end mt-2 mt-lg-0">
+                                    <span class="font-bangers fs-5 text-secondary">Juli 2025 – Oktober 2025</span>
+                                    <div class="font-archivo fw-bold text-dark">Web Developer Intern</div>
+                                </div>
                             </div>
+                            <h4 class="font-archivo fs-5 mb-3 text-uppercase text-comic-red">Tanggung Jawab Utama:</h4>
+                            <ul class="list-unstyled font-dm">
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1 flex-shrink-0"></i>
+                                    <span>Mengembangkan aplikasi web menggunakan framework Laravel berdasarkan kebutuhan klien.</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1 flex-shrink-0"></i>
+                                    <span>Melakukan penyesuaian fitur dan antarmuka berdasarkan feedback langsung dari klien secara profesional.</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1 flex-shrink-0"></i>
+                                    <span>Membuat modul panduan penggunaan aplikasi untuk membantu klien memahami sistem dengan mudah.</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="bi bi-caret-right-fill text-comic-red me-2 mt-1 flex-shrink-0"></i>
+                                    <span>Melakukan pengujian mandiri (testing) untuk memastikan fitur berjalan dengan baik tanpa kendala teknis.</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="text-lg-end mt-2 mt-lg-0">
-                            <span class="font-bangers fs-5 text-secondary">2023 – 2026</span>
-                            <div class="font-archivo fw-bold text-dark">Laboratorium Anak Teknik Ilmu Komputer — Anggota</div>
+
+                        <!-- ===== CARD 2: LABANTIK ===== -->
+                        <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body shadow-comic mt-5" data-aos="fade-up">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom border-dark">
+                                <div>
+                                    <span class="badge bg-comic-yellow text-dark font-bangers px-3 py-1 mb-2">ORGANISASI</span>
+
+                                    <!-- ===== LOGO + NAMA LABANTIK ===== -->
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="assets/images/labantik1.png"
+                                            alt="Logo LABANTIK"
+                                            class="comic-logo">
+                                        <h3 class="font-archivo fs-3 mb-0">LABANTIK</h3>
+                                    </div>
+                                </div>
+                                <div class="text-lg-end mt-2 mt-lg-0">
+                                    <span class="font-bangers fs-5 text-secondary">2023 – 2026</span>
+                                    <div class="font-archivo fw-bold text-dark">Laboratorium Anak Teknik Ilmu Komputer — Anggota</div>
+                                </div>
+                            </div>
+
+                            <p class="font-dm text-muted mb-3">
+                                Laboratorium Anak Teknik Ilmu Komputer (LABANTIK) merupakan wadah pengembangan minat dan bakat siswa di bidang teknologi informasi, khususnya pemrograman dan kreativitas digital.
+                            </p>
+
+                            <ul class="list-unstyled font-dm">
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
+                                    <span>Mendokumentasikan berbagai kegiatan organisasi melalui fotografi dan media visual.</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
+                                    <span>Berpartisipasi dalam kegiatan pengembangan keterampilan di bidang pemrograman dan teknologi informasi.</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
+                                    <span>Mengembangkan kemampuan teknis melalui diskusi, berbagi pengetahuan, dan pembelajaran bersama anggota.</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
+                                    <span>Membantu mendokumentasikan dan mengabadikan momen penting dalam kegiatan organisasi.</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
+                                    <span>Melatih kemampuan komunikasi dan kerja sama tim dalam menjalankan kegiatan organisasi.</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
+                                    <span>Meningkatkan kedisiplinan, tanggung jawab, kreativitas, serta kemampuan beradaptasi dalam lingkungan organisasi.</span>
+                                </li>
+                            </ul>
                         </div>
+
                     </div>
-
-                    <p class="font-dm text-muted mb-3">
-                        Laboratorium Anak Teknik Ilmu Komputer (LABANTIK) merupakan wadah pengembangan minat dan bakat siswa di bidang teknologi informasi, khususnya pemrograman dan kreativitas digital.
-                    </p>
-
-                    <ul class="list-unstyled font-dm">
-                        <li class="d-flex align-items-start mb-2">
-                            <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
-                            <span>Mendokumentasikan berbagai kegiatan organisasi melalui fotografi dan media visual.</span>
-                        </li>
-                        <li class="d-flex align-items-start mb-2">
-                            <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
-                            <span>Berpartisipasi dalam kegiatan pengembangan keterampilan di bidang pemrograman dan teknologi informasi.</span>
-                        </li>
-                        <li class="d-flex align-items-start mb-2">
-                            <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
-                            <span>Mengembangkan kemampuan teknis melalui diskusi, berbagi pengetahuan, dan pembelajaran bersama anggota.</span>
-                        </li>
-                        <li class="d-flex align-items-start mb-2">
-                            <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
-                            <span>Membantu mendokumentasikan dan mengabadikan momen penting dalam kegiatan organisasi.</span>
-                        </li>
-                        <li class="d-flex align-items-start mb-2">
-                            <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
-                            <span>Melatih kemampuan komunikasi dan kerja sama tim dalam menjalankan kegiatan organisasi.</span>
-                        </li>
-                        <li class="d-flex align-items-start mb-2">
-                            <i class="bi bi-check-square-fill text-comic-yellow me-2 mt-1 flex-shrink-0"></i>
-                            <span>Meningkatkan kedisiplinan, tanggung jawab, kreativitas, serta kemampuan beradaptasi dalam lingkungan organisasi.</span>
-                        </li>
-                    </ul>
                 </div>
-
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-    <!-- Technical Abilities Section (Skills) -->
-    <section id="skills" class="py-5 border-top border-3 border-dark">
-        <div class="container py-5">
-            <div class="section-title-wrap mb-5" data-aos="fade-up">
-                <span class="font-bangers text-comic-red fs-4">BAB 04</span>
-                <h2 class="display-5 font-archivo fw-bold text-uppercase">KEAHLIAN TEKNIS</h2>
-                <div class="comic-divider"></div>
-            </div>
+        <!-- Technical Abilities Section (Skills) -->
+        <section id="skills" class="py-5 border-top border-3 border-dark">
+            <div class="container py-5">
+                <div class="section-title-wrap mb-5" data-aos="fade-up">
+                    <span class="font-bangers text-comic-red fs-4">BAB 04</span>
+                    <h2 class="display-5 font-archivo fw-bold text-uppercase">KEAHLIAN TEKNIS</h2>
+                    <div class="comic-divider"></div>
+                </div>
             
             <div class="row g-4 justify-content-center" id="skillsContainer">
-    <!-- 1. FRONTEND -->
-    <div class="col-md-6 col-lg-4" data-aos="fade-up">
-        <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
-            <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-comic-red">FRONTEND</h3>
-            <div class="d-flex flex-wrap gap-2">
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-html text-danger me-1"></i> HTML5</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-css text-primary me-1"></i> CSS3</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-js text-warning me-1"></i> JavaScript</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-bootstrap-fill me-1" style="color: #7952B3;"></i> Bootstrap</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-lightning-charge-fill me-1" style="color: #646CFF;"></i> Vite.js</span>
-            </div>
-        </div>
-    </div>
+                <!-- 1. FRONTEND -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-comic-red">FRONTEND</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-html text-danger me-1"></i> HTML5</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-css text-primary me-1"></i> CSS3</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-js text-warning me-1"></i> JavaScript</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-bootstrap-fill me-1" style="color: #7952B3;"></i> Bootstrap</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-lightning-charge-fill me-1" style="color: #646CFF;"></i> Vite.js</span>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- 2. BACKEND & DB (Core Stack Diberi Penanda Khusus) -->
-    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100 position-relative">
-            <span class="position-absolute top-0 end-0 translate-middle-y badge bg-comic-red text-white border border-dark font-bangers me-3 mt-3">CORE STACK</span>
-            <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-dark">BACKEND &amp; DB</h3>
-            <div class="d-flex flex-wrap gap-2">
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-php text-secondary me-1"></i> PHP</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-shield-fill-check text-danger me-1"></i> Laravel</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-database-fill text-info me-1"></i> MySQL</span>
-            </div>
-        </div>
-    </div>
+                <!-- 2. BACKEND & DB (Core Stack Diberi Penanda Khusus) -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100 position-relative">
+                        <span class="position-absolute top-0 end-0 translate-middle-y badge bg-comic-red text-white border border-dark font-bangers me-3 mt-3">CORE STACK</span>
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-dark">BACKEND &amp; DB</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-php text-secondary me-1"></i> PHP</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-shield-fill-check text-danger me-1"></i> Laravel</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-database-fill text-info me-1"></i> MySQL</span>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- 3. API & INTEGRATION (Digabung agar grid pas & relevan) -->
-    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
-        <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
-            <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-danger">API &amp; INTEGRATION</h3>
-            <div class="d-flex flex-wrap gap-2">
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-fire text-warning me-1"></i> Firebase</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-code-slash text-success me-1"></i> RESTful API</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-json text-primary me-1"></i> JSON / AJAX</span>
-            </div>
-        </div>
-    </div>
+                <!-- 3. API & INTEGRATION (Digabung agar grid pas & relevan) -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-danger">API &amp; INTEGRATION</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-fire text-warning me-1"></i> Firebase</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-code-slash text-success me-1"></i> RESTful API</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-filetype-json text-primary me-1"></i> JSON / AJAX</span>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- 4. TOOLS & VERSION CONTROL -->
-    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
-            <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-success">TOOLS &amp; VERSION</h3>
-            <div class="d-flex flex-wrap gap-2">
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-code text-info me-1"></i> VS Code</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-git text-danger me-1"></i> Git &amp; GitHub</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-server text-warning me-1"></i> Postman</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-hdd-stack text-secondary me-1"></i> XAMPP</span>
-            </div>
-        </div>
-    </div>
+                <!-- 4. TOOLS & VERSION CONTROL -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-success">TOOLS &amp; VERSION</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-code text-info me-1"></i> VS Code</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-git text-danger me-1"></i> Git &amp; GitHub</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-server text-warning me-1"></i> Postman</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-hdd-stack text-secondary me-1"></i> XAMPP</span>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- 5. DEPLOYMENT & UI/UX -->
-    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
-        <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
-            <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-warning">DEPLOYMENT &amp; DESIGN</h3>
-            <div class="d-flex flex-wrap gap-2">
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-cloud-arrow-up text-info me-1"></i> Vercel / Netlify</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-hdd-rack text-secondary me-1"></i> cPanel</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-palette text-primary me-1"></i> Canva</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-phone text-success me-1"></i> Responsive Design</span>
-            </div>
-        </div>
-    </div>
+                <!-- 5. DEPLOYMENT & UI/UX -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark text-warning">DEPLOYMENT &amp; DESIGN</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-cloud-arrow-up text-info me-1"></i> Vercel / Netlify</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-hdd-rack text-secondary me-1"></i> cPanel</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-palette text-primary me-1"></i> Canva</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-phone text-success me-1"></i> Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
     
-    <!-- 6. AI & PROMPTING -->
-    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
-            <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark" style="color: #8b5cf6;">AI &amp; PROMPTING</h3>
-            <div class="d-flex flex-wrap gap-2">
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-github text-dark me-1"></i> GitHub Copilot</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-robot me-1" style="color: #8b5cf6;"></i> ChatGPT &amp; Claude</span>
-                <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-google me-1" style="color: #4285F4;"></i> Gemini &amp; DeepSeek</span>
+                <!-- 6. AI & PROMPTING -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="comic-skill-card p-4 border border-3 border-dark bg-body h-100">
+                        <h3 class="font-archivo fs-4 mb-3 pb-2 border-bottom border-dark" style="color: #8b5cf6;">AI &amp; PROMPTING</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-github text-dark me-1"></i> GitHub Copilot</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-robot me-1" style="color: #8b5cf6;"></i> ChatGPT &amp; Claude</span>
+                            <span class="badge border border-dark bg-surface text-dark font-dm p-2 fs-6"><i class="bi bi-google me-1" style="color: #4285F4;"></i> Gemini &amp; DeepSeek</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
         </div>
     </section>
 
-    <!-- Selected Projects Section -->
-    <section id="projects" class="py-5 border-top border-3 border-dark bg-surface">
-        <div class="container py-5">
-            <div class="section-title-wrap mb-5" data-aos="fade-up">
-                <span class="font-bangers text-comic-red fs-4">BAB 05</span>
-                
-                <!-- GIF Animasi Proyek Ditingkatkan Performanya -->
-                <div class="d-flex align-items-center gap-3">
-                    <h2 class="display-5 font-archivo fw-bold text-uppercase mb-0">PROYEK PILIHAN</h2>
-                </div>
-
+        <!-- Selected Projects Section -->
+        <section id="projects" class="py-5 border-top border-3 border-dark bg-surface">
+            <div class="container py-5">
+                <div class="section-title-wrap mb-5" data-aos="fade-up">
+                    <span class="font-bangers text-comic-red fs-4">BAB 05</span>
+                    
+                    <!-- GIF Animasi Proyek Ditingkatkan Performanya -->
+                    <div class="d-flex align-items-center gap-3">
+                        <h2 class="display-5 font-archivo fw-bold text-uppercase mb-0">PROYEK PILIHAN</h2>
+                    </div>
                 <p class="font-dm text-muted mt-2">Karya pilihan yang dikembangkan menggunakan teknologi web modern.</p>
                 <div class="comic-divider"></div>
             </div>
 
            <div class="row g-4" id="projectsGrid">
-    <!-- Project 01: Casa Rasa -->
-    <div class="col-12" data-aos="fade-up">
-        <div class="comic-project-card featured border border-3 border-dark bg-body p-4 p-lg-5">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-7">
-                    <span class="badge bg-comic-red text-white font-bangers px-3 py-1 mb-2">PROYEK 01 — UNGGULAN</span>
-                    <h3 class="font-archivo display-6 mb-2">CASA RASA</h3>
-                    <h4 class="font-bangers text-secondary fs-4 mb-3">Website E-Commerce Makanan</h4>
-                    
-                    <div class="font-dm mb-4 space-y-2">
-                        <p class="mb-2"><strong class="font-archivo">Proses:</strong> Merancang alur pemesanan dari katalog menu, keranjang belanja, hingga dashboard admin untuk mengelola stok dan status pesanan.</p>
-                        <p class="mb-0"><strong class="font-archivo">Tantangan:</strong> Menjaga sinkronisasi hitung total harga dan pemotongan stok produk di MySQL saat pengguna mengubah jumlah item di keranjang secara bersamaan.</p>
-                    </div>
-
-                    <div class="mb-4">
-                        <strong class="font-archivo d-block mb-2">Teknologi:</strong>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge border border-dark bg-surface text-dark">Laravel</span>
-                            <span class="badge border border-dark bg-surface text-dark">PHP</span>
-                            <span class="badge border border-dark bg-surface text-dark">MySQL</span>
-                            <span class="badge border border-dark bg-surface text-dark">Bootstrap</span>
-                            <span class="badge border border-dark bg-surface text-dark">JavaScript</span>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-sm-row gap-2">
-                        <button class="btn btn-comic-primary px-4 py-2 font-archivo view-project-btn" data-project-id="1">BACA CASE STUDY</button>
-                        <a href="https://github.com/rizki12-cyber/E-Commerce-Restoran" target="_blank" rel="noopener noreferrer" class="btn btn-comic-outline px-4 py-2 font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="border border-2 border-dark overflow-hidden position-relative">
-                        <img src="assets/images/projects/casarasa1.png" alt="Casa Rasa E-Commerce" class="img-fluid w-100 object-fit-cover" style="height: 300px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop'">
-                        <div class="position-absolute top-0 end-0 m-2 badge bg-comic-yellow text-dark border border-dark font-bangers">E-COMMERCE</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Project 02: PoliklinikApp -->
-    <div class="col-md-6" data-aos="fade-up">
-        <div class="comic-project-card border border-3 border-dark bg-body p-4 h-100 d-flex flex-column justify-content-between">
-            <div>
-                <div class="border border-2 border-dark overflow-hidden mb-3 position-relative">
-                    <img src="assets/images/projects/klinik1.png" alt="PoliklinikApp" class="img-fluid w-100 object-fit-cover" style="height: 220px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=800&auto=format&fit=crop'">
-                    <span class="position-absolute top-0 end-0 m-2 badge bg-comic-red text-white border border-dark font-bangers">PoliklinikApp</span>
-                </div>
-                <h3 class="font-archivo fs-3 mb-1">PoliklinikApp</h3>
-                <h4 class="font-bangers text-secondary fs-6 mb-3">Sistem Manajemen Klinik</h4>
-                
-                <div class="font-dm small mb-3">
-                    <p class="mb-2"><strong class="font-archivo text-dark">Proses:</strong> Membangun sistem multi-role (Admin, Dokter, Pasien) untuk alur pendaftaran antrean, input rekam medis/obat, hingga kalkulasi biaya periksa.</p>
-                    <p class="mb-0"><strong class="font-archivo text-dark">Tantangan:</strong> Mengelola relasi tabel *many-to-many* antara riwayat pemeriksaan dan daftar obat yang diresepkan dokter serta pembatasan hak akses *middleware*.</p>
-                </div>
-
-                <div class="d-flex flex-wrap gap-1 mb-3">
-                    <span class="badge border border-dark bg-surface text-dark small">Laravel</span>
-                    <span class="badge border border-dark bg-surface text-dark small">MySQL</span>
-                    <span class="badge border border-dark bg-surface text-dark small">Bootstrap</span>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
-                <button class="btn btn-comic-outline flex-fill font-archivo view-project-btn" data-project-id="2"><i class="bi bi-journal-text me-1"></i> CASE STUDY</button>
-                <a href="https://github.com/rizki12-cyber/PoliklinikApp" target="_blank" rel="noopener noreferrer" class="btn btn-comic-primary flex-fill font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Project 03: Desa Ciranjeng -->
-    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="comic-project-card border border-3 border-dark bg-body p-4 h-100 d-flex flex-column justify-content-between">
-            <div>
-                <div class="border border-2 border-dark overflow-hidden mb-3 position-relative">
-                    <img src="assets/images/projects/crj4.png" alt="Sistem Informasi Desa Ciranjeng" class="img-fluid w-100 object-fit-cover" style="height: 220px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop'">
-                    <span class="position-absolute top-0 end-0 m-2 badge bg-comic-yellow text-dark border border-dark font-bangers">SISTEM INFORMASI DESA</span>
-                </div>
-                <h3 class="font-archivo fs-3 mb-1">Desa Ciranjeng</h3>
-                <h4 class="font-bangers text-secondary fs-6 mb-3">Sistem Informasi Desa</h4>
-                
-                <div class="font-dm small mb-3">
-                    <p class="mb-2"><strong class="font-archivo text-dark">Proses:</strong> Membuat portal informasi publik desa beserta panel operator untuk publikasi berita, agenda kegiatan, potensi wilayah, dan grafik data kependudukan.</p>
-                    <p class="mb-0"><strong class="font-archivo text-dark">Tantangan:</strong> Merancang struktur database kependudukan agar mudah dikelompokkan berdasarkan usia/pekerjaan serta memastikan tampilan tetap ringan dibuka lewat jaringan seluler warga.</p>
-                </div>
-
-                <div class="d-flex flex-wrap gap-1 mb-3">
-                    <span class="badge border border-dark bg-surface text-dark small">Laravel</span>
-                    <span class="badge border border-dark bg-surface text-dark small">JavaScript</span>
-                    <span class="badge border border-dark bg-surface text-dark small">MySQL</span>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
-                <button class="btn btn-comic-outline flex-fill font-archivo view-project-btn" data-project-id="3"><i class="bi bi-journal-text me-1"></i> CASE STUDY</button>
-                <a href="https://github.com/rizki12-cyber/sistem-informasi-desa" target="_blank" rel="noopener noreferrer" class="btn btn-comic-primary flex-fill font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
-            </div>
-        </div>
-    </div>
-</div>
-        </div>
-    </section>
-
-    <!-- Certificates Section -->
-    <section id="certificates" class="py-5 border-top border-3 border-dark">
-        <div class="container py-5">
-            <div class="section-title-wrap mb-5" data-aos="fade-up">
-                <span class="font-bangers text-comic-red fs-4">BAB 06</span>
-                <h2 class="display-5 font-archivo fw-bold text-uppercase">PENCAPAIAN TERBUKA</h2>
-                <p class="font-dm text-muted">Koleksi sertifikat penghargaan dan kompetensi profesional.</p>
-                <div class="comic-divider"></div>
-            </div>
-
-            <div class="row g-4" id="certificatesGrid">
-                <!-- ===== KARTU 1: PKL PT Grage ===== -->
-                <div class="col-md-4" data-aos="fade-up">
-                    <div class="comic-cert-card border border-3 border-dark bg-body p-3 h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <div class="border border-2 border-dark overflow-hidden mb-3 position-relative cert-thumb"
-                                 style="cursor: pointer;"
-                                 role="button"
-                                 tabindex="0"
-                                 data-img="assets/images/certificates/pkl.jpg"
-                                 data-title="Sertifikat Praktik Kerja Lapangan"
-                                 data-penerbit="PT Grage Media Technology"
-                                 data-tahun="2025"
-                                 data-berlaku="Seumur Hidup"
-                                 data-bidang="Web Developer"
-                                 data-predikat="Sangat Baik">
-                                <img src="assets/images/certificates/pkl.jpg" alt="Sertifikat PKL" class="img-fluid w-100 object-fit-cover" style="height: 200px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=600&auto=format&fit=crop'">
-                                <span class="position-absolute bottom-0 start-0 m-2 badge bg-dark text-white font-bangers">PT Grage Media Technology</span>
-                            </div>
-                            <h3 class="font-archivo fs-5 mb-1">Sertifikat Praktik Kerja Lapangan</h3>
-                            <p class="font-dm text-muted small mb-0">Pengalaman kerja nyata sebagai Web Developer.</p>
-                        </div>
-                        <button class="btn btn-comic-outline btn-sm mt-3 font-archivo view-cert-btn"
-                                data-img="assets/images/certificates/pkl.jpg"
-                                data-title="Sertifikat Praktik Kerja Lapangan"
-                                data-penerbit="PT Grage Media Technology"
-                                data-tahun="2025"
-                                data-berlaku="Seumur Hidup"
-                                data-bidang="Web Development"
-                                data-predikat="Sangat Baik">
-                            <i class="bi bi-eye-fill me-1"></i> LIHAT SERTIFIKAT
-                        </button>
-                    </div>
-                </div>
-
-                <!-- ===== KARTU 2: Uji Kompetensi SMKN 1 Talaga ===== -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="comic-cert-card border border-3 border-dark bg-body p-3 h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <div class="border border-2 border-dark overflow-hidden mb-3 position-relative cert-thumb"
-                                 style="cursor: pointer;"
-                                 role="button"
-                                 tabindex="0"
-                                 data-img="assets/images/certificates/bnsp.jpg"
-                                 data-title="Sertifikat Uji Kompetensi Keahlian"
-                                 data-penerbit="BNSP"
-                                 data-tahun="2026"
-                                 data-berlaku="2029"
-                                 data-bidang="Junior Web Developer"
-                                 data-predikat="Kompeten">
-                                <img src="assets/images/certificates/bnsp.jpg" alt="Sertifikat Ukom" class="img-fluid w-100 object-fit-cover" style="height: 200px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600&auto=format&fit=crop'">
-                                <span class="position-absolute bottom-0 start-0 m-2 badge bg-dark text-white font-bangers">SMKN 1 Talaga</span>
-                            </div>
-                            <h3 class="font-archivo fs-5 mb-1">Sertifikat Uji Kompetensi</h3>
-                            <p class="font-dm text-muted small mb-0">Kompetensi Keahlian Rekayasa Perangkat Lunak.</p>
-                        </div>
-                        <button class="btn btn-comic-outline btn-sm mt-3 font-archivo view-cert-btn"
-                                data-img="assets/images/certificates/bnsp.jpg"
-                                data-title="Sertifikat Uji Kompetensi Keahlian"
-                                data-penerbit="BNSP"
-                                data-tahun="2026"
-                                data-berlaku="2029"
-                                data-bidang="Junior Web Developer"
-                                data-predikat="Kompeten">
-                            <i class="bi bi-eye-fill me-1"></i> LIHAT SERTIFIKAT
-                        </button>
-                    </div>
-                </div>
-
-                <!-- ===== KARTU 3: Uji Kompetensi PT Gebra ===== -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="comic-cert-card border border-3 border-dark bg-body p-3 h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <div class="border border-2 border-dark overflow-hidden mb-3 position-relative cert-thumb"
-                                 style="cursor: pointer;"
-                                 role="button"
-                                 tabindex="0"
-                                 data-img="assets/images/certificates/ujikom.jpg"
-                                 data-title="Sertifikat Uji Kompetensi PT Gebra"
-                                 data-penerbit="PT. Gebra"
-                                 data-tahun="2025"
-                                 data-berlaku="2029"
-                                 data-bidang="Web Development & Software Engineering"
-                                 data-predikat="Baik">
-                                <img src="assets/images/certificates/ujikom.jpg" alt="Sertifikat Uji Kompetensi" class="img-fluid w-100 object-fit-cover" style="height: 200px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&auto=format&fit=crop'">
-                                <span class="position-absolute bottom-0 start-0 m-2 badge bg-dark text-white font-bangers">PT. Gebra</span>
-                            </div>
-                            <h3 class="font-archivo fs-5 mb-1">Sertifikat Uji Kompetensi PT Gebra</h3>
-                            <p class="font-dm text-muted small mb-0">Partisipasi aktif dalam pengembangan tren web modern.</p>
-                        </div>
-                        <button class="btn btn-comic-outline btn-sm mt-3 font-archivo view-cert-btn"
-                                data-img="assets/images/certificates/ujikom.jpg"
-                                data-title="Sertifikat Uji Kompetensi PT Gebra"
-                                data-penerbit="PT. Gebra"
-                                data-tahun="2025"
-                                data-berlaku="2028"
-                                data-bidang="Software Engineer"
-                                data-predikat="Kompeten">
-                            <i class="bi bi-eye-fill me-1"></i> LIHAT SERTIFIKAT
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section id="reviews" class="py-5 border-top border-3 border-dark bg-surface">
-        <div class="container py-5">
-            <div class="section-title-wrap mb-5 text-center" data-aos="fade-up">
-                <span class="font-bangers text-comic-red fs-4">BAB INTERAKTIF</span>
-                <h2 class="display-5 font-archivo fw-bold text-uppercase">SUARA PEMBACA</h2>
-                <p class="font-dm text-muted">Setiap masukan adalah amunisi untuk terus berkembang.</p>
-                <div class="comic-divider mx-auto"></div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-8" data-aos="fade-up">
-                    <div class="comic-card border border-3 border-dark bg-body p-4 p-md-5 shadow-comic">
-                        <div class="mb-5">
-                            <h3 class="font-archivo fs-5 text-uppercase mb-3 d-flex align-items-center gap-2">
-                                <i class="bi bi-pencil-square text-comic-red"></i> Tinggalkan Jejak
-                            </h3>
-                            <form id="reviewForm">
-                                <div class="row g-3 mb-3">
-                                    <div class="col-12">
-                                        <input type="text" class="form-control border border-2 border-dark rounded-0 p-2 font-dm" id="visitorName" placeholder="Nama / Panggilan kamu..." maxlength="50" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea class="form-control border border-2 border-dark rounded-0 p-2 font-dm" id="visitorMessage" rows="2" placeholder="Tuliskan pendapat singkatmu di sini..." maxlength="500" required></textarea>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-comic-primary w-100 py-2 font-archivo text-uppercase">Kirim <i class="bi bi-send-fill ms-1"></i></button>
-                                <div id="reviewFeedback" class="mt-2 font-dm small text-success text-center d-none"></div>
-                            </form>
-                        </div>
-
-                        <hr class="border-dark border-2 opacity-100 my-4">
-
-                        <div>
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h3 class="font-archivo fs-5 text-uppercase mb-0 d-flex align-items-center gap-2">
-                                    <i class="bi bi-chat-square-text-fill text-comic-red"></i> Daftar Ulasan
-                                </h3>
-                                <span class="badge bg-comic-yellow text-dark border border-dark font-bangers fs-6 px-3 py-1">
-                                    <span id="reviewCount">0</span>
-                                </span>
-                            </div>
-
-                            <div id="testimonialsList" class="review-list mb-4">
-                                <p class="font-dm text-muted text-center small my-4">Belum ada ulasan. Jadilah yang pertama!</p>
-                            </div>
-
-                            <div id="reviewPagination" class="d-flex justify-content-between align-items-center w-100 mt-2 flex-nowrap">
-                                <button id="btnPrevReview" class="btn btn-sm btn-outline-dark border-2 font-archivo text-uppercase" disabled><i class="bi bi-arrow-left"></i></button>
-                                <span id="pageIndicator" class="font-bangers text-muted fs-6 mx-2 text-center text-nowrap">Hal 1</span>
-                                <button id="btnNextReview" class="btn btn-sm btn-outline-dark border-2 font-archivo text-uppercase" disabled><i class="bi bi-arrow-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 border-top border-3 border-dark bg-surface">
-        <div class="container py-5">
-            <div class="section-title-wrap mb-5 text-center" data-aos="fade-up">
-                <span class="font-bangers text-comic-red fs-4">BAB AKHIR</span>
-                <h2 class="display-5 font-archivo fw-bold text-uppercase">BAB BERIKUTNYA</h2>
-                <p class="font-bangers fs-4 text-secondary">"SETIAP KISAH HEBAT BERAWAL DARI SEBUAH KONEKSI."</p>
-                <div class="comic-divider mx-auto"></div>
-            </div>
-
-            <div class="row g-5 justify-content-center">
-                <div class="col-lg-5" data-aos="fade-right">
-                    <div class="comic-card p-4 border border-3 border-dark bg-body h-100">
-                        <h3 class="font-archivo fs-4 mb-4 text-uppercase">HUBUNGI SAYA</h3>
-                        <p class="font-dm text-muted mb-4">Terbuka untuk kesempatan kerja, kolaborasi, dan pengalaman baru di bidang pengembangan web.</p>
-
-                        <ul class="list-unstyled font-dm space-y-3 mb-4">
-                            <li class="mb-3 d-flex align-items-center gap-3">
-                                <div class="p-2 border border-2 border-dark bg-comic-yellow text-dark"><i class="bi bi-envelope-fill fs-5"></i></div>
-                                <div>
-                                    <span class="d-block small text-muted font-bangers">EMAIL</span>
-                                    <a href="mailto:aprianarizqi@gmail.com" class="text-dark text-decoration-none fw-bold">aprianarizqi@gmail.com</a>
-                                </div>
-                            </li>
-                            <li class="mb-3 d-flex align-items-center gap-3">
-                                <div class="p-2 border border-2 border-dark bg-success text-white"><i class="bi bi-whatsapp fs-5"></i></div>
-                                <div>
-                                    <span class="d-block small text-muted font-bangers">WHATSAPP</span>
-                                    <a href="https://wa.me/6282116949020" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none fw-bold">+62 821-1694-9020</a>
-                                </div>
-                            </li>
-                            <li class="mb-3 d-flex align-items-center gap-3">
-                                <div class="p-2 border border-2 border-dark bg-danger text-white"><i class="bi bi-instagram fs-5"></i></div>
-                                <div>
-                                    <span class="d-block small text-muted font-bangers">INSTAGRAM</span>
-                                    <a href="https://www.instagram.com/ap.rzqy" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none fw-bold">@ap.rzqy</a>
-                                </div>
-                            </li>
-                            <li class="mb-3 d-flex align-items-center gap-3">
-                                <div class="p-2 border border-2 border-dark bg-primary text-white"><i class="bi bi-linkedin fs-5"></i></div>
-                                <div>
-                                    <span class="d-block small text-muted font-bangers">LINKEDIN</span>
-                                    <a href="https://www.linkedin.com/in/rizkiapriana" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none fw-bold">linkedin.com/in/rizkiapriana</a>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center gap-3">
-                                <div class="p-2 border border-2 border-dark bg-dark text-white"><i class="bi bi-github fs-5"></i></div>
-                                <div>
-                                    <span class="d-block small text-muted font-bangers">GITHUB</span>
-                                    <a href="https://github.com/rizki12-cyber" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none fw-bold">github.com/rizki12-cyber</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-7" data-aos="fade-left">
-                    <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body">
-                        <h3 class="font-archivo fs-4 mb-4 text-uppercase">KIRIM PESAN</h3>
-                        <form id="contactForm" novalidate>
-                            <div class="mb-3">
-                                <label for="name" class="form-label font-archivo fw-bold">NAMA ANDA</label>
-                                <input type="text" class="form-control comic-input border border-2 border-dark rounded-0" id="name" name="name" autocomplete="name" required>
-                                <div class="invalid-feedback">Silakan masukkan nama Anda.</div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label font-archivo fw-bold">ALAMAT EMAIL</label>
-                                <input type="email" class="form-control comic-input border border-2 border-dark rounded-0" id="email" name="email" autocomplete="email" required>
-                                <div class="invalid-feedback">Silakan masukkan email yang valid.</div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="subject" class="form-label font-archivo fw-bold">SUBJEK</label>
-                                <input type="text" class="form-control comic-input border border-2 border-dark rounded-0" id="subject" name="subject" autocomplete="off" required>
-                                <div class="invalid-feedback">Silakan masukkan subjek pesan.</div>
-                            </div>
-                            <div class="mb-4">
-                                <label for="message" class="form-label font-archivo fw-bold">PESAN</label>
-                                <textarea class="form-control comic-input border border-2 border-dark rounded-0" id="message" name="message" rows="4" autocomplete="off" required></textarea>
-                                <div class="invalid-feedback">Silakan tuliskan pesan Anda.</div>
-                            </div>
-                            <button type="submit" class="btn btn-comic-primary w-100 py-3 font-archivo text-uppercase">KIRIM PESAN <i class="bi bi-send-fill ms-2"></i></button>
-                            <div id="formSuccessAlert" class="alert alert-success mt-3 d-none font-dm border border-2 border-dark rounded-0">
-                                Pesan berhasil divalidasi! Silakan hubungi langsung melalui WhatsApp atau Email tertera.
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-4 border-top border-3 border-dark bg-body text-center">
-    <div class="container">
-        <div class="d-flex flex-column align-items-center justify-content-center gap-2">
-            <div class="monogram-badge-lg">RA</div>
-            <span class="badge bg-comic-yellow text-dark border border-2 border-dark font-bangers px-3 py-1">STILL HIGH 20</span>
-            <h4 class="font-bangers display-6 text-comic-red mb-0 footer-bersambung">BERSAMBUNG...</h4>
-            <p class="font-dm text-muted small mb-0">&copy; <span id="currentYear"></span> Rizki Apriana. Hak Cipta Dilindungi.</p>
-        </div>
-    </div>
-</footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="btn btn-comic-primary rounded-circle border border-2 border-dark shadow" aria-label="Kembali ke Atas">
-        <i class="bi bi-arrow-up-short fs-4"></i>
-    </button>
-
-    <!-- Project Modal -->
-    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content border border-3 border-dark rounded-0 bg-surface">
-                <div class="modal-header border-bottom border-dark bg-body">
-                    <h3 class="modal-title font-archivo fs-4" id="projectModalLabel">Detail Proyek</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
-                </div>
-                <div class="modal-body font-dm p-4" id="projectModalBody"></div>
-                <div class="modal-footer border-top border-dark bg-body">
-                    <button type="button" class="btn btn-comic-outline font-archivo" data-bs-dismiss="modal">TUTUP</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-       <!-- Certificate Modal -->
-    <div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content border border-3 border-dark rounded-0 bg-surface shadow-comic">
-                <!-- Header Modal -->
-                <div class="modal-header border-bottom border-3 border-dark bg-body py-2 px-3 d-flex flex-wrap align-items-center justify-content-between gap-2">
-                    <div class="d-flex align-items-center gap-2">
-                        <span id="certModalCounter" class="badge bg-comic-yellow text-dark border border-2 border-dark font-bangers fs-6 px-2 py-1" aria-live="polite">1 / 3</span>
-                        <h3 class="modal-title font-archivo fs-5 mb-0 text-uppercase" id="certModalLabel">Pratinjau Sertifikat</h3>
-                    </div>
-
-                    <!-- Toolbar Aksi (Zoom, Fullscreen, Download, Tutup) -->
-                    <div class="d-flex align-items-center gap-1 flex-wrap" role="toolbar" aria-label="Kontrol Pratinjau Sertifikat">
-                        <button type="button" id="certZoomOutBtn" class="btn btn-sm btn-outline-dark border-2 rounded-0" title="Perkecil (Zoom Out)" aria-label="Perkecil Gambar">
-                            <i class="bi bi-zoom-out"></i>
-                        </button>
-                        <button type="button" id="certZoomResetBtn" class="btn btn-sm btn-outline-dark border-2 rounded-0 font-archivo px-2" title="Reset Ukuran (100%)" aria-label="Reset Zoom" style="font-size: 0.75rem;">
-                            100%
-                        </button>
-                        <button type="button" id="certZoomInBtn" class="btn btn-sm btn-outline-dark border-2 rounded-0" title="Perbesar (Zoom In)" aria-label="Perbesar Gambar">
-                            <i class="bi bi-zoom-in"></i>
-                        </button>
-                        <button type="button" id="certFullscreenBtn" class="btn btn-sm btn-outline-dark border-2 rounded-0" title="Layar Penuh (Fullscreen)" aria-label="Layar Penuh">
-                            <i class="bi bi-arrows-fullscreen"></i>
-                        </button>
-                        <a id="certDownloadBtn" href="#" download class="btn btn-sm btn-comic-primary border-2 rounded-0 font-archivo px-2" title="Unduh Sertifikat" aria-label="Unduh Sertifikat">
-                            <i class="bi bi-download"></i> <span class="d-none d-md-inline">UNDUH</span>
-                        </a>
-                        <button type="button" class="btn-close border border-2 border-dark p-2 ms-1 bg-white" data-bs-dismiss="modal" aria-label="Tutup Modal"></button>
-                    </div>
-                </div>
-
-                <!-- Body Modal -->
-                <div class="modal-body p-0 bg-body">
-                    <div class="row g-0">
-                        <!-- Area Pratinjau Gambar -->
-                        <div class="col-lg-8 position-relative bg-dark d-flex align-items-center justify-content-center overflow-auto" id="certViewport" style="min-height: 360px; max-height: 72vh;">
+            <!-- Project 01: Casa Rasa -->
+            <div class="col-12" data-aos="fade-up">
+                <div class="comic-project-card featured border border-3 border-dark bg-body p-4 p-lg-5">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-7">
+                            <span class="badge bg-comic-red text-white font-bangers px-3 py-1 mb-2">PROYEK 01 — UNGGULAN</span>
+                            <h3 class="font-archivo display-6 mb-2">CASA RASA</h3>
+                            <h4 class="font-bangers text-secondary fs-4 mb-3">Website E-Commerce Makanan</h4>
                             
-                            <!-- Loading State -->
-                            <div id="certLoadingState" class="text-center text-white p-4 d-none" role="status" aria-live="polite">
-                                <div class="spinner-border text-warning mb-2" style="width: 2.5rem; height: 2.5rem;" role="status"></div>
-                                <p class="font-bangers fs-5 tracking-widest mb-0">MEMUAT SERTIFIKAT...</p>
+                            <div class="font-dm mb-4 space-y-2">
+                                <p class="mb-2"><strong class="font-archivo">Proses:</strong> Merancang alur pemesanan dari katalog menu, keranjang belanja, hingga dashboard admin untuk mengelola stok dan status pesanan.</p>
+                                <p class="mb-0"><strong class="font-archivo">Tantangan:</strong> Menjaga sinkronisasi hitung total harga dan pemotongan stok produk di MySQL saat pengguna mengubah jumlah item di keranjang secara bersamaan.</p>
                             </div>
 
-                            <!-- Error State -->
-                            <div id="certErrorState" class="text-center text-white p-4 d-none" role="alert">
-                                <i class="bi bi-exclamation-triangle-fill text-comic-red display-4 d-block mb-2"></i>
-                                <p class="font-archivo fs-6 mb-1">GAMBAR GAGAL DIMUAT</p>
-                                <p class="font-dm small text-white-50 mb-0">File sertifikat tidak ditemukan atau terjadi kendala jaringan.</p>
-                            </div>
-
-                            <!-- Gambar Sertifikat -->
-                            <div id="certImageWrapper" class="p-3 text-center" style="transition: transform 0.2s ease; transform-origin: center center;">
-                                <img id="certModalImage" src="" alt="Pratinjau Sertifikat" class="img-fluid border border-2 border-white shadow" style="max-height: 65vh; object-fit: contain;">
-                            </div>
-
-                            <!-- Navigasi Prev / Next di Area Gambar -->
-                            <button type="button" id="certPrevBtn" class="btn btn-comic-yellow border border-2 border-dark rounded-0 position-absolute start-0 top-50 translate-middle-y ms-2 shadow-comic" aria-label="Sertifikat Sebelumnya" title="Sebelumnya (Panah Kiri)">
-                                <i class="bi bi-chevron-left fw-bold"></i>
-                            </button>
-                            <button type="button" id="certNextBtn" class="btn btn-comic-yellow border border-2 border-dark rounded-0 position-absolute end-0 top-50 translate-middle-y me-2 shadow-comic" aria-label="Sertifikat Berikutnya" title="Berikutnya (Panah Kanan)">
-                                <i class="bi bi-chevron-right fw-bold"></i>
-                            </button>
-                        </div>
-
-                        <!-- Panel Informasi Detail Sertifikat -->
-                        <div class="col-lg-4 border-top border-lg-top-0 border-lg-start border-3 border-dark bg-surface p-3 p-md-4 d-flex flex-column justify-content-between">
-                            <div>
-                                <span class="badge bg-comic-red text-white border border-2 border-dark font-bangers fs-6 px-2 py-1 mb-2">DETAIL KREDENSIAL</span>
-                                <h4 id="certDetailTitle" class="font-archivo fs-5 mb-3 text-dark border-bottom border-2 border-dark pb-2">-</h4>
-
-                                <ul class="list-unstyled font-dm small mb-3">
-                                    <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex justify-content-between gap-2">
-                                        <span class="fw-bold text-muted">Penerbit:</span>
-                                        <span id="certDetailPenerbit" class="fw-bold text-end text-dark">-</span>
-                                    </li>
-                                    <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex justify-content-between gap-2">
-                                        <span class="fw-bold text-muted">Tahun Terbit:</span>
-                                        <span id="certDetailTahun" class="fw-bold text-end text-dark">-</span>
-                                    </li>
-                                    <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex justify-content-between gap-2">
-                                        <span class="fw-bold text-muted">Masa Berlaku:</span>
-                                        <span id="certDetailBerlaku" class="fw-bold text-end text-dark">-</span>
-                                    </li>
-                                    <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex justify-content-between gap-2">
-                                        <span class="fw-bold text-muted">Bidang:</span>
-                                        <span id="certDetailBidang" class="fw-bold text-end text-dark">-</span>
-                                    </li>
-                                    <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex justify-content-between gap-2">
-                                        <span class="fw-bold text-muted">Predikat:</span>
-                                        <span id="certDetailPredikat" class="badge bg-comic-yellow text-dark border border-dark font-bangers fs-6">-</span>
-                                    </li>
-                                    <!-- Baris Nomor Sertifikat (Muncul hanya jika data-nomor tersedia) -->
-                                    <li id="certNomorRow" class="py-2 border-bottom border-secondary border-opacity-25 d-none">
-                                        <span class="fw-bold text-muted d-block mb-1">Nomor Sertifikat:</span>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" id="certDetailNomor" class="form-control border border-2 border-dark rounded-0 font-dm bg-body" readonly aria-label="Nomor Sertifikat">
-                                            <button type="button" id="certCopyNomorBtn" class="btn btn-outline-dark border-2 rounded-0 font-archivo" aria-label="Salin Nomor Sertifikat">
-                                                <i class="bi bi-clipboard"></i>
-                                            </button>
-                                        </div>
-                                        <small id="certCopyFeedback" class="text-success fw-bold d-none mt-1">Nomor berhasil disalin!</small>
-                                    </li>
-                                </ul>
-
-                                <!-- Tombol Verifikasi Resmi (Muncul hanya jika data-verify-url tersedia) -->
-                                <div id="certVerifyWrapper" class="d-none mb-3">
-                                    <a id="certVerifyBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-comic-primary btn-sm w-100 font-archivo text-uppercase">
-                                        <i class="bi bi-patch-check-fill me-1"></i> VERIFIKASI SERTIFIKAT
-                                    </a>
+                            <div class="mb-4">
+                                <strong class="font-archivo d-block mb-2">Teknologi:</strong>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge border border-dark bg-surface text-dark">Laravel</span>
+                                    <span class="badge border border-dark bg-surface text-dark">PHP</span>
+                                    <span class="badge border border-dark bg-surface text-dark">MySQL</span>
+                                    <span class="badge border border-dark bg-surface text-dark">Bootstrap</span>
+                                    <span class="badge border border-dark bg-surface text-dark">JavaScript</span>
                                 </div>
                             </div>
-
-                            <!-- Navigasi Footer Bawah Panel Detail -->
-                            <div class="pt-3 border-top border-2 border-dark d-flex justify-content-between align-items-center gap-2">
-                                <button type="button" id="certPrevFooterBtn" class="btn btn-sm btn-comic-outline flex-fill font-archivo">
-                                    <i class="bi bi-arrow-left me-1"></i> PREV
-                                </button>
-                                <button type="button" id="certNextFooterBtn" class="btn btn-sm btn-comic-outline flex-fill font-archivo">
-                                    NEXT <i class="bi bi-arrow-right ms-1"></i>
-                                </button>
+                            <div class="d-flex flex-column flex-sm-row gap-2">
+                                <button class="btn btn-comic-primary px-4 py-2 font-archivo view-project-btn" data-project-id="1">BACA CASE STUDY</button>
+                                <a href="https://github.com/rizki12-cyber/E-Commerce-Restoran" target="_blank" rel="noopener noreferrer" class="btn btn-comic-outline px-4 py-2 font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="border border-2 border-dark overflow-hidden position-relative">
+                                <img src="assets/images/projects/casarasa1.png" alt="Casa Rasa E-Commerce" class="img-fluid w-100 object-fit-cover" style="height: 300px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop'">
+                                <div class="position-absolute top-0 end-0 m-2 badge bg-comic-yellow text-dark border border-dark font-bangers">E-COMMERCE</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+
+                    <!-- Project 02: PoliklinikApp -->
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="comic-project-card border border-3 border-dark bg-body p-4 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="border border-2 border-dark overflow-hidden mb-3 position-relative">
+                                    <img src="assets/images/projects/klinik1.png" alt="PoliklinikApp" class="img-fluid w-100 object-fit-cover" style="height: 220px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=800&auto=format&fit=crop'">
+                                    <span class="position-absolute top-0 end-0 m-2 badge bg-comic-red text-white border border-dark font-bangers">PoliklinikApp</span>
+                                </div>
+                                <h3 class="font-archivo fs-3 mb-1">PoliklinikApp</h3>
+                                <h4 class="font-bangers text-secondary fs-6 mb-3">Sistem Manajemen Klinik</h4>
+                                
+                                <div class="font-dm small mb-3">
+                                    <p class="mb-2"><strong class="font-archivo text-dark">Proses:</strong> Membangun sistem multi-role (Admin, Dokter, Pasien) untuk alur pendaftaran antrean, input rekam medis/obat, hingga kalkulasi biaya periksa.</p>
+                                    <p class="mb-0"><strong class="font-archivo text-dark">Tantangan:</strong> Mengelola relasi tabel *many-to-many* antara riwayat pemeriksaan dan daftar obat yang diresepkan dokter serta pembatasan hak akses *middleware*.</p>
+                                </div>
+
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge border border-dark bg-surface text-dark small">Laravel</span>
+                                    <span class="badge border border-dark bg-surface text-dark small">MySQL</span>
+                                    <span class="badge border border-dark bg-surface text-dark small">Bootstrap</span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
+                                <button class="btn btn-comic-outline flex-fill font-archivo view-project-btn" data-project-id="2"><i class="bi bi-journal-text me-1"></i> CASE STUDY</button>
+                                <a href="https://github.com/rizki12-cyber/PoliklinikApp" target="_blank" rel="noopener noreferrer" class="btn btn-comic-primary flex-fill font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 03: Desa Ciranjeng -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="comic-project-card border border-3 border-dark bg-body p-4 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="border border-2 border-dark overflow-hidden mb-3 position-relative">
+                                    <img src="assets/images/projects/crj4.png" alt="Sistem Informasi Desa Ciranjeng" class="img-fluid w-100 object-fit-cover" style="height: 220px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop'">
+                                    <span class="position-absolute top-0 end-0 m-2 badge bg-comic-yellow text-dark border border-dark font-bangers">SISTEM INFORMASI DESA</span>
+                                </div>
+                                <h3 class="font-archivo fs-3 mb-1">Desa Ciranjeng</h3>
+                                <h4 class="font-bangers text-secondary fs-6 mb-3">Sistem Informasi Desa</h4>
+                                
+                                <div class="font-dm small mb-3">
+                                    <p class="mb-2"><strong class="font-archivo text-dark">Proses:</strong> Membuat portal informasi publik desa beserta panel operator untuk publikasi berita, agenda kegiatan, potensi wilayah, dan grafik data kependudukan.</p>
+                                    <p class="mb-0"><strong class="font-archivo text-dark">Tantangan:</strong> Merancang struktur database kependudukan agar mudah dikelompokkan berdasarkan usia/pekerjaan serta memastikan tampilan tetap ringan dibuka lewat jaringan seluler warga.</p>
+                                </div>
+
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge border border-dark bg-surface text-dark small">Laravel</span>
+                                    <span class="badge border border-dark bg-surface text-dark small">JavaScript</span>
+                                    <span class="badge border border-dark bg-surface text-dark small">MySQL</span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
+                                <button class="btn btn-comic-outline flex-fill font-archivo view-project-btn" data-project-id="3"><i class="bi bi-journal-text me-1"></i> CASE STUDY</button>
+                                <a href="https://github.com/rizki12-cyber/sistem-informasi-desa" target="_blank" rel="noopener noreferrer" class="btn btn-comic-primary flex-fill font-archivo"><i class="bi bi-github me-1"></i> SOURCE CODE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Behind The Code Section (Fixed Mobile List Alignment) -->
+        <section id="behind-the-code" class="py-5 border-top border-3 border-dark">
+            <div class="container py-5">
+                <div class="section-title-wrap mb-5" data-aos="fade-up">
+                    <span class="font-bangers text-comic-red fs-4">BAB 07</span>
+                    <h2 class="display-5 font-archivo fw-bold text-uppercase">BEHIND THE CODE</h2>
+                    <p class="font-dm text-muted">Mengintip dapur pacu, arsitektur, dan logika di balik layar aplikasi.</p>
+                    <div class="comic-divider"></div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Kolom 1 -->
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="comic-card p-4 border border-3 border-dark bg-body h-100">
+                            <span class="badge bg-comic-red text-white font-bangers px-3 py-1 mb-3">ARSITEKTUR & DATABASE</span>
+                            <h3 class="font-archivo fs-4 mb-3">Pola Desain & Relasi Relasional</h3>
+                            <p class="font-dm text-muted mb-3">
+                                Dalam membangun proyek seperti <em>Casa Rasa</em> dan <em>PoliklinikApp</em>, struktur basis data dirancang menggunakan konsep relasional yang ketat pada MySQL untuk menghindari duplikasi data dan memastikan integritas transaksi.
+                            </p>
+                            <ul class="list-unstyled font-dm mb-0">
+                                <!-- Menggunakan align-items-start agar ikon tetap sejajar di baris pertama jika teks turun ke bawah -->
+                                <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex align-items-start gap-2">
+                                    <i class="bi bi-check-circle-fill text-success mt-1 flex-shrink-0"></i> 
+                                    <span>Penerapan pola arsitektur MVC (Model-View-Controller) Laravel.</span>
+                                </li>
+                                <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex align-items-start gap-2">
+                                    <i class="bi bi-check-circle-fill text-success mt-1 flex-shrink-0"></i> 
+                                    <span>Manajemen relasi <em>One-to-Many</em> dan <em>Many-to-Many</em>.</span>
+                                </li>
+                                <li class="py-2 d-flex align-items-start gap-2">
+                                    <i class="bi bi-check-circle-fill text-success mt-1 flex-shrink-0"></i> 
+                                    <span>Proteksi rute menggunakan sistem <em>Middleware</em> kustom.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Kolom 2 -->
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="comic-card p-4 border border-3 border-dark bg-body h-100">
+                            <span class="badge bg-comic-yellow text-dark border border-dark font-bangers px-3 py-1 mb-3">OPTIMASI & ALUR KERJA</span>
+                            <h3 class="font-archivo fs-4 mb-3">Performa & Debugging</h3>
+                            <p class="font-dm text-muted mb-3">
+                                Kode ditulis dengan memperhatikan prinsip pemeliharaan jangka panjang, kebersihan struktur sintaks, serta pengujian berkala menggunakan Postman untuk integrasi API.
+                            </p>
+                            <ul class="list-unstyled font-dm mb-0">
+                                <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex align-items-start gap-2">
+                                    <i class="bi bi-check-circle-fill text-comic-red mt-1 flex-shrink-0"></i> 
+                                    <span>Validasi ketat pada sisi <em>frontend</em> dan <em>backend</em>.</span>
+                                </li>
+                                <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex align-items-start gap-2">
+                                    <i class="bi bi-check-circle-fill text-comic-red mt-1 flex-shrink-0"></i> 
+                                    <span>Penggunaan Git & GitHub untuk kontrol versi harian.</span>
+                                </li>
+                                <li class="py-2 d-flex align-items-start gap-2">
+                                    <i class="bi bi-check-circle-fill text-comic-red mt-1 flex-shrink-0"></i> 
+                                    <span>Optimasi aset agar waktu muat halaman tetap ringan.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <!-- Developer Zone Section (Smooth Colored Typing Effect - Guaranteed Colored) -->
+            <section id="developer-zone" class="py-5 border-top border-3 border-dark bg-surface">
+                <div class="container py-5">
+                    <div class="section-title-wrap mb-5" data-aos="fade-up">
+                        <span class="font-bangers text-comic-red fs-4">BAB 08</span>
+                        <h2 class="display-5 font-archivo fw-bold text-uppercase">DEVELOPER ZONE</h2>
+                        <p class="font-dm text-muted">Laboratorium eksperimen, snippet kode favorit, dan aktivitas harian.</p>
+                        <div class="comic-divider"></div>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Kotak 1: Terminal dengan Efek Ketik Warna-warni -->
+                        <div class="col-lg-7" data-aos="fade-right">
+                            <div class="comic-card border border-3 border-dark bg-dark text-light p-4 h-100 shadow-comic">
+                                <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom border-secondary">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="badge bg-danger rounded-circle p-2" style="width: 12px; height: 12px;"></span>
+                                        <span class="badge bg-warning rounded-circle p-2" style="width: 12px; height: 12px;"></span>
+                                        <span class="badge bg-success rounded-circle p-2" style="width: 12px; height: 12px;"></span>
+                                        <span class="font-dm small text-muted ms-2">snippet.php</span>
+                                    </div>
+                                    <span class="badge bg-comic-yellow text-dark font-bangers">LARAVEL ROUTINE</span>
+                                </div>
+                                
+                                <!-- Area Terminal -->
+                                <div class="bg-black border border-secondary p-3 rounded overflow-auto" style="min-height: 180px;">
+                                    <pre class="font-monospace fs-6 mb-0"><code id="typed-code"></code><span id="typing-cursor" class="text-warning fw-bold">|</span></pre>
+                                </div>
+
+                                <p class="font-dm small text-white mt-3 mb-0">
+                                    ⚡ Potongan kode backend untuk menjaga keamanan hak akses pengguna di berbagai sistem berbasis Laravel.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Kotak 2: Status / Stack Favorit -->
+                        <div class="col-lg-5" data-aos="fade-left">
+                            <div class="comic-card p-4 border border-3 border-dark bg-body h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <span class="badge bg-comic-yellow text-dark border border-dark font-bangers px-3 py-1 mb-3">ENVIRONMENT</span>
+                                    <h3 class="font-archivo fs-4 mb-3">Setup & Senjata Andalan</h3>
+                                    <p class="font-dm text-muted small mb-3">
+                                        Lingkungan kerja yang nyaman dan konfigurasi alat yang tepat adalah kunci produktivitas harian dalam merakit barisan kode.
+                                    </p>
+                                    <ul class="list-unstyled font-dm small space-y-2 mb-0">
+                                        <li class="py-1 border-bottom border-secondary border-opacity-25 d-flex justify-content-between">
+                                            <span class="fw-bold">OS Utama:</span> <span>Windows</span>
+                                        </li>
+                                        <li class="py-1 border-bottom border-secondary border-opacity-25 d-flex justify-content-between">
+                                            <span class="fw-bold">Text Editor:</span> <span>VS Code</span>
+                                        </li>
+                                        <li class="py-1 border-bottom border-secondary border-opacity-25 d-flex justify-content-between">
+                                            <span class="fw-bold">Terminal:</span> <span>Git Bash / PowerShell</span>
+                                        </li>
+                                        <li class="py-1 d-flex justify-content-between">
+                                            <span class="fw-bold">Database GUI:</span> <span>phpMyAdmin</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <style>
+                @keyframes blink {
+                    0%, 100% { opacity: 1; }
+                    50% { opacity: 0; }
+                }
+                #typing-cursor {
+                    animation: blink 0.8s infinite;
+                }
+                /* Warna kustom ala VS Code Dark Theme */
+                .token-comment { color: #6a9955; font-style: italic; }
+                .token-keyword { color: #c586c0; font-weight: bold; }
+                .token-function { color: #dcdcaa; }
+                .token-variable { color: #9cdcfe; }
+                .token-string { color: #ce9178; }
+            </style>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    // Kode PHP yang sudah diberi format HTML warna-warni siap ketik
+                    const codeHTML = `<span class="token-comment">// Contoh middleware kustom untuk role check</span>\n` +
+                                    `<span class="token-keyword">public function</span> <span class="token-function">handle</span>(<span class="token-variable">$request</span>, Closure <span class="token-variable">$next</span>, <span class="token-variable">$role</span>)\n` +
+                                    `{\n` +
+                                    `    <span class="token-keyword">if</span> (!Auth::<span class="token-function">check</span>() || Auth::<span class="token-function">user</span>()->role !== <span class="token-variable">$role</span>) {\n` +
+                                    `        <span class="token-keyword">return</span> <span class="token-function">redirect</span>(<span class="token-string">'/unauthorized'</span>);\n` +
+                                    `    }\n` +
+                                    `    <span class="token-keyword">return</span> <span class="token-variable">$next</span>(<span class="token-variable">$request</span>);\n` +
+                                    `}`;
+
+                    const codeElement = document.getElementById("typed-code");
+                    const cursorElement = document.getElementById("typing-cursor");
+                    let charIndex = 0;
+                    let isStarted = false;
+                    let currentHTML = "";
+                    let insideTag = false;
+
+                    function typeWriter() {
+                        if (charIndex < codeHTML.length) {
+                            let char = codeHTML.charAt(charIndex);
+                            
+                            // Logika agar tag HTML warna tidak terpotong saat diketik huruf per huruf
+                            if (char === '<') {
+                                insideTag = true;
+                            }
+                            
+                            currentHTML += char;
+                            
+                            if (char === '>') {
+                                insideTag = false;
+                            }
+
+                            codeElement.innerHTML = currentHTML;
+                            charIndex++;
+
+                            // Jika sedang di dalam tag HTML warna, percepat sedikit agar tag-nya langsung utuh
+                            let speed = insideTag ? 5 : 55; // 55 milidetik per karakter (santai & enak dilihat)
+                            setTimeout(typeWriter, speed);
+                        } else {
+                            // Sembunyikan kursor kedip setelah selesai
+                            if (cursorElement) cursorElement.style.display = 'none';
+                        }
+                    }
+
+                    // Jalankan animasi saat discroll ke Bab 08
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !isStarted) {
+                                isStarted = true;
+                                setTimeout(typeWriter, 500);
+                            }
+                        });
+                    }, { threshold: 0.3 });
+
+                    const devZoneSection = document.getElementById("developer-zone");
+                    if (devZoneSection) {
+                        observer.observe(devZoneSection);
+                    }
+                });
+            </script>
+
+            <!-- Achievement Section -->
+            <section id="achievement" class="py-5 border-top border-3 border-dark">
+                <div class="container py-5">
+                    <div class="section-title-wrap mb-5" data-aos="fade-up">
+                        <span class="font-bangers text-comic-red fs-4">BAB 09</span>
+                        <h2 class="display-5 font-archivo fw-bold text-uppercase">PENCAPAIAN &amp; MILESTONE</h2>
+                        <p class="font-dm text-muted">Jejak pencapaian, penghargaan khusus, dan pencapaian target pengembangan.</p>
+                        <div class="comic-divider"></div>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Poin 1 -->
+                        <div class="col-md-4" data-aos="fade-up">
+                            <div class="comic-card p-4 border border-3 border-dark bg-body h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center gap-2 mb-3">
+                                        <span class="badge bg-comic-red text-white font-bangers fs-5 px-3 py-1">01</span>
+                                        <span class="font-bangers text-secondary">PKL SUKSES</span>
+                                    </div>
+                                    <h3 class="font-archivo fs-5 mb-2">Penyelesaian Proyek Klien PKL</h3>
+                                    <p class="font-dm text-muted small mb-0">
+                                        Berhasil menyelesaikan masa Praktik Kerja Lapangan di PT Grage Media Technology dengan kontribusi nyata dalam pengembangan aplikasi berbasis Laravel.
+                                    </p>
+                                </div>
+                                <div class="mt-4 pt-3 border-top border-dark border-opacity-25 font-bangers text-comic-red">
+                                    ⭐ 100% TARGET TERCAPAI
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Poin 2 -->
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="comic-card p-4 border border-3 border-dark bg-body h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center gap-2 mb-3">
+                                        <span class="badge bg-comic-yellow text-dark border border-dark font-bangers fs-5 px-3 py-1">02</span>
+                                        <span class="font-bangers text-secondary">KARYA MANDIRI</span>
+                                    </div>
+                                    <h3 class="font-archivo fs-5 mb-2">Portofolio E-Commerce &amp; Sistem Desa</h3>
+                                    <p class="font-dm text-muted small mb-0">
+                                        Mengembangkan dan merilis beberapa aplikasi web fungsional berstandar industri dengan arsitektur database relasional yang rapi.
+                                    </p>
+                                </div>
+                                <div class="mt-4 pt-3 border-top border-dark border-opacity-25 font-bangers text-dark">
+                                    🚀 3+ Aplikasi Web Utama
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Poin 3 -->
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="comic-card p-4 border border-3 border-dark bg-body h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center gap-2 mb-3">
+                                        <span class="badge bg-dark text-white font-bangers fs-5 px-3 py-1">03</span>
+                                        <span class="font-bangers text-secondary">KOMPETENSI</span>
+                                    </div>
+                                    <h3 class="font-archivo fs-5 mb-2">Uji Kompetensi Keahlian RPL</h3>
+                                    <p class="font-dm text-muted small mb-0">
+                                        Lulus uji kompetensi bidang Rekayasa Perangkat Lunak dengan predikat memuaskan serta menguasai standar teknologi web modern.
+                                    </p>
+                                </div>
+                                <div class="mt-4 pt-3 border-top border-dark border-opacity-25 font-bangers text-success">
+                                    🎯 LULUSAN KOMPETEN
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certificates Section -->
+                    <section id="certificates" class="py-5 border-top border-3 border-dark bg-surface">                <div class="container py-5">
+                    <div class="section-title-wrap mb-5" data-aos="fade-up">
+                        <span class="font-bangers text-comic-red fs-4">BAB 06</span>
+                        <h2 class="display-5 font-archivo fw-bold text-uppercase">PENCAPAIAN TERBUKA</h2>
+                        <p class="font-dm text-muted">Koleksi sertifikat penghargaan dan kompetensi profesional.</p>
+                        <div class="comic-divider"></div>
+                    </div>
+
+                    <div class="row g-4" id="certificatesGrid">
+                        <!-- ===== KARTU 1: PKL PT Grage ===== -->
+                        <div class="col-md-4" data-aos="fade-up">
+                            <div class="comic-cert-card border border-3 border-dark bg-body p-3 h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="border border-2 border-dark overflow-hidden mb-3 position-relative cert-thumb"
+                                        style="cursor: pointer;"
+                                        role="button"
+                                        tabindex="0"
+                                        data-img="assets/images/certificates/pkl.jpg"
+                                        data-title="Sertifikat Praktik Kerja Lapangan"
+                                        data-penerbit="PT Grage Media Technology"
+                                        data-tahun="2025"
+                                        data-berlaku="Seumur Hidup"
+                                        data-bidang="Web Developer"
+                                        data-predikat="Sangat Baik">
+                                        <img src="assets/images/certificates/pkl.jpg" alt="Sertifikat PKL" class="img-fluid w-100 object-fit-cover" style="height: 200px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=600&auto=format&fit=crop'">
+                                        <span class="position-absolute bottom-0 start-0 m-2 badge bg-dark text-white font-bangers">PT Grage Media Technology</span>
+                                    </div>
+                                    <h3 class="font-archivo fs-5 mb-1">Sertifikat Praktik Kerja Lapangan</h3>
+                                    <p class="font-dm text-muted small mb-0">Pengalaman kerja nyata sebagai Web Developer.</p>
+                                </div>
+                                <button class="btn btn-comic-outline btn-sm mt-3 font-archivo view-cert-btn"
+                                        data-img="assets/images/certificates/pkl.jpg"
+                                        data-title="Sertifikat Praktik Kerja Lapangan"
+                                        data-penerbit="PT Grage Media Technology"
+                                        data-tahun="2025"
+                                        data-berlaku="Seumur Hidup"
+                                        data-bidang="Web Development"
+                                        data-predikat="Sangat Baik">
+                                    <i class="bi bi-eye-fill me-1"></i> LIHAT SERTIFIKAT
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ===== KARTU 2: Uji Kompetensi SMKN 1 Talaga ===== -->
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="comic-cert-card border border-3 border-dark bg-body p-3 h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="border border-2 border-dark overflow-hidden mb-3 position-relative cert-thumb"
+                                        style="cursor: pointer;"
+                                        role="button"
+                                        tabindex="0"
+                                        data-img="assets/images/certificates/bnsp.jpg"
+                                        data-title="Sertifikat Uji Kompetensi Keahlian"
+                                        data-penerbit="BNSP"
+                                        data-tahun="2026"
+                                        data-berlaku="2029"
+                                        data-bidang="Junior Web Developer"
+                                        data-predikat="Kompeten">
+                                        <img src="assets/images/certificates/bnsp.jpg" alt="Sertifikat Ukom" class="img-fluid w-100 object-fit-cover" style="height: 200px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600&auto=format&fit=crop'">
+                                        <span class="position-absolute bottom-0 start-0 m-2 badge bg-dark text-white font-bangers">SMKN 1 Talaga</span>
+                                    </div>
+                                    <h3 class="font-archivo fs-5 mb-1">Sertifikat Uji Kompetensi</h3>
+                                    <p class="font-dm text-muted small mb-0">Kompetensi Keahlian Rekayasa Perangkat Lunak.</p>
+                                </div>
+                                <button class="btn btn-comic-outline btn-sm mt-3 font-archivo view-cert-btn"
+                                        data-img="assets/images/certificates/bnsp.jpg"
+                                        data-title="Sertifikat Uji Kompetensi Keahlian"
+                                        data-penerbit="BNSP"
+                                        data-tahun="2026"
+                                        data-berlaku="2029"
+                                        data-bidang="Junior Web Developer"
+                                        data-predikat="Kompeten">
+                                    <i class="bi bi-eye-fill me-1"></i> LIHAT SERTIFIKAT
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ===== KARTU 3: Uji Kompetensi PT Gebra ===== -->
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="comic-cert-card border border-3 border-dark bg-body p-3 h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="border border-2 border-dark overflow-hidden mb-3 position-relative cert-thumb"
+                                        style="cursor: pointer;"
+                                        role="button"
+                                        tabindex="0"
+                                        data-img="assets/images/certificates/ujikom.jpg"
+                                        data-title="Sertifikat Uji Kompetensi PT Gebra"
+                                        data-penerbit="PT. Gebra"
+                                        data-tahun="2025"
+                                        data-berlaku="2029"
+                                        data-bidang="Web Development & Software Engineering"
+                                        data-predikat="Baik">
+                                        <img src="assets/images/certificates/ujikom.jpg" alt="Sertifikat Uji Kompetensi" class="img-fluid w-100 object-fit-cover" style="height: 200px;" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&auto=format&fit=crop'">
+                                        <span class="position-absolute bottom-0 start-0 m-2 badge bg-dark text-white font-bangers">PT. Gebra</span>
+                                    </div>
+                                    <h3 class="font-archivo fs-5 mb-1">Sertifikat Uji Kompetensi PT Gebra</h3>
+                                    <p class="font-dm text-muted small mb-0">Partisipasi aktif dalam pengembangan tren web modern.</p>
+                                </div>
+                                <button class="btn btn-comic-outline btn-sm mt-3 font-archivo view-cert-btn"
+                                        data-img="assets/images/certificates/ujikom.jpg"
+                                        data-title="Sertifikat Uji Kompetensi PT Gebra"
+                                        data-penerbit="PT. Gebra"
+                                        data-tahun="2025"
+                                        data-berlaku="2028"
+                                        data-bidang="Software Engineer"
+                                        data-predikat="Kompeten">
+                                    <i class="bi bi-eye-fill me-1"></i> LIHAT SERTIFIKAT
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                    <!-- Roadmap Section: Winding SVG Road Style (Direct CSS Applied) -->
+                    <section id="roadmap" class="py-5 border-top border-3 border-dark">                    
+                    
+                    <style>
+                        .roadmap-container-fixed {
+                        position: relative;
+                        padding-top: 3rem !important;   /* tambah ruang atas */
+                        padding-bottom: 3rem !important;/* tambah ruang bawah */
+                    }
+                    .winding-road-svg {
+                        left: 50% !important;
+                        transform: translateX(-50%);
+                        width: 300px !important;
+                        opacity: .9;                    /* sedikit lembut biar tidak "nabrak" kartu */
+                    }
+
+                    /* Pengaturan Desktop (Layar Lebar) */
+                    @media (min-width: 768px) {
+                        /* KOTAK MERAH (Kanan) - Digeser lebih jauh ke kanan */
+                        .row.flex-md-row-reverse .col-md-5:first-child {
+                            margin-right: -6rem !important; /* Sebelumnya -4rem atau -2rem */
+                            transform: translateX(60px) !important; /* Sebelumnya 30px atau 18px */
+                        }
+                        
+                        /* KOTAK KUNING & HITAM (Kiri) - Tetap sejajar */
+                        .row:not(.flex-md-row-reverse) .col-md-5:first-child {
+                            margin-left: -4rem !important;
+                            transform: translateX(-30px);
+                        }
+
+                        /* jarak antar tahap lebih lega */
+                        .roadmap-container-fixed .row {
+                            margin-bottom: 4rem !important;
+                        }
+                        .roadmap-container-fixed .row:last-child {
+                            margin-bottom: 0 !important;
+                        }
+                    }
+
+                    /* Mobile tetap rapi */
+                    @media (max-width: 767.98px) {
+                        .winding-road-svg { display: none !important; }
+                        .roadmap-container-fixed .row {
+                            flex-direction: column !important;
+                            text-align: center !important;
+                            margin-bottom: 2rem !important;
+                        }
+                        .roadmap-container-fixed .col-md-5,
+                        .roadmap-container-fixed .col-md-7 {
+                            width: 100% !important;
+                            padding: 0 12px !important;
+                        }
+                        .roadmap-container-fixed .comic-card {
+                            text-align: left !important;
+                            margin-top: 18px;
+                            max-width: 100% !important;
+                        }
+                        .road-pin-badge { margin-bottom: 8px; }
+                    }
+                    </style>
+
+                    <div class="container py-5">
+                        <div class="section-title-wrap mb-5 text-center" data-aos="fade-up">
+                            <span class="font-bangers text-comic-red fs-4">BAB 11</span>
+                            <h2 class="display-5 font-archivo fw-bold text-uppercase">PETA JALUR KARIER IT MINING</h2>
+                            <p class="font-dm text-muted">Jalur navigasi berkelok menuju impian berkarir di sektor industri pertambangan.</p>
+                            <div class="comic-divider mx-auto"></div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-11">
+                                <!-- Wrapper Utama -->
+                                <div class="roadmap-container-fixed position-relative mx-auto py-4" style="max-width: 950px;">
+                                    
+                                    <!-- SVG Jalan Aspal Berkelok di Tengah -->
+                                    <svg class="winding-road-svg d-none d-md-block position-absolute top-0 start-50 translate-middle-x h-100" width="320" viewBox="0 0 320 950" preserveAspectRatio="none" style="z-index: 0; pointer-events: none;">
+                                        <path d="M 160 0 L 160 130 C 160 280, 270 230, 270 410 C 270 590, 50 540, 50 720 C 50 840, 160 860, 160 950" 
+                                            fill="none" stroke="#111111" stroke-width="42" stroke-linecap="round"/>
+                                        <path d="M 160 0 L 160 130 C 160 280, 270 230, 270 410 C 270 590, 50 540, 50 720 C 50 840, 160 860, 160 950" 
+                                            fill="none" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="16, 16"/>
+                                    </svg>
+
+                                    <!-- GARIS 1: KOTAK KUNING (KIRI) -->
+                                    <div class="row align-items-center position-relative z-1">
+                                        <div class="col-md-5 text-md-end mb-3 mb-md-0" data-aos="fade-right">
+                                            <div class="comic-card p-4 border border-3 border-dark bg-comic-yellow text-dark shadow-comic">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <span class="badge bg-dark text-white font-bangers px-2 py-1">TAHAP 01 — START</span>
+                                                    <span class="font-bangers text-dark">EST. 2026</span>
+                                                </div>
+                                                <h3 class="font-archivo fs-4 text-dark mb-2">Junior Web Developer</h3>
+                                                <p class="font-dm small text-dark mb-0">
+                                                    Fokus memperkuat fondasi pemrograman web, merilis portofolio nyata, serta menguasai ekosistem <strong>Laravel, PHP, dan MySQL</strong>.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 text-center position-relative my-2 my-md-0">
+                                            <div class="road-pin-badge mx-auto bg-comic-yellow text-dark border border-3 border-dark font-bangers fs-2 rounded-circle d-flex align-items-center justify-content-center shadow-comic" style="width: 65px; height: 65px;">
+                                                1
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 d-none d-md-block"></div>
+                                    </div>
+
+                                    <!-- GARIS 2: KOTAK MERAH (DIGESER KE KANAN LEBIH JAUH) -->
+                                    <div class="row align-items-center mb-5 pb-md-5 position-relative z-1 flex-md-row-reverse">
+                                        <div class="col-md-5 text-md-start mb-3 mb-md-0" data-aos="fade-left">
+                                            <div class="comic-card p-4 border border-3 border-dark bg-comic-red text-white shadow-comic">
+                                                <div class="d-flex justify-content-between align-items-center mb-2 flex-md-row-reverse">
+                                                    <span class="badge bg-comic-yellow text-dark border border-dark font-bangers px-2 py-1">TAHAP 02 — LEVEL UP</span>
+                                                    <span class="font-bangers text-white">2027 – 2028</span>
+                                                </div>
+                                                <h3 class="font-archivo fs-4 text-white mb-2">Enterprise &amp; System Integration</h3>
+                                                <p class="font-dm small text-white mb-0">
+                                                    Mendalami integrasi API, manajemen database skala besar, keamanan jaringan, dan otomatisasi alur kerja sistem berskala industri.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 text-center position-relative my-2 my-md-0">
+                                            <div class="road-pin-badge mx-auto bg-comic-red text-white border border-3 border-dark font-bangers fs-2 rounded-circle d-flex align-items-center justify-content-center shadow-comic" style="width: 65px; height: 65px;">
+                                                2
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 d-none d-md-block"></div>
+                                    </div>
+
+                                    <!-- GARIS 3: KOTAK HITAM (PT ADARO & TEKS LEBIH RAPI) -->
+                                    <div class="row align-items-center position-relative z-1">
+                                        <div class="col-md-5 text-md-end mb-3 mb-md-0" data-aos="fade-right">
+                                            <div class="comic-card p-4 border border-3 border-dark bg-dark text-white shadow-comic text-start mx-auto" style="max-width: 440px;">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <span class="badge bg-comic-yellow text-dark border border-dark font-bangers px-2 py-1">FINISH LINE ⛏️</span>
+                                                    <span class="font-bangers text-warning">MISI UTAMA</span>
+                                                </div>
+                                                <h3 class="font-archivo fs-4 text-warning mb-2">IT Mining Specialist</h3>
+                                                <p class="font-dm small text-light mb-3 lh-sm">
+                                                    Berkarir di sektor industri pertambangan melalui jalur IT—membangun sistem manajemen operasional tambang, integrasi data lapangan, dan digitalisasi infrastruktur.
+                                                </p>
+                                                
+                                                <!-- Logo & Nama PT Adaro -->
+                                                <div class="p-3 border border-2 border-secondary rounded bg-black bg-opacity-75 d-flex align-items-center gap-3 shadow-sm">
+                                                    <div class="p-1 bg-white rounded border border-dark flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                                                        <img src="assets/images/OIP.webp" alt="Logo PT Adaro" class="img-fluid w-100 h-100 object-fit-contain" onerror="this.src='https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?q=80&w=150&auto=format&fit=crop'">
+                                                    </div>
+                                                    <div class="overflow-hidden text-start">
+                                                        <small class="font-bangers text-warning d-block tracking-wide" style="font-size: 0.75rem;">TARGET PERUSAHAAN</small>
+                                                        <span class="font-dm fw-bold text-white small text-truncate d-block">PT Adaro Energy Indonesia</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 text-center position-relative my-2 my-md-0">
+                                            <div class="road-pin-badge mx-auto bg-white text-dark border border-3 border-dark font-bangers fs-2 rounded-circle d-flex align-items-center justify-content-center shadow-comic" style="width: 65px; height: 65px;">
+                                                3
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 d-none d-md-block"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reviews Section -->
+                <section id="reviews" class="py-5 border-top border-3 border-dark bg-surface" style="padding-top: 5rem !important; padding-bottom: 5rem !important;">
+                    <div class="container py-5">
+                        <div class="section-title-wrap mb-5 text-center" data-aos="fade-up">
+                            <span class="font-bangers text-comic-red fs-4">BAB INTERAKTIF</span>
+                            <h2 class="display-5 font-archivo fw-bold text-uppercase">SUARA PEMBACA</h2>
+                            <p class="font-dm text-muted">Setiap masukan adalah amunisi untuk terus berkembang.</p>
+                            <div class="comic-divider mx-auto"></div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8" data-aos="fade-up">
+                                <div class="comic-card border border-3 border-dark bg-body p-4 p-md-5 shadow-comic">
+                                    <div class="mb-5">
+                                        <h3 class="font-archivo fs-5 text-uppercase mb-3 d-flex align-items-center gap-2">
+                                            <i class="bi bi-pencil-square text-comic-red"></i> Tinggalkan Jejak
+                                        </h3>
+                                        <form id="reviewForm">
+                                            <div class="row g-3 mb-3">
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control border border-2 border-dark rounded-0 p-2 font-dm" id="visitorName" placeholder="Nama / Panggilan kamu..." maxlength="50" required>
+                                                </div>
+                                                <div class="col-12">
+                                                    <textarea class="form-control border border-2 border-dark rounded-0 p-2 font-dm" id="visitorMessage" rows="2" placeholder="Tuliskan pendapat singkatmu di sini..." maxlength="500" required></textarea>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-comic-primary w-100 py-2 font-archivo text-uppercase">Kirim <i class="bi bi-send-fill ms-1"></i></button>
+                                            <div id="reviewFeedback" class="mt-2 font-dm small text-success text-center d-none"></div>
+                                        </form>
+                                    </div>
+
+                                    <hr class="border-dark border-2 opacity-100 my-4">
+
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between mb-4">
+                                            <h3 class="font-archivo fs-5 text-uppercase mb-0 d-flex align-items-center gap-2">
+                                                <i class="bi bi-chat-square-text-fill text-comic-red"></i> Daftar Ulasan
+                                            </h3>
+                                            <span class="badge bg-comic-yellow text-dark border border-dark font-bangers fs-6 px-3 py-1">
+                                                <span id="reviewCount">0</span>
+                                            </span>
+                                        </div>
+
+                                        <div id="testimonialsList" class="review-list mb-4">
+                                            <p class="font-dm text-muted text-center small my-4">Belum ada ulasan. Jadilah yang pertama!</p>
+                                        </div>
+
+                                        <div id="reviewPagination" class="d-flex justify-content-between align-items-center w-100 mt-2 flex-nowrap">
+                                            <button id="btnPrevReview" class="btn btn-sm btn-outline-dark border-2 font-archivo text-uppercase" disabled><i class="bi bi-arrow-left"></i></button>
+                                            <span id="pageIndicator" class="font-bangers text-muted fs-6 mx-2 text-center text-nowrap">Hal 1</span>
+                                            <button id="btnNextReview" class="btn btn-sm btn-outline-dark border-2 font-archivo text-uppercase" disabled><i class="bi bi-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                    <section id="roadmap" class="py-5 border-top border-3 border-dark">
+                        <div class="container py-5">
+                        <div class="section-title-wrap mb-5 text-center" data-aos="fade-up">
+                            <span class="font-bangers text-comic-red fs-4">BAB AKHIR</span>
+                            <h2 class="display-5 font-archivo fw-bold text-uppercase">BAB BERIKUTNYA</h2>
+                            <p class="font-bangers fs-4 text-secondary">"SETIAP KISAH HEBAT BERAWAL DARI SEBUAH KONEKSI."</p>
+                            <div class="comic-divider mx-auto"></div>
+                        </div>
+
+                        <div class="row g-5 justify-content-center">
+                            <div class="col-lg-5" data-aos="fade-right">
+                                <div class="comic-card p-4 border border-3 border-dark bg-body h-100">
+                                    <h3 class="font-archivo fs-4 mb-4 text-uppercase">HUBUNGI SAYA</h3>
+                                    <p class="font-dm text-muted mb-4">Terbuka untuk kesempatan kerja, kolaborasi, dan pengalaman baru di bidang pengembangan web.</p>
+
+                                    <ul class="list-unstyled font-dm space-y-3 mb-4">
+                                        <li class="mb-3 d-flex align-items-center gap-3">
+                                            <div class="p-2 border border-2 border-dark bg-comic-yellow text-dark"><i class="bi bi-envelope-fill fs-5"></i></div>
+                                            <div>
+                                                <span class="d-block small text-muted font-bangers">EMAIL</span>
+                                                <a href="mailto:aprianarizqi@gmail.com" class="text-dark text-decoration-none fw-bold">aprianarizqi@gmail.com</a>
+                                            </div>
+                                        </li>
+                                        <li class="mb-3 d-flex align-items-center gap-3">
+                                            <div class="p-2 border border-2 border-dark bg-success text-white"><i class="bi bi-whatsapp fs-5"></i></div>
+                                            <div>
+                                                <span class="d-block small text-muted font-bangers">WHATSAPP</span>
+                                                <a href="https://wa.me/6282116949020" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none fw-bold">+62 821-1694-9020</a>
+                                            </div>
+                                        </li>
+                                        <li class="mb-3 d-flex align-items-center gap-3">
+                                            <div class="p-2 border border-2 border-dark bg-danger text-white"><i class="bi bi-instagram fs-5"></i></div>
+                                            <div>
+                                                <span class="d-block small text-muted font-bangers">INSTAGRAM</span>
+                                                <a href="https://www.instagram.com/ap.rzqy" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none fw-bold">@ap.rzqy</a>
+                                            </div>
+                                        </li>
+                                        <li class="mb-3 d-flex align-items-center gap-3">
+                                            <div class="p-2 border border-2 border-dark bg-primary text-white"><i class="bi bi-linkedin fs-5"></i></div>
+                                            <div>
+                                                <span class="d-block small text-muted font-bangers">LINKEDIN</span>
+                                                <a href="https://www.linkedin.com/in/rizkiapriana" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none fw-bold">linkedin.com/in/rizkiapriana</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3">
+                                            <div class="p-2 border border-2 border-dark bg-dark text-white"><i class="bi bi-github fs-5"></i></div>
+                                            <div>
+                                                <span class="d-block small text-muted font-bangers">GITHUB</span>
+                                                <a href="https://github.com/rizki12-cyber" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none fw-bold">github.com/rizki12-cyber</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-7" data-aos="fade-left">
+                                <div class="comic-card p-4 p-md-5 border border-3 border-dark bg-body">
+                                    <h3 class="font-archivo fs-4 mb-4 text-uppercase">KIRIM PESAN</h3>
+                                    <form id="contactForm" novalidate>
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label font-archivo fw-bold">NAMA ANDA</label>
+                                            <input type="text" class="form-control comic-input border border-2 border-dark rounded-0" id="name" name="name" autocomplete="name" required>
+                                            <div class="invalid-feedback">Silakan masukkan nama Anda.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label font-archivo fw-bold">ALAMAT EMAIL</label>
+                                            <input type="email" class="form-control comic-input border border-2 border-dark rounded-0" id="email" name="email" autocomplete="email" required>
+                                            <div class="invalid-feedback">Silakan masukkan email yang valid.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="subject" class="form-label font-archivo fw-bold">SUBJEK</label>
+                                            <input type="text" class="form-control comic-input border border-2 border-dark rounded-0" id="subject" name="subject" autocomplete="off" required>
+                                            <div class="invalid-feedback">Silakan masukkan subjek pesan.</div>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="message" class="form-label font-archivo fw-bold">PESAN</label>
+                                            <textarea class="form-control comic-input border border-2 border-dark rounded-0" id="message" name="message" rows="4" autocomplete="off" required></textarea>
+                                            <div class="invalid-feedback">Silakan tuliskan pesan Anda.</div>
+                                        </div>
+                                        <button type="submit" class="btn btn-comic-primary w-100 py-3 font-archivo text-uppercase">KIRIM PESAN <i class="bi bi-send-fill ms-2"></i></button>
+                                        <div id="formSuccessAlert" class="alert alert-success mt-3 d-none font-dm border border-2 border-dark rounded-0">
+                                            Pesan berhasil divalidasi! Silakan hubungi langsung melalui WhatsApp atau Email tertera.
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="py-4 border-top border-3 border-dark bg-body text-center">
+                <div class="container">
+                    <div class="d-flex flex-column align-items-center justify-content-center gap-2">
+                        <div class="monogram-badge-lg">RA</div>
+                        <span class="badge bg-comic-yellow text-dark border border-2 border-dark font-bangers px-3 py-1">STILL HIGH 20</span>
+                        <h4 class="font-bangers display-6 text-comic-red mb-0 footer-bersambung">BERSAMBUNG...</h4>
+                        <p class="font-dm text-muted small mb-0">&copy; <span id="currentYear"></span> Rizki Apriana. Hak Cipta Dilindungi.</p>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Back to Top Button -->
+            <button id="backToTop" class="btn btn-comic-primary rounded-circle border border-2 border-dark shadow" aria-label="Kembali ke Atas">
+                <i class="bi bi-arrow-up-short fs-4"></i>
+            </button>
+
+            <!-- Project Modal -->
+            <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content border border-3 border-dark rounded-0 bg-surface">
+                        <div class="modal-header border-bottom border-dark bg-body">
+                            <h3 class="modal-title font-archivo fs-4" id="projectModalLabel">Detail Proyek</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                        </div>
+                        <div class="modal-body font-dm p-4" id="projectModalBody"></div>
+                        <div class="modal-footer border-top border-dark bg-body">
+                            <button type="button" class="btn btn-comic-outline font-archivo" data-bs-dismiss="modal">TUTUP</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate Modal -->
+            <div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content border border-3 border-dark rounded-0 bg-surface shadow-comic">
+                        <!-- Header Modal -->
+                        <div class="modal-header border-bottom border-3 border-dark bg-body py-2 px-3 d-flex flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span id="certModalCounter" class="badge bg-comic-yellow text-dark border border-2 border-dark font-bangers fs-6 px-2 py-1" aria-live="polite">1 / 3</span>
+                                <h3 class="modal-title font-archivo fs-5 mb-0 text-uppercase" id="certModalLabel">Pratinjau Sertifikat</h3>
+                            </div>
+
+                            <!-- Toolbar Aksi (Zoom, Fullscreen, Download, Tutup) -->
+                            <div class="d-flex align-items-center gap-1 flex-wrap" role="toolbar" aria-label="Kontrol Pratinjau Sertifikat">
+                                <button type="button" id="certZoomOutBtn" class="btn btn-sm btn-outline-dark border-2 rounded-0" title="Perkecil (Zoom Out)" aria-label="Perkecil Gambar">
+                                    <i class="bi bi-zoom-out"></i>
+                                </button>
+                                <button type="button" id="certZoomResetBtn" class="btn btn-sm btn-outline-dark border-2 rounded-0 font-archivo px-2" title="Reset Ukuran (100%)" aria-label="Reset Zoom" style="font-size: 0.75rem;">
+                                    100%
+                                </button>
+                                <button type="button" id="certZoomInBtn" class="btn btn-sm btn-outline-dark border-2 rounded-0" title="Perbesar (Zoom In)" aria-label="Perbesar Gambar">
+                                    <i class="bi bi-zoom-in"></i>
+                                </button>
+                                <button type="button" id="certFullscreenBtn" class="btn btn-sm btn-outline-dark border-2 rounded-0" title="Layar Penuh (Fullscreen)" aria-label="Layar Penuh">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                                <a id="certDownloadBtn" href="#" download class="btn btn-sm btn-comic-primary border-2 rounded-0 font-archivo px-2" title="Unduh Sertifikat" aria-label="Unduh Sertifikat">
+                                    <i class="bi bi-download"></i> <span class="d-none d-md-inline">UNDUH</span>
+                                </a>
+                                <button type="button" class="btn-close border border-2 border-dark p-2 ms-1 bg-white" data-bs-dismiss="modal" aria-label="Tutup Modal"></button>
+                            </div>
+                        </div>
+
+                        <!-- Body Modal -->
+                        <div class="modal-body p-0 bg-body">
+                            <div class="row g-0">
+                                <!-- Area Pratinjau Gambar -->
+                                <div class="col-lg-8 position-relative bg-dark d-flex align-items-center justify-content-center overflow-auto" id="certViewport" style="min-height: 360px; max-height: 72vh;">
+                                    
+                                    <!-- Loading State -->
+                                    <div id="certLoadingState" class="text-center text-white p-4 d-none" role="status" aria-live="polite">
+                                        <div class="spinner-border text-warning mb-2" style="width: 2.5rem; height: 2.5rem;" role="status"></div>
+                                        <p class="font-bangers fs-5 tracking-widest mb-0">MEMUAT SERTIFIKAT...</p>
+                                    </div>
+
+                                    <!-- Error State -->
+                                    <div id="certErrorState" class="text-center text-white p-4 d-none" role="alert">
+                                        <i class="bi bi-exclamation-triangle-fill text-comic-red display-4 d-block mb-2"></i>
+                                        <p class="font-archivo fs-6 mb-1">GAMBAR GAGAL DIMUAT</p>
+                                        <p class="font-dm small text-white-50 mb-0">File sertifikat tidak ditemukan atau terjadi kendala jaringan.</p>
+                                    </div>
+
+                                    <!-- Gambar Sertifikat -->
+                                    <div id="certImageWrapper" class="p-3 text-center" style="transition: transform 0.2s ease; transform-origin: center center;">
+                                        <img id="certModalImage" src="" alt="Pratinjau Sertifikat" class="img-fluid border border-2 border-white shadow" style="max-height: 65vh; object-fit: contain;">
+                                    </div>
+
+                                    <!-- Navigasi Prev / Next di Area Gambar -->
+                                    <button type="button" id="certPrevBtn" class="btn btn-comic-yellow border border-2 border-dark rounded-0 position-absolute start-0 top-50 translate-middle-y ms-2 shadow-comic" aria-label="Sertifikat Sebelumnya" title="Sebelumnya (Panah Kiri)">
+                                        <i class="bi bi-chevron-left fw-bold"></i>
+                                    </button>
+                                    <button type="button" id="certNextBtn" class="btn btn-comic-yellow border border-2 border-dark rounded-0 position-absolute end-0 top-50 translate-middle-y me-2 shadow-comic" aria-label="Sertifikat Berikutnya" title="Berikutnya (Panah Kanan)">
+                                        <i class="bi bi-chevron-right fw-bold"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Panel Informasi Detail Sertifikat -->
+                                <div class="col-lg-4 border-top border-lg-top-0 border-lg-start border-3 border-dark bg-surface p-3 p-md-4 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <span class="badge bg-comic-red text-white border border-2 border-dark font-bangers fs-6 px-2 py-1 mb-2">DETAIL KREDENSIAL</span>
+                                        <h4 id="certDetailTitle" class="font-archivo fs-5 mb-3 text-dark border-bottom border-2 border-dark pb-2">-</h4>
+
+                                        <ul class="list-unstyled font-dm small mb-3">
+                                            <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex justify-content-between gap-2">
+                                                <span class="fw-bold text-muted">Penerbit:</span>
+                                                <span id="certDetailPenerbit" class="fw-bold text-end text-dark">-</span>
+                                            </li>
+                                            <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex justify-content-between gap-2">
+                                                <span class="fw-bold text-muted">Tahun Terbit:</span>
+                                                <span id="certDetailTahun" class="fw-bold text-end text-dark">-</span>
+                                            </li>
+                                            <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex justify-content-between gap-2">
+                                                <span class="fw-bold text-muted">Masa Berlaku:</span>
+                                                <span id="certDetailBerlaku" class="fw-bold text-end text-dark">-</span>
+                                            </li>
+                                            <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex justify-content-between gap-2">
+                                                <span class="fw-bold text-muted">Bidang:</span>
+                                                <span id="certDetailBidang" class="fw-bold text-end text-dark">-</span>
+                                            </li>
+                                            <li class="py-2 border-bottom border-secondary border-opacity-25 d-flex justify-content-between gap-2">
+                                                <span class="fw-bold text-muted">Predikat:</span>
+                                                <span id="certDetailPredikat" class="badge bg-comic-yellow text-dark border border-dark font-bangers fs-6">-</span>
+                                            </li>
+                                            <!-- Baris Nomor Sertifikat (Muncul hanya jika data-nomor tersedia) -->
+                                            <li id="certNomorRow" class="py-2 border-bottom border-secondary border-opacity-25 d-none">
+                                                <span class="fw-bold text-muted d-block mb-1">Nomor Sertifikat:</span>
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" id="certDetailNomor" class="form-control border border-2 border-dark rounded-0 font-dm bg-body" readonly aria-label="Nomor Sertifikat">
+                                                    <button type="button" id="certCopyNomorBtn" class="btn btn-outline-dark border-2 rounded-0 font-archivo" aria-label="Salin Nomor Sertifikat">
+                                                        <i class="bi bi-clipboard"></i>
+                                                    </button>
+                                                </div>
+                                                <small id="certCopyFeedback" class="text-success fw-bold d-none mt-1">Nomor berhasil disalin!</small>
+                                            </li>
+                                        </ul>
+
+                                        <!-- Tombol Verifikasi Resmi (Muncul hanya jika data-verify-url tersedia) -->
+                                        <div id="certVerifyWrapper" class="d-none mb-3">
+                                            <a id="certVerifyBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-comic-primary btn-sm w-100 font-archivo text-uppercase">
+                                                <i class="bi bi-patch-check-fill me-1"></i> VERIFIKASI SERTIFIKAT
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Navigasi Footer Bawah Panel Detail -->
+                                    <div class="pt-3 border-top border-2 border-dark d-flex justify-content-between align-items-center gap-2">
+                                        <button type="button" id="certPrevFooterBtn" class="btn btn-sm btn-comic-outline flex-fill font-archivo">
+                                            <i class="bi bi-arrow-left me-1"></i> PREV
+                                        </button>
+                                        <button type="button" id="certNextFooterBtn" class="btn btn-sm btn-comic-outline flex-fill font-archivo">
+                                            NEXT <i class="bi bi-arrow-right ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     <!-- Bootstrap 5.3 JS (Ditambahkan defer agar tidak memblokir render HTML) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>

@@ -102,35 +102,52 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg fixed-top comic-navbar no-print">
-        <div class="container">
-            <a class="navbar-brand comic-brand d-flex align-items-center gap-2" href="index.html">
-                <span class="monogram-badge">RA</span>
-                <span class="brand-text">APRIANA<span class="text-comic-red">.DEV</span></span>
-            </a>
+    <!-- Skip link untuk aksesibilitas keyboard -->
+    <a href="#home" class="visually-hidden-focusable position-absolute top-0 start-0 m-2 px-3 py-2 bg-dark text-white">Lompat ke konten</a>
 
-            <div class="d-flex align-items-center gap-2 d-lg-none">
-                <button class="navbar-toggler comic-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigasi Toggle">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+    <!-- Reading Progress Bar -->
+    <div id="reading-progress"></div>
 
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-lg-center gap-lg-2 my-3 my-lg-0 p-3 p-lg-0 bg-surface bg-lg-transparent border border-3 border-dark border-lg-0 shadow-comic shadow-lg-none">
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#about">Tentang</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#origin">Pendidikan</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#experience">Pengalaman</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#skills">Keahlian</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#projects">Proyek</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#certificates">Sertifikat</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#reviews">Ulasan</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html#contact">Kontak</a></li>
-                    <li class="nav-item"><a class="nav-link comic-nav-link active fw-bold" href="cv.html">CV</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <nav class="navbar navbar-expand-lg fixed-top comic-navbar-minimal" id="mainNav">
+  <div class="container">
+
+    <!-- Brand -->
+    <a class="navbar-brand comic-brand d-flex align-items-center gap-2 m-0" href="#home">
+      <span class="monogram-badge">RA</span>
+      <span class="brand-text d-none d-sm-inline">APRIANA<span class="text-comic-red">.DEV</span></span>
+    </a>
+
+    <!-- Toggler mobile -->
+    <button class="navbar-toggler comic-toggler border-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse justify-content-end flex-grow-0" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center gap-1 my-2 my-lg-0 p-2 p-lg-0">
+        <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html"><span class="nav-index">01</span>Tentang</a></li>
+        <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html"><span class="nav-index">02</span>Pengalaman</a></li>
+        <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html"><span class="nav-index">03</span>Proyek</a></li>
+        <li class="nav-item"><a class="nav-link comic-nav-link" href="index.html"><span class="nav-index">04</span>Keahlian</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link comic-nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Lainnya</a>
+          <ul class="dropdown-menu shadow-comic-soft">
+            <li><a class="dropdown-item" href="index.html">Pendidikan</a></li>
+            <li><a class="dropdown-item" href="index.html">Sertifikat</a></li>
+            <li><a class="dropdown-item" href="index.html">Ulasan</a></li>
+            <li><a class="dropdown-item" href="index.html">Roadmap</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <a href="cv.html" class="btn btn-comic-primary btn-sm text-uppercase">CV </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     <!-- Main Content: CV Viewer -->
     <main class="flex-grow-1 py-5" style="margin-top: 70px;">

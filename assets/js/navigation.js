@@ -61,19 +61,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update Chapter Tag di Pojok (Floating Chapter Indicator)
         if (currentChapterTag) {
-            const chapterMap = {
-                'home': 'EDISI #001 — BERANDA',
-                'about': 'BAB 01 — TENTANG',
-                'origin': 'BAB 02 — PENDIDIKAN',
-                'experience': 'BAB 03 — PENGALAMAN',
-                'skills': 'BAB 04 — KEAHLIAN',
-                'projects': 'BAB 05 — PROYEK',
-                'certificates': 'BAB 06 — SERTIFIKAT',
-                'reviews': 'BAB INTERAKTIF — ULASAN',
-                'contact': 'BAB AKHIR — KONTAK'
-            };
-            currentChapterTag.textContent = chapterMap[currentSectionId] || 'EDISI #001';
-        }
+    const chapterMap = {
+        'home': 'EDISI #001 — BERANDA',
+        'about': 'BAB 02 — TENTANG',
+        'origin': 'BAB 03 — PENDIDIKAN',
+        'experience': 'BAB 04 — PENGALAMAN',
+        'skills': 'BAB 05 — KEAHLIAN',
+        'projects': 'BAB 06 — PROYEK',
+        'behind-the-code': 'BAB 07 — BEHIND THE CODE',
+        'developer-zone': 'BAB 08 — DEVELOPER ZONE',
+        'achievement': 'BAB 09 — ACHIEVEMENT',
+        'certificates': 'BAB 10 — SERTIFIKAT',
+        'roadmap': 'BAB 11 — ROADMAP',
+        'reviews': 'BAB 12 — SUARA PEMBACA',
+        'contact': 'BAB 13 — KONTAK / THE END'
+    };
+    currentChapterTag.textContent = chapterMap[currentSectionId] || 'EDISI #001';
+}
     }, { passive: true });
 
     // Back to Top Click Action

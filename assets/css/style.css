@@ -681,26 +681,183 @@ code {
    MINIMALIST EDITORIAL FLOATING NAVBAR
    ========================================================== */
 
+/* ==========================================================
+   NAVBAR — CLEAN MINIMAL (single source of truth)
+   ========================================================== */
+
 .comic-navbar-minimal {
-    padding: 15px 0;
-    background-color: transparent !important;
-    transition: all 0.3s ease;
+    padding: 14px 0;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: padding 0.3s ease, transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform;
+    z-index: 1050;
 }
 
-/* Ketika halaman di-scroll, bungkus menu menjadi kotak kecil mengambang */
+.comic-navbar-minimal.navbar-hidden {
+    transform: translateY(-130%);
+    pointer-events: none;
+}
+
+/* Container: transparan saat di atas halaman */
 .comic-navbar-minimal .container {
-    background-color: var(--surface-color);
-    border: 3px solid var(--border-color);
-    box-shadow: 4px 4px 0 var(--border-color);
-    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
     transition: all 0.3s ease;
 }
 
-/* Penyesuaian tautan menu agar lebih padat dan rapi */
+/* Saat scroll: hairline tipis + blur (pilih salah satu, jangan dua-duanya) */
+.comic-navbar-minimal.scrolled {
+    padding: 8px 0;
+    background: color-mix(in srgb, var(--bg-color) 88%, transparent) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* ---- BRAND ---- */
+.comic-navbar-minimal .comic-brand {
+    font-size: 1.05rem;
+    flex-shrink: 0;
+}
+
+.comic-navbar-minimal .monogram-badge {
+    width: 34px;
+    height: 34px;
+    border-width: 2px;
+    box-shadow: 2px 2px 0 var(--border-color);
+    font-size: 0.78rem;
+    border-radius: 0;
+}
+
+/* ---- NAV LINKS: satu efek saja ---- */
 .comic-navbar-minimal .comic-nav-link {
-    font-size: 0.75rem;
+    position: relative;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     padding: 6px 10px !important;
-    letter-spacing: 0.5px;
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.comic-navbar-minimal .comic-nav-link::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 2px;
+    height: 2px;
+    background: var(--comic-red);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.comic-navbar-minimal .comic-nav-link:hover,
+.comic-navbar-minimal .comic-nav-link.active {
+    color: var(--text-primary) !important;
+}
+
+.comic-navbar-minimal .comic-nav-link:hover::after,
+.comic-navbar-minimal .comic-nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* ---- DROPDOWN: biar tidak default Bootstrap ---- */
+.comic-navbar-minimal .dropdown-menu {
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.4rem;
+    margin-top: 0.4rem;
+    background: var(--surface-color);
+    box-shadow: 4px 4px 0 var(--border-color);
+}
+
+.comic-navbar-minimal .dropdown-item {
+    font-size: 0.82rem;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+}
+
+.comic-navbar-minimal .dropdown-item:hover,
+.comic-navbar-minimal .dropdown-item:focus {
+    background: var(--text-primary);
+    color: var(--surface-color);
+}
+
+/* ---- CTA: aksen comic tunggal ---- */
+.comic-navbar-minimal .btn-comic-primary {
+    padding: 7px 14px !important;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    box-shadow: 3px 3px 0 var(--border-color);
+    border-width: 2px;
+}
+
+/* ---- TOGGLER ---- */
+.comic-navbar-minimal .comic-toggler {
+    border: 2px solid var(--border-color);
+    background: var(--surface-color);
+    padding: 4px 6px;
+    box-shadow: 2px 2px 0 var(--border-color);
+    border-radius: 0;
+}
+
+.comic-navbar-minimal .comic-toggler:focus {
+    outline: none;
+    box-shadow: 2px 2px 0 var(--border-color);
+}
+
+/* ---- MOBILE ---- */
+@media (max-width: 991.98px) {
+    .comic-navbar-minimal.scrolled {
+        padding: 6px 0;
+    }
+
+    .comic-navbar-minimal .navbar-collapse {
+        margin-top: 10px;
+    }
+
+    .comic-navbar-minimal .navbar-nav {
+        background: var(--surface-color);
+        border: 2px solid var(--border-color);
+        box-shadow: 4px 4px 0 var(--border-color);
+        padding: 8px;
+        gap: 2px;
+    }
+
+    .comic-navbar-minimal .comic-nav-link {
+        padding: 10px 12px !important;
+        font-size: 0.8rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    /* Matikan underline di mobile — ganti background highlight */
+    .comic-navbar-minimal .comic-nav-link::after {
+        display: none;
+    }
+
+    .comic-navbar-minimal .comic-nav-link:hover,
+    .comic-navbar-minimal .comic-nav-link.active {
+        background: var(--comic-yellow) !important;
+        color: var(--text-primary) !important;
+    }
+
+    .comic-navbar-minimal .btn-comic-primary {
+        width: 100%;
+        margin-top: 6px;
+        text-align: center;
+    }
 }
 
 /* Perbaikan Toggler Mobile */
@@ -1072,4 +1229,31 @@ code {
     width: 88%;
     background-color: var(--bs-body-bg, #fff);
     box-shadow: 6px 6px 0px #111111 !important;
+}
+
+/* Pengaturan khusus SVG agar berada tepat di tengah dengan lebar pas */
+.roadmap-container-fixed {
+    position: relative;
+}
+
+.winding-road-svg {
+    left: 50% !important;
+    transform: translateX(-50%);
+    width: 400px !important;
+}
+
+@media (max-width: 767.98px) {
+    .winding-road-svg {
+        display: none !important;
+    }
+}
+
+#reviews {
+    background-color: #f8f9fa;
+    background-image: radial-gradient(#111 1px, transparent 1px);
+    background-size: 20px 20px; /* Comic dot pattern */
+}
+.border-dashed {
+    border-style: dashed !important;
+    border-color: #6c757d !important;
 }
